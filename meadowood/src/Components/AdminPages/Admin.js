@@ -1,0 +1,75 @@
+import { useContext, useEffect, useState } from "react"
+import { UserContext } from "../../Contexts/UserContext"
+import { Link, useNavigate } from "react-router-dom"
+import { Button, Card, Container, Row } from "react-bootstrap"
+import { LiveContext } from "../../Contexts/LiveContext"
+
+function Admin() {
+
+    const { verify } = useContext(UserContext)
+    const { getStatus } = useContext(LiveContext)
+    const navigate = useNavigate()
+
+    const [status, setStatus] = useState()
+
+    useEffect(() => {
+        async function verifing() {
+            let a = await verify()
+            if (a === false) {
+                navigate("/")
+            } else {
+                console.log("Approved")
+            }
+        }
+        verifing()
+
+        async function gettingLiveStatus() {
+            let status = await getStatus()
+            setStatus(status)
+        }
+        gettingLiveStatus()
+    }, [])
+
+    return (
+        <>
+            <Container>
+                <br />
+                <Row>
+                    {status ? (
+                        <>
+                            <div className="col-6 col-lg-4">
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Header>
+                                            <h4>Live Status: <div className="liveStatus">{status.liveStatus}</div></h4>
+                                        </Card.Header>
+                                        <Card.Text>
+                                            Live link: <a target="_blank" href={status.liveLink}>{status.liveLink}</a>
+                                            <br />
+                                            Title: {status.liveTitle}
+                                        </Card.Text>
+                                        <Link to="/admin/edit/live">
+                                            <Button className="col-12">
+                                                Edit
+                                            </Button>
+                                        </Link>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        </>
+                    ) : (
+                        <Card className="col-6 col-lg-4">
+                            <Card.Body>
+                                <Card.Header>
+                                    Live Status Error
+                                </Card.Header>
+
+                            </Card.Body>
+                        </Card>
+                    )}
+                </Row>
+            </Container>
+        </>
+    )
+}
+export default Admin
