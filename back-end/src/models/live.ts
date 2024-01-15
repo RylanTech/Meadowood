@@ -2,7 +2,7 @@ import { DataTypes, InferAttributes, InferCreationAttributes, Model, Sequelize }
 
 export class live extends Model<InferAttributes<live>, InferCreationAttributes<live>>{
     declare liveId: number;
-    declare liveStatus: boolean;
+    declare liveStatus: string;
     declare liveLink: string;
     declare liveTitle: string;
 }

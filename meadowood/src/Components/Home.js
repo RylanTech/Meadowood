@@ -13,6 +13,7 @@ function Home() {
               <Link className="nav-link hover-effect nvbr" to="/">Home</Link>
               <Link className="nav-link hover-effect nvbr" to="/live">Watch Live</Link>
               {/* <Link className="nav-link hover-effect" to="/ministries">Ministries</Link> */}
+              <Link className="nav-link hover-effect nvbr" to="/clips">Clips</Link>
               <Link className="nav-link hover-effect nvbr" to="/events">Events</Link>
               <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>
               <NavDropdown title="Ministries" id="basic-nav-dropdown" className="nvbr">

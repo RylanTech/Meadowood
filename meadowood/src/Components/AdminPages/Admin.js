@@ -67,6 +67,32 @@ function Admin() {
                             </Card.Body>
                         </Card>
                     )}
+                    <div className="col-6 col-lg-4">
+                        <Card>
+                            <Card.Body>
+                                <Card.Header>
+                                    <h4>Clips</h4>
+                                </Card.Header>
+                                <Card.Text>
+                                    <br/>
+                                    <Link to='/admin/clips/create/'>
+                                        <Button className="col-12">
+                                            Create
+                                        </Button>
+                                    </Link>
+                                    <br/><br/>
+                                    <Link to='/admin/clips/'>
+                                        <Button 
+                                        className="col-12"
+                                        variant="warning"
+                                        >
+                                            Edit/Delete
+                                        </Button>
+                                    </Link>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </div>
                 </Row>
             </Container>
         </>

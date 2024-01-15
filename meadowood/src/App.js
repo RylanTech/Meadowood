@@ -9,8 +9,6 @@ import Homepage from './Components/Pages/Homepage';
 import Kids from './Components/Pages/Kids';
 import Ladies from './Components/Pages/ladies';
 import Mens from './Components/Pages/mens';
-import Ministries from './Components/Pages/Ministries';
-import Schedule from './Components/Pages/Schedule';
 import Youngadults from './Components/Pages/Youngadults';
 import Youth from './Components/Pages/Youth';
 import Seniors from './Components/Pages/Seniors';
@@ -18,6 +16,9 @@ import Live from './Components/Pages/Live';
 import Loginpage from './Components/AdminPages/Login';
 import Admin from './Components/AdminPages/Admin';
 import EditLive from './Components/AdminPages/EditLive';
+import Clips from './Components/Pages/Clips';
+import CreateClip from './Components/AdminPages/CreateClip';
+import EditClip from './Components/AdminPages/EditClips';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<Home/>}>
           <Route index element={<Homepage/>}/>
           <Route path='/live' element={<Live/>}/>
+          <Route path='/clips' element={<Clips/>}/>
           {/* <Route path='/ministries' element={<Ministries/>} /> */}
           <Route path='/kids' element={<Kids/>} />
           <Route path='/youth' element={<Youth/>} />
@@ -42,6 +44,9 @@ function App() {
           <Route path='/login' element={<Loginpage/>}/>
           <Route path='/admin' element={<Admin/>}/>
           <Route path='/admin/edit/live' element={<EditLive/>}/>
+
+          <Route path='/admin/clips/create/' element={<CreateClip/>}/>
+          <Route path='/admin/clips/' element={<EditClip/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
