@@ -23,7 +23,7 @@ function Clips() {
                         <a 
                         href={clip.clipURL} 
                         target="_blank" 
-                        className="col-4 col-lg-4 thumbnailLink"
+                        className="col-12 col-sm-6 col-lg-4 thumbnailLink"
                         key={clip.clipId}
                         >
                             <Card className="clipCard">

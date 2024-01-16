@@ -6,22 +6,18 @@ import { LiveContext } from "../../Contexts/LiveContext"
 
 function Admin() {
 
-    const { verify } = useContext(UserContext)
+    const { isAdmin } = useContext(UserContext)
     const { getStatus } = useContext(LiveContext)
     const navigate = useNavigate()
 
     const [status, setStatus] = useState()
 
     useEffect(() => {
-        async function verifing() {
-            let a = await verify()
-            if (a === false) {
-                navigate("/")
-            } else {
-                console.log("Approved")
-            }
+        if (isAdmin === true) {
+            console.log("Admin verified")
+        } else {
+            navigate('/')
         }
-        verifing()
 
         async function gettingLiveStatus() {
             let status = await getStatus()
@@ -48,7 +44,7 @@ function Admin() {
                                             <br />
                                             Title: {status.liveTitle}
                                         </Card.Text>
-                                        <Link to="/admin/edit/live">
+                                        <Link to="/admin/live/edit">
                                             <Button className="col-12">
                                                 Edit
                                             </Button>

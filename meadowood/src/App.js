@@ -18,7 +18,8 @@ import Admin from './Components/AdminPages/Admin';
 import EditLive from './Components/AdminPages/EditLive';
 import Clips from './Components/Pages/Clips';
 import CreateClip from './Components/AdminPages/CreateClip';
-import EditClip from './Components/AdminPages/EditClips';
+import EditClips from './Components/AdminPages/EditClips';
+import EditClip from './Components/AdminPages/EditClip';
 
 function App() {
   return (
@@ -43,10 +44,11 @@ function App() {
 
           <Route path='/login' element={<Loginpage/>}/>
           <Route path='/admin' element={<Admin/>}/>
-          <Route path='/admin/edit/live' element={<EditLive/>}/>
+          <Route path='/admin/live/edit' element={<EditLive/>}/>
 
           <Route path='/admin/clips/create/' element={<CreateClip/>}/>
-          <Route path='/admin/clips/' element={<EditClip/>}/>
+          <Route path='/admin/clips/edit/:id' element={<EditClip/>}/>
+          <Route path='/admin/clips/' element={<EditClips/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

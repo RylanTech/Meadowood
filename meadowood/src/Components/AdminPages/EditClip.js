@@ -2,16 +2,17 @@ import { useContext, useEffect, useState } from "react"
 import { Button, Card, Container, Form, Row } from "react-bootstrap"
 import { ClipContext } from "../../Contexts/ClipContext";
 import { UserContext } from "../../Contexts/UserContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function CreateClip() {
+function EditClip() {
     const [clipTitle, setClipTitle] = useState("");
     const [clipURL, setClipURL] = useState("");
     const [clipThumbnail, setClipThumbnail] = useState("");
 
-    const {createClip} = useContext(ClipContext)
-    const {isAdmin} = useContext(UserContext)
+    const { editClip, getClip, deleteClip } = useContext(ClipContext)
+    const { isAdmin } = useContext(UserContext)
     const navigate = useNavigate()
+    const params = useParams()
 
     useEffect(() => {
         if (isAdmin === true) {
@@ -19,15 +20,25 @@ function CreateClip() {
         } else {
             navigate('/')
         }
-    },[])
+
+        async function gettingClip() {
+            let id = params.id
+            let res = await getClip(id)
+            setClipThumbnail(res.clipThumbnail)
+            setClipURL(res.clipURL)
+            setClipTitle(res.clipTitle)
+        }
+        gettingClip()
+    }, [])
 
     function handleSubmit() {
         let clip = {
             clipThumbnail: clipThumbnail,
             clipTitle: clipTitle,
-            clipURL: clipURL
+            clipURL: clipURL,
+            clipId: params.id
         }
-        createClip(clip)
+        editClip(clip)
         navigate("/admin")
     }
 
@@ -37,11 +48,11 @@ function CreateClip() {
                 <Row>
                     <br />
                     <Row>
-                        <div className="col-4" />
+                        <div className="col-3" />
                         <a
                             href={clipURL}
                             target="_blank"
-                            className="col-12 col-sm-4 thumbnailLink"
+                            className="col-12 col-sm-6 thumbnailLink"
                         >
                             <Card className="clipCard col-12">
                                 <Card.Header>
@@ -76,16 +87,29 @@ function CreateClip() {
                             />
                         </Form.Group>
                         <br />
-                        <Button
-                            className="col-12"
-                            onClick={handleSubmit}
+                        <Row>
+                            <Button
+                                className="col-5"
+                                onClick={handleSubmit}
                             >
-                            Submit
-                        </Button>
+                                Edit
+                            </Button>
+                            <div className="col-2"/>
+                            <Button
+                                className="col-5"
+                                onClick={() => {
+                                    deleteClip(params.id)
+                                    navigate("/admin")
+                                }}
+                                variant="danger"
+                            >
+                                Delete
+                            </Button>
+                        </Row>
                     </Form>
                 </Row>
             </Container>
         </>
     )
 }
-export default CreateClip
+export default EditClip

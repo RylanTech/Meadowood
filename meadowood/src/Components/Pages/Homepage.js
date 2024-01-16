@@ -1,7 +1,16 @@
+import { useContext, useEffect } from "react"
 import { Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { UserContext } from "../../Contexts/UserContext"
 
 function Homepage() {
+
+    const {verify} = useContext(UserContext)
+
+    useEffect(() => {
+        verify()
+    })
+
     return (
         <div className="first-page">
             <div className="fprow">

@@ -1,10 +1,11 @@
 import axios from "axios";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const UserContext = createContext()
 let baseUrl = "http://localhost:3001/"
 
 export const UserProvider = (props) => {
+  const [isAdmin, setIsAdmin] = useState(false);
 
   function login(credentials) {
 
@@ -23,6 +24,11 @@ export const UserProvider = (props) => {
     return axios.post(baseUrl + "api/user/verify", null, {
       headers: myHeaders
     }).then(response => {
+      if (response.data === true) {
+        setIsAdmin(true)
+      } else {
+        setIsAdmin(false)
+      }
       return new Promise(resolve => resolve(response.data));
     })
   }
@@ -38,7 +44,8 @@ export const UserProvider = (props) => {
       value={{
         login,
         verify,
-        createAccount
+        createAccount,
+        isAdmin
       }}
     >
       {props.children}

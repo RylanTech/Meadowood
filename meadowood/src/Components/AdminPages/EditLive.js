@@ -6,7 +6,7 @@ import { LiveContext } from "../../Contexts/LiveContext"
 
 function EditLive() {
 
-    const { verify } = useContext(UserContext)
+    const { isAdmin } = useContext(UserContext)
     const { getStatus, setStatus } = useContext(LiveContext)
     const navigate = useNavigate()
 
@@ -15,15 +15,11 @@ function EditLive() {
     const [liveLink, setLiveLink] = useState("")
 
     useEffect(() => {
-        async function verifing() {
-            let a = await verify()
-            if (a === false) {
-                navigate("/")
-            } else {
-                console.log("Approved")
-            }
+        if (isAdmin === true) {
+            console.log("Admin verified")
+        } else {
+            navigate('/')
         }
-        verifing()
 
         async function gettingLiveStatus() {
             let status = await getStatus()

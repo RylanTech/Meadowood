@@ -1,15 +1,25 @@
+import { useContext, useEffect } from "react"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { Link, Outlet } from "react-router-dom"
+import { UserContext } from "../Contexts/UserContext"
 
 function Home() {
+
+  const { isAdmin } = useContext(UserContext)
+
   return (
     <div>
       <Navbar className="almostWhite" expand="lg" variant="light">
         <Container>
-          <img className="nav-img" src="Images/mwlogo2.png" />
+          <img className="nav-img" src="https://i.postimg.cc/YS7vzYdY/mwlogo2.png" />
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
+              {isAdmin ? (
+                <Link className="nav-link hover-effect nvbr" to="/admin">Admin</Link>
+              ) : (
+                <></>
+              )}
               <Link className="nav-link hover-effect nvbr" to="/">Home</Link>
               <Link className="nav-link hover-effect nvbr" to="/live">Watch Live</Link>
               {/* <Link className="nav-link hover-effect" to="/ministries">Ministries</Link> */}
