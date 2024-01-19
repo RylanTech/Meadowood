@@ -1,73 +1,183 @@
+import { useEffect, useState } from "react"
 import { Carousel, Container, Row } from "react-bootstrap"
 
 function Youth() {
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+
+    }, [])
+
+    const updateScreenWidth = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', updateScreenWidth);
+        return () => {
+            window.removeEventListener('resize', updateScreenWidth);
+        };
+    }, []);
+
+    function extraDiv() {
+        if (screenWidth > 992) {
+            return <div className="col-2" />
+        }
+    }
+
+    function cara() {
+        if (screenWidth > 992) {
+            //large
+            return (
+                <>
+                    <Row>
+                        <div className="col-12">
+                            <Row>
+                                <div className="col-4 firstCara">
+                                    <Carousel fade>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp1.png"
+                                                alt="First slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp2.png"
+                                                alt="Second slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp3.png"
+                                                alt="Third slide"
+                                            />
+                                        </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                                <div className="col-4">
+                                    <Carousel fade>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp1.png"
+                                                alt="First slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp2.png"
+                                                alt="Second slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp3.png"
+                                                alt="Third slide"
+                                            />
+                                        </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                                <div className="col-4 thirdCara">
+                                    <Carousel fade>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp1.png"
+                                                alt="First slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp2.png"
+                                                alt="Second slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100 newFlameImg"
+                                                src="Images/sp3.png"
+                                                alt="Third slide"
+                                            />
+                                        </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                            </Row>
+                        </div>
+                    </Row>
+                </>
+            )
+        } else {
+            //small
+            return (
+                <>
+                    <Row>
+                        <Carousel fade>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100 newFlameImg"
+                                    src="Images/sp1.png"
+                                    alt="First slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100 newFlameImg"
+                                    src="Images/sp2.png"
+                                    alt="Second slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100 newFlameImg"
+                                    src="Images/sp3.png"
+                                    alt="Third slide"
+                                />
+                            </Carousel.Item>
+                        </Carousel>
+                    </Row>
+                </>
+            )
+        }
+    }
+
     return (
-        <div>
-            <center>
-            <div className="cara">
-                <Carousel fade>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp1.png"
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <p className="slideLabel">First slide label</p>
-                            <p className="slideText">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp2.png"
-                            alt="Second slide"
-                        />
-
-                        <Carousel.Caption>
-                            <p className="slideLabel">Second slide label</p>
-                            <p className="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp3.png"
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <p className="slideLabel">Third slide label</p>
-                            <p className="slideText">
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </div>
-            </center>
-            <Container>
-                <Row>
-                    <center>
-                        <div className="verse">
-                        <img src="Images/bg1.svg"/>
-                        <div className="miniHeader col-10">
-                            "Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity."
-                            <br />
-                            -1 Timothy 4:12 ESV
-                        </div>
-                        </div>
-                    </center>
-                </Row>
-            </Container>
-            <div className="miniRow3">
+        <>
+            <div className="newFlamePage">
                 <Container>
-                    <div className="r3Text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Tortor condimentum lacinia quis vel eros donec. Nunc sed velit dignissim sodales ut eu sem integer. Lorem ipsum dolor sit amet consectetur. Tincidunt id aliquet risus feugiat in ante metus. Risus quis varius quam quisque id diam vel quam elementum. Dui vivamus arcu felis bibendum ut tristique et. Sagittis aliquam malesuada bibendum arcu vitae elementum. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. In hendrerit gravida rutrum quisque. Dui vivamus arcu felis bibendum ut tristique. Leo urna molestie at elementum eu facilisis.
-                    </div>
+                    <Row>
+                        <center>
+                            <div className="newFlame">
+                                Newflame
+                            </div>
+                            <div className="studentM">
+                                Student Ministries
+                            </div>
+                        </center>
+                    </Row>
+                    {cara()}
+                    <Row>
+                        {extraDiv()}
+                        <div className="col-12 col-lg-8">
+                            <div className="newFlameVerse">
+                                Don’t let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity.
+                            </div>
+                            <cetner>
+                                <div className="newFlameVerse2">
+                                    <center>1 Timothy 4:12 NIV</center>
+                                </div>
+                            </cetner>
+                        </div>
+                    </Row>
                 </Container>
-            </div>
-        </div>
+            </div >
+        </>
     )
 }
 export default Youth

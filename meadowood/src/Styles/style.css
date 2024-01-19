@@ -284,6 +284,44 @@ body {
   padding: 10px 10px 0px 10px!important;
 }
 
+.newFlame {
+  color: red;
+  margin-top: 30px;
+  font-size: 100px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.studentM {
+  color: rgb(239, 123, 40);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 35px;
+  position: relative; top: -45px
+}
+.newFlameImg {
+  aspect-ratio: 16/9!important;
+}
+.firstCara {
+  margin-top: 30px;
+  transform: rotate(-20deg);
+}
+.thirdCara {
+  margin-top: 30px;
+  transform: rotate(20deg);
+}
+.newFlamePage {
+  background-color: black;
+}
+.newFlameVerse {
+  margin-top: 80px;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.newFlameVerse2 center {
+  color: white;
+  font-size: 15px;
+}
+
+
 @media (min-width:768px) {
   /* .fpimgMain {
     margin: 0px 0px;
