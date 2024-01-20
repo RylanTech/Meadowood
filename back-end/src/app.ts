@@ -4,6 +4,7 @@ import { db } from './models';
 import userRoutes from './routes/userRoutes'
 import liveRoutes from './routes/liveRoutes'
 import clipRoutes from './routes/clipRoutes'
+import headerRoutes from './routes/headerRoutes'
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({extended: true}));
 app.use("/api/user", userRoutes)
 app.use("/api/live", liveRoutes)
 app.use('/api/clips', clipRoutes)
+app.use('/api/header', headerRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).end();

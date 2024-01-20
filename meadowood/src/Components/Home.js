@@ -42,23 +42,18 @@ function Home() {
                     Young Adults
                   </NavDropdown.Item>
                 </Link>
-                <Link to="/mensgroup" className="notUnderlined nvbr">
+                <Link to="/youngadults" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.4">
-                    Men's group
-                  </NavDropdown.Item>
-                </Link>
-                <Link to="/womansgroup" className="notUnderlined nvbr">
-                  <NavDropdown.Item href="#action/3.4">
-                    Woman's group
+                    Adults
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/seniors" className="notUnderlined nvbr">
-                  <NavDropdown.Item href="#action/3.4">
+                  <NavDropdown.Item href="#action/3.5">
                     Seniors
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/foodpantry" className="notUnderlined nvbr">
-                  <NavDropdown.Item href="#action/3.4">
+                  <NavDropdown.Item href="#action/3.6">
                     Food Pantry
                   </NavDropdown.Item>
                 </Link>

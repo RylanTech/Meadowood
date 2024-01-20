@@ -1,22 +1,42 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { UserContext } from "../../Contexts/UserContext"
+import { HeaderContext } from "../../Contexts/HeaderContext"
 
 function Homepage() {
 
-    const {verify} = useContext(UserContext)
+    const { verify } = useContext(UserContext)
+    const { getHeader } = useContext(HeaderContext)
+    const [headerLink, setHeaderLink] = useState("")
+    const [headerCaption, setHeaderCaption] = useState("")
 
     useEffect(() => {
         verify()
-    })
+
+        async function gettingHeader() {
+            let hdr = await getHeader()
+            console.log(hdr)
+            setHeaderLink(hdr.headerLink)
+            setHeaderCaption(hdr.headerCaption)
+        }
+        gettingHeader()
+
+    },[])
 
     return (
         <div className="first-page">
             <div className="fprow">
                 <Container>
                     <Row>
-                    <img src="Images/bg2.jpg"/>
+                        <img
+                            className="homepageHeader"
+                            src={headerLink}
+                            alt="Images/bg2.jpg"
+                        />
+                        <div className="homeHeader">
+                            {headerCaption}
+                        </div>
                     </Row>
                     <Row className="fpr1Content">
                         <div className="col-md-4 fpcard clock">
@@ -54,6 +74,19 @@ function Homepage() {
                                 </a>
                             </center>
                         </div>
+                    </Row>
+                    <Row>
+                        <center>
+                            <div className="facebookText">
+                                Come follow us on <a
+                                    href="https://www.facebook.com/profile.php?id=61550936281949">
+                                    <img
+                                        className="facebookImg"
+                                        target="_blank"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+                                    />Facebook</a>
+                            </div>
+                        </center>
                     </Row>
                 </Container>
             </div>

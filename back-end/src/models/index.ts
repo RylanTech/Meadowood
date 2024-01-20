@@ -2,6 +2,7 @@ import { Sequelize } from "sequelize";
 import { userFactory } from "./user";
 import { liveFactory } from "./live";
 import { clipFactory } from "./clips";
+import { headerFactory } from "./header";
 
 const dbName = 'meadowood';
 const username = 'root';
@@ -16,5 +17,6 @@ const sequelize = new Sequelize(dbName, username, password, {
 userFactory(sequelize)
 liveFactory(sequelize)
 clipFactory(sequelize)
+headerFactory(sequelize)
 
 export const db = sequelize;

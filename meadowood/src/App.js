@@ -7,8 +7,6 @@ import Foodpantry from './Components/Pages/Foodpantry';
 import Home from './Components/Home';
 import Homepage from './Components/Pages/Homepage';
 import Kids from './Components/Pages/Kids';
-import Ladies from './Components/Pages/ladies';
-import Mens from './Components/Pages/mens';
 import Youngadults from './Components/Pages/Youngadults';
 import Youth from './Components/Pages/Youth';
 import Seniors from './Components/Pages/Seniors';
@@ -20,6 +18,7 @@ import Clips from './Components/Pages/Clips';
 import CreateClip from './Components/AdminPages/CreateClip';
 import EditClips from './Components/AdminPages/EditClips';
 import EditClip from './Components/AdminPages/EditClip';
+import Connect from './Components/Pages/Connect';
 
 function App() {
   return (
@@ -34,10 +33,9 @@ function App() {
           <Route path='/youth' element={<Youth/>} />
           <Route path='/youngadults' element={<Youngadults/>} />
           <Route path='/foodpantry' element={<Foodpantry/>} />
-          <Route path='/donate' element={<Donate/>} />
+          {/* <Route path='/donate' element={<Donate/>} /> */}
+          <Route path='/connect' element={<Connect/>}/>
           <Route path='/events' element={<Events/>} />
-          <Route path='/mensgroup' element={<Mens/>}/>
-          <Route path='/womansgroup' element={<Ladies/>}/>
           <Route path='/about' element={<About/>}/>
           {/* <Route path='/schedule' element={<Schedule/>}/> */}
           <Route path='/seniors' element={<Seniors/>}/>

@@ -127,6 +127,22 @@ body {
 .underlined:hover {
   text-decoration-color: #b4b4b4;
 }
+.homeHeader {
+  position: relative; top: -40px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+.facebookImg {
+  width: 25px;
+  margin-left: 5px;
+}
+.facebookText {
+  font-size: 20px;
+}
+.homepageHeader {
+  aspect-ratio: 21/9;
+}
 
 /* ministries */
 .crd {
@@ -296,16 +312,42 @@ body {
   font-size: 35px;
   position: relative; top: -45px
 }
+.nfInstaLink {
+  color: white;
+  font-size: 20px;
+}
+.newFlameImg2 {
+  width: 25px;
+}
+.nfInstaLink:hover {
+  color: red;
+}
+.newFlameInsta {
+  position: relative; top: -35px;
+  color: white;
+  font-size: 20px;
+}
 .newFlameImg {
   aspect-ratio: 16/9!important;
 }
+.newFlameWhoFor {
+  position: relative; top: -32px;
+  color: rgb(242, 122, 10);
+}
 .firstCara {
-  margin-top: 30px;
+  margin-top: 55px;
   transform: rotate(-20deg);
+  width: 32%;
+  margin-right: 1.5%;
+}
+.secondCara {
+  width: 32%;
 }
 .thirdCara {
-  margin-top: 30px;
+  margin-top: 55px;
   transform: rotate(20deg);
+  width: 32%;
+  margin-left: 1.5%;
 }
 .newFlamePage {
   background-color: black;
@@ -313,12 +355,25 @@ body {
 .newFlameVerse {
   margin-top: 80px;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 .newFlameVerse2 center {
+  font-family: 'Bebas Neue', sans-serif;
   color: white;
-  font-size: 15px;
+  font-size: 35px;
+}
+.youthSchedule {
+  margin-top: 85px;
+}
+.youthScheduleHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  font-size: 35px;
+}
+.youthScheduleContent {
+  color: white;
+  font-size: 25px;
 }
 
 
