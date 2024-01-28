@@ -1,72 +1,87 @@
 import { Carousel, Container, Row } from "react-bootstrap"
+import Footer from "../Footer"
 
 function Youngadults() {
     return (
         <div>
             <center>
-            <div className="cara">
-                <Carousel fade>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp1.png"
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <p className="slideLabel">First slide label</p>
-                            <p className="slideText">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp2.png"
-                            alt="Second slide"
-                        />
+                <div className="caraYA">
+                    <Carousel fade>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://i.postimg.cc/CxXwWTs5/PXL-20231202-232015152.jpg"
+                                alt="First slide"
+                            />
 
-                        <Carousel.Caption>
-                            <p className="slideLabel">Second slide label</p>
-                            <p className="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp3.png"
-                            alt="Third slide"
-                        />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://i.postimg.cc/NFst1gBJ/PXL-20231101-235321562.jpg"
+                                alt="Second slide"
+                            />
 
-                        <Carousel.Caption>
-                            <p className="slideLabel">Third slide label</p>
-                            <p className="slideText">
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </div>
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <div className="YAheading">
+                    Christ 4 Life<br />
+                    <div className="YAages">
+                        18 & Graduated - 25
+                    </div>
+                    <a
+                        href="https://www.instagram.com/c4l_meadowood/"
+                        target="_blank"
+                        className="YAInstaLink">
+                        @c4l_meadowood
+                    </a>
+                </div>
             </center>
             <Container>
                 <Row>
                     <center>
                         <div className="verse">
-                        <img src="Images/bg1.svg"/>
-                        <div className="miniHeader col-10">
-                            "Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect"
-                            <br />
-                            -Romans 12:2 ESV
-                        </div>
+                            <Row>
+                                <div className="col-1" />
+                                <div className="miniHeaderYA col-10">
+                                    "Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect"
+                                    <br />
+                                    -Romans 12:2 ESV
+                                </div>
+                            </Row>
                         </div>
                     </center>
                 </Row>
             </Container>
             <div className="miniRow3">
                 <Container>
-                    <div className="r3Text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Tortor condimentum lacinia quis vel eros donec. Nunc sed velit dignissim sodales ut eu sem integer. Lorem ipsum dolor sit amet consectetur. Tincidunt id aliquet risus feugiat in ante metus. Risus quis varius quam quisque id diam vel quam elementum. Dui vivamus arcu felis bibendum ut tristique et. Sagittis aliquam malesuada bibendum arcu vitae elementum. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. In hendrerit gravida rutrum quisque. Dui vivamus arcu felis bibendum ut tristique. Leo urna molestie at elementum eu facilisis.
+                    <div className="youthSchedule">
+                        <Row>
+                            <div className="col-12 col-md-6">
+                                <div className="YAScheduleHeader">
+                                    SUNDAYS @ CHURCH
+                                </div>
+                                <div className="YAScheduleContent">
+
+                                    10am - 11am Sunday morning class - Young Adults room
+                                    <br /><br />
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-6">
+                                <div className="YAScheduleHeader">
+                                    WEDNESDAYS @ CHURCH
+                                </div>
+                                <div className="YAScheduleContent">
+                                    7pm - 8pm Wednesday night class - Young Adults room
+                                    <br /><br />
+                                </div>
+                            </div>
+                        </Row>
                     </div>
                 </Container>
             </div>
+            <Footer/>
         </div>
     )
 }

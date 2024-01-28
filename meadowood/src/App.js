@@ -19,6 +19,7 @@ import CreateClip from './Components/AdminPages/CreateClip';
 import EditClips from './Components/AdminPages/EditClips';
 import EditClip from './Components/AdminPages/EditClip';
 import Connect from './Components/Pages/Connect';
+import Connections from './Components/AdminPages/Connections';
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           <Route path='/admin/clips/create/' element={<CreateClip/>}/>
           <Route path='/admin/clips/edit/:id' element={<EditClip/>}/>
           <Route path='/admin/clips/' element={<EditClips/>}/>
+
+          <Route path='/admin/connections' element={<Connections/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

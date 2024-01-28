@@ -1,4 +1,5 @@
 import { Carousel, Container, Row } from "react-bootstrap"
+import Footer from "../Footer"
 
 function Seniors() {
     return (
@@ -67,6 +68,7 @@ function Seniors() {
                     </div>
                 </Container>
             </div>
+            <Footer/>
         </div>
     )
 }

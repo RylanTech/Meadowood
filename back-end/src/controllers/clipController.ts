@@ -4,8 +4,8 @@ import { verifyUser } from "../services/authService"
 
 export const getClips: RequestHandler = async (req, res, next) => {
     try {
-        let gotClip = await clips.findAll()
-        res.status(200).send(gotClip)
+        let gotClips = await clips.findAll()
+        res.status(200).send(gotClips)
     } catch {
         res.status(500).send()
     }
@@ -37,7 +37,7 @@ export const createClip: RequestHandler = async (req, res, next) => {
         if (usr) {
             let newClip: clips = req.body
             await clips.create(newClip)
-            res.status(201).send()
+            res.status(201).send("Clip Created")
         } else {
             res.status(401).send()
         }

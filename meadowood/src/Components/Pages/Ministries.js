@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import Footer from "../Footer"
 
 function Ministries() {
     return (
@@ -47,6 +48,7 @@ function Ministries() {
                     </div>
                 </Link>
             </Container>
+            <Footer/>
         </div>
     )
 }

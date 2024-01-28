@@ -3,6 +3,7 @@ import { userFactory } from "./user";
 import { liveFactory } from "./live";
 import { clipFactory } from "./clips";
 import { headerFactory } from "./header";
+import { connectFactory } from "./connect";
 
 const dbName = 'meadowood';
 const username = 'root';
@@ -18,5 +19,6 @@ userFactory(sequelize)
 liveFactory(sequelize)
 clipFactory(sequelize)
 headerFactory(sequelize)
+connectFactory(sequelize)
 
 export const db = sequelize;

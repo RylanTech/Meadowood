@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import { LiveContext } from "../../Contexts/LiveContext"
+import Footer from "../Footer"
 
 function Live() {
     const [status, setStatus] = useState({
@@ -90,6 +91,7 @@ function Live() {
                     {isLive()}
                 </Row>
             </Container>
+            <Footer/>
         </>
     )
 }

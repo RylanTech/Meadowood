@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { UserContext } from "../../Contexts/UserContext"
 import { HeaderContext } from "../../Contexts/HeaderContext"
+import Footer from "../Footer"
 
 function Homepage() {
 
@@ -156,6 +157,7 @@ function Homepage() {
                     </center>
                 </Row>
             </Container>
+            <Footer/>
         </div>
     )
 }

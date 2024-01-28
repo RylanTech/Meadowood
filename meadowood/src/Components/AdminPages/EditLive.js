@@ -6,7 +6,7 @@ import { LiveContext } from "../../Contexts/LiveContext"
 
 function EditLive() {
 
-    const { isAdmin } = useContext(UserContext)
+    const { isAdmin, verify } = useContext(UserContext)
     const { getStatus, setStatus } = useContext(LiveContext)
     const navigate = useNavigate()
 
@@ -15,11 +15,8 @@ function EditLive() {
     const [liveLink, setLiveLink] = useState("")
 
     useEffect(() => {
-        if (isAdmin === true) {
-            console.log("Admin verified")
-        } else {
-            navigate('/')
-        }
+
+        console.log(isAdmin)
 
         async function gettingLiveStatus() {
             let status = await getStatus()
@@ -28,7 +25,7 @@ function EditLive() {
             setLiveLink(status.liveLink)
         }
         gettingLiveStatus()
-    }, [])
+    }, []);
 
 
 
@@ -101,7 +98,7 @@ function EditLive() {
                     <div className="col-6">
                         <center>
                             Then click embed,
-                            <br/>
+                            <br />
                             <img className="col-12" src="/Images/share2.png" />
                         </center>
                     </div>
@@ -109,7 +106,7 @@ function EditLive() {
                         <br /><br />
                         <center>
                             Then copy the highlighted text and put that in the "Link field"
-                            <br/>
+                            <br />
                             <img className="col-12" src="/Images/share3.png" />
                         </center>
                     </div>

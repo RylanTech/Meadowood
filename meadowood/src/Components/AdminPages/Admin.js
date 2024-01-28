@@ -54,7 +54,7 @@ function Admin() {
                 <Row>
                     {status ? (
                         <>
-                            <div className="col-6 col-lg-4">
+                            <div className="adminCard col-6 col-lg-4">
                                 <Card>
                                     <Card.Body>
                                         <Card.Header>
@@ -75,35 +75,35 @@ function Admin() {
                             </div>
                         </>
                     ) : (
-                        <div className="col-6 col-lg-4">
+                        <div className="adminCard col-6 col-lg-4">
                             <Card>
-                            <Card.Body>
-                                <Card.Header>
-                                    Live Status Error
-                                </Card.Header>
+                                <Card.Body>
+                                    <Card.Header>
+                                        Live Status Error
+                                    </Card.Header>
 
-                            </Card.Body>
-                        </Card>
+                                </Card.Body>
+                            </Card>
                         </div>
                     )}
-                    <div className="col-6 col-lg-4">
+                    <div className="adminCard col-6 col-lg-4">
                         <Card>
                             <Card.Body>
                                 <Card.Header>
                                     <h4>Clips</h4>
                                 </Card.Header>
                                 <Card.Text>
-                                    <br/>
+                                    <br />
                                     <Link to='/admin/clips/create/'>
                                         <Button className="col-12">
                                             Create
                                         </Button>
                                     </Link>
-                                    <br/><br/>
+                                    <br /><br />
                                     <Link to='/admin/clips/'>
-                                        <Button 
-                                        className="col-12"
-                                        variant="warning"
+                                        <Button
+                                            className="col-12"
+                                            variant="warning"
                                         >
                                             Edit/Delete
                                         </Button>
@@ -112,34 +112,53 @@ function Admin() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-6 col-lg-4">
+                    <div className="adminCard col-6 col-lg-4">
                         <Card>
                             <Card.Body>
                                 <Card.Header>
                                     <h4>Homepage Header: 21x9</h4>
                                 </Card.Header>
                                 <Card.Text>
-                                    <br/>
-                                    <img 
-                                    className="homepageHeader col-12"
-                                    src={headerLink}
+                                    <br />
+                                    <img
+                                        className="homepageHeader col-12"
+                                        src={headerLink}
                                     />
                                     <Form.Label>Image Link</Form.Label>
                                     <Form.Control
-                                    value={headerLink}
-                                    onChange={(e) => setHeaderLink(e.target.value)}/>
-                                    <br/>
+                                        value={headerLink}
+                                        onChange={(e) => setHeaderLink(e.target.value)} />
+                                    <br />
                                     <Form.Label>Image Caption</Form.Label>
                                     <Form.Control
-                                    value={headerCaption}
-                                    onChange={(e) => setHeaderCaption(e.target.value)}/>
-                                    <br/>
-                                    <Button 
-                                    className="col-12"
-                                    onClick={handleHeaderSubmit}
+                                        value={headerCaption}
+                                        onChange={(e) => setHeaderCaption(e.target.value)} />
+                                    <br />
+                                    <Button
+                                        className="col-12"
+                                        onClick={handleHeaderSubmit}
                                     >
                                         Update
                                     </Button>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                    <div className="adminCard col-6 col-lg-4">
+                        <Card>
+                            <Card.Body>
+                                <Card.Header>
+                                    <h4>Connections</h4>
+                                </Card.Header>
+                                <Card.Text>
+                                    <br />
+                                    <Link to={'/admin/connections'}>
+                                        <Button
+                                            className="col-12"
+                                        >
+                                            View Connections
+                                        </Button>
+                                    </Link>
                                 </Card.Text>
                             </Card.Body>
                         </Card>

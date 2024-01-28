@@ -5,6 +5,7 @@ import userRoutes from './routes/userRoutes'
 import liveRoutes from './routes/liveRoutes'
 import clipRoutes from './routes/clipRoutes'
 import headerRoutes from './routes/headerRoutes'
+import connectionRoutes from './routes/connectRoutes'
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use("/api/user", userRoutes)
 app.use("/api/live", liveRoutes)
 app.use('/api/clips', clipRoutes)
 app.use('/api/header', headerRoutes)
+app.use('/api/connection', connectionRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).end();

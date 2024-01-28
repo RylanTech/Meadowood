@@ -195,6 +195,7 @@ body {
 }
 .cara {
   max-width: 1400px;
+  z-index: 2;
 }
 .verse {
   position: relative;
@@ -375,7 +376,152 @@ body {
   color: white;
   font-size: 25px;
 }
+.message {
+  text-align: center;
+  color: rgb(255, 233, 233);
+  background-color: rgb(180, 0, 0);
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 8px;
+}
 
+/*
+Connection card page
+*/
+.connectionHeader {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 35px;
+  margin: 25px 0px 25px 0px
+}
+.notes {
+  height: 100px;
+}
+.connection {
+  margin: 5px;
+  padding: 5px;
+  background-color: #ebebeb;
+  border-radius: 7px;
+  font-size: 15px;
+}
+.connectionEntry {
+  margin: auto;
+}
+.connectionTitleRow {
+  margin: 10px;
+  font-weight: 700;
+}
+
+/*
+Young Adults Page
+*/
+.miniHeaderYA {
+  font-size: 25px;
+  position: relative; top: -150px;
+}
+.YAheading {
+  font-size: 60px;
+  font-family: 'Honk', system-ui;
+  position: relative; top: -330px;
+  z-index: 1;
+}
+.caraYA {
+  max-width: 1400px;
+  margin-top: 75px;
+}
+.YASchedule {
+  margin-top: 85px;
+}
+.YAScheduleHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 35px;
+}
+.YAScheduleContent {
+  font-size: 25px;
+}
+.YAInstaLink {
+  font-family: 'Honk', system-ui;
+  color: white;
+  font-size: 25px!important;
+  position: relative; top: -65px;
+}
+.YAInstaLink:hover {
+  color: orange;
+}
+.YAages {
+  font-family: 'Honk', system-ui;
+  color: white;
+  font-size: 25px!important;
+  position: relative; top: -20px;
+}
+/*
+Footer
+*/
+.footer {
+  background-color: rgb(234, 234, 234)!important;
+}
+.adminLoginLink {
+  color:rgb(234, 234, 234)!important;
+}
+.adminLoginLink:hover {
+  color:rgb(154, 154, 154)!important;
+}
+.locationIframe {
+  aspect-ratio: 5/6;
+  border: 3px solid black;
+  border-radius: 7px;
+  margin-bottom: 35px;
+}
+.footerLink {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: black;
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+.footerHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 35px;
+  background-color: #b4b4b4;
+  padding: 0px 15px;
+  border-radius: 7px;
+}
+.footerHeader2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 35px;
+  background-color: #b4b4b4;
+  padding: 0px 15px;
+  border-radius: 7px;
+  margin-top: 22px;
+}
+
+
+/*
+Admin Page
+*/
+.adminCard {
+  margin-top: 15px;
+}
+
+@media (min-width:576px) {
+  .YAheading {
+    font-size: 80px;
+    position: relative; top: -440px;
+  }
+  .YAInstaLink {
+    position: relative; top: -85px;
+  }
+
+}
+
+@media (max-width:768px) {
+  .locationIframe {
+    aspect-ratio: 3/2!important;
+    margin-top: 15px;
+  }
+
+}
 
 @media (min-width:768px) {
   /* .fpimgMain {
@@ -404,6 +550,17 @@ body {
   .helloPng {
     height: 1100px;
   }
+  .YAheading {
+    font-size: 80px;
+    position: relative; top: -530px;
+  }
+  .YAInstaLink {
+    font-size: 35px!important;
+  }
+  .YAages {
+    font-size: 35px!important;
+  }
+
 }
 @media (min-width: 992px) {
     .nav-img {
@@ -423,6 +580,19 @@ body {
     .miniHeader {
       font-size: 50px;
     }
+    .YAheading {
+      font-size: 100px;
+      position: relative; top: -700px;
+    }
+    .YAInstaLink {
+      position: relative; top: -100px;
+    }
+    .YAages {
+      position: relative; top: -25px;
+    }
+    .locationIframe {
+      aspect-ratio: 10/9;
+    }
 }
 @media (min-width: 1200px) {
     .slideImg {
@@ -431,4 +601,19 @@ body {
     .helloPng {
       height: 1200px;
     }
+    .locationIframe {
+      aspect-ratio: 8/5;
+    }
+}
+@media (min-width: 1400px) {
+  .YAheading {
+    font-size: 180px;
+    position: relative; top: -940px;
+  }
+  .YAInstaLink {
+    position: relative; top: -220px;
+  }
+  .YAages {
+    position: relative; top: -60px;
+  }
 }
