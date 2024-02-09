@@ -20,6 +20,7 @@ import EditClips from './Components/AdminPages/EditClips';
 import EditClip from './Components/AdminPages/EditClip';
 import Connect from './Components/Pages/Connect';
 import Connections from './Components/AdminPages/Connections';
+import Classes from './Components/Pages/Classes';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           {/* <Route path='/schedule' element={<Schedule/>}/> */}
           <Route path='/seniors' element={<Seniors/>}/>
+          <Route path='/classes' element={<Classes/>}/>
 
           <Route path='/login' element={<Loginpage/>}/>
           <Route path='/admin' element={<Admin/>}/>

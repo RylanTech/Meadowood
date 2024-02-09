@@ -21,11 +21,19 @@ function Home() {
                 <></>
               )}
               <Link className="nav-link hover-effect nvbr" to="/">Home</Link>
-              <Link className="nav-link hover-effect nvbr" to="/live">Watch Live</Link>
+              <NavDropdown className="nvbr" title="Watch" id="basic-nav-dropdown">
+                <Link to="/live" className="notUnderlined nvbr">
+                  <NavDropdown.Item>
+                    Live
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="clips" className="notUnderlined nvbr">
+                  <NavDropdown.Item>
+                    Clips
+                  </NavDropdown.Item>
+                </Link>
+              </NavDropdown>
               {/* <Link className="nav-link hover-effect" to="/ministries">Ministries</Link> */}
-              <Link className="nav-link hover-effect nvbr" to="/clips">Clips</Link>
-              <Link className="nav-link hover-effect nvbr" to="/events">Events</Link>
-              <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>
               <NavDropdown title="Ministries" id="basic-nav-dropdown" className="nvbr">
                 <Link to="/kids" className="notUnderlined">
                   <NavDropdown.Item href="#action/3.1">
@@ -62,14 +70,17 @@ function Home() {
                   Separated link
                 </NavDropdown.Item> */}
               </NavDropdown>
+              <Link className="nav-link hover-effect nvbr" to="/classes">Classes</Link>
               <NavDropdown className="nvbr" title="Donate" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="https://www.paypal.com/donate?token=dAPUbR6l-8mcvWRdRvxLGBSAqI6Cbs4eHsT276tLRzHpL-IdjwQrm2uXC07XZMmK97Y9SRiPCcQRuLyN" target="_top">
-                    Paypal
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Venmo
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <NavDropdown.Item href="https://www.paypal.com/donate?token=dAPUbR6l-8mcvWRdRvxLGBSAqI6Cbs4eHsT276tLRzHpL-IdjwQrm2uXC07XZMmK97Y9SRiPCcQRuLyN" target="_top">
+                  Paypal
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Venmo
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Link className="nav-link hover-effect nvbr" to="/events">Events</Link>
+              <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
