@@ -504,6 +504,10 @@ Classes Page
   text-align: center;
   font-size: 18px;
 }
+.classHeadingTwo {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 35px;
+}
 .classList {
   margin-top: 35px;
 }
@@ -512,6 +516,13 @@ Classes Page
 }
 .classListItem:hover {
   background-color: #b4b4b4;
+  cursor: pointer;
+}
+.listItemSelected {
+  background-color: #b4b4b4;
+}
+.classContent {
+  margin-top: 35px;
 }
 
 
