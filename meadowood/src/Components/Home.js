@@ -23,12 +23,12 @@ function Home() {
               <Link className="nav-link hover-effect nvbr" to="/">Home</Link>
               <NavDropdown className="nvbr" title="Watch" id="basic-nav-dropdown">
                 <Link to="/live" className="notUnderlined nvbr">
-                  <NavDropdown.Item>
+                  <NavDropdown.Item href="/live">
                     Live
                   </NavDropdown.Item>
                 </Link>
                 <Link to="clips" className="notUnderlined nvbr">
-                  <NavDropdown.Item>
+                  <NavDropdown.Item href="/clips">
                     Clips
                   </NavDropdown.Item>
                 </Link>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Container, DropdownButton, ListGroup, Row } from "react-bootstrap"
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
+import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 function Classes() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -67,9 +69,10 @@ function Classes() {
         },
         {
             title: "Youth",
-            description: "",
+            description: "New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that safe enough for students to be vulnerable and grow closer to God and each other.",
             photo: ""
         },
+        // I like that guys arm that's robotic, don't write that down.
         {
             title: "Young Adults",
             description: "",
@@ -95,7 +98,7 @@ function Classes() {
                         <ListGroup className="classList">
                             <ListGroup.Item id="list0" className="classListItem classHeading listItemSelected"
                                 onClick={() => changeSelected(0)}>
-                                Nursery
+                                3 and under
                             </ListGroup.Item>
                             <ListGroup.Item id="list1" className="classListItem classHeading"
                                 onClick={() => changeSelected(1)}>
@@ -107,15 +110,15 @@ function Classes() {
                             </ListGroup.Item>
                             <ListGroup.Item id="list3" className="classListItem classHeading"
                                 onClick={() => changeSelected(3)}>
-                                Youth
+                                7th grade or 13 - 18 & Graduated
                             </ListGroup.Item>
                             <ListGroup.Item id="list4" className="classListItem classHeading"
                                 onClick={() => changeSelected(4)}>
-                                Young Adults
+                                18 & Graduated - 25
                             </ListGroup.Item>
                             <ListGroup.Item id="list5" className="classListItem classHeading"
                                 onClick={() => changeSelected(5)}>
-                                Young Adults #2
+                                25 - 40
                             </ListGroup.Item>
                             <ListGroup.Item id="list6" className="classListItem classHeading"
                                 onClick={() => changeSelected(6)}>
@@ -141,26 +144,36 @@ function Classes() {
                             Toddler
                         </DropdownItem>
                         <DropdownItem className="classHeading"
-                        onClick={() => changeSelected(2)}>
+                            onClick={() => changeSelected(2)}>
                             Children
                         </DropdownItem>
                         <DropdownItem className="classHeading"
-                        onClick={() => changeSelected(3)}>
+                            onClick={() => changeSelected(3)}>
                             Youth
                         </DropdownItem>
                         <DropdownItem className="classHeading"
-                        onClick={() => changeSelected(4)}>
+                            onClick={() => changeSelected(4)}>
                             Young Adults
                         </DropdownItem>
                         <DropdownItem className="classHeading"
-                        onClick={() => changeSelected(5)}>
+                            onClick={() => changeSelected(5)}>
                             Young Adults #2
                         </DropdownItem>
                         <DropdownItem className="classHeading"
-                        onClick={() => changeSelected(6)}>
+                            onClick={() => changeSelected(6)}>
                             Adults
                         </DropdownItem>
                     </DropdownButton>
+                </>
+            )
+        }
+    }
+
+    function ifLink(title) {
+        if (title === "Youth") {
+            return (
+                <>
+                    <Link to="/youth" className="nfsmLink">Newflame Student Ministries</Link>
                 </>
             )
         }
@@ -175,9 +188,15 @@ function Classes() {
                         {content ? (
                             <>
                                 <div className="classContent">
-                                    <div className="classHeadingTwo">
-                                        {content.title}
-                                    </div>
+                                    <Row>
+                                        <div className="classHeadingTwo">
+                                            {content.title}
+                                        </div>
+                                        <div>
+                                            {content.description}
+                                        </div>
+                                        {ifLink(content.title)}
+                                    </Row>
                                 </div>
                             </>
                         ) : (
@@ -186,6 +205,8 @@ function Classes() {
                     </div>
                 </Row>
             </Container>
+            <br/><br/><br/><br/>
+            <Footer/>
         </>
     )
 }

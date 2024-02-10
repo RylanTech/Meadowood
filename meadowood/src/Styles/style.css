@@ -524,7 +524,11 @@ Classes Page
 .classContent {
   margin-top: 35px;
 }
-
+.nfsmLink {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  color: black;
+}
 
 /*
 Admin Page

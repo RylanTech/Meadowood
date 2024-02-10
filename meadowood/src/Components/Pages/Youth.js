@@ -224,12 +224,15 @@ function Youth() {
                                 <div className="newFlameVerse">
                                     Don’t let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity.
                                 </div>
-                            </center>
-                            <cetner>
+                        
                                 <div className="newFlameVerse2">
                                     <center>1 Timothy 4:12 NIV</center>
                                 </div>
-                            </cetner>
+
+                                <div className="newFlameVerse">
+                                New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that safe enough for students to be vulnerable and grow closer to God and each other.
+                                </div>
+                            </center>
                         </div>
                     </Row>
                     <Row>

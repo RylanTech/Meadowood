@@ -18,22 +18,28 @@ function Footer() {
                             <div className="footerHeader">
                                 Ministries
                             </div>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/kids">
                                 Kids
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/youth">
                                 Youth
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/youngadults">
                                 Young Adults
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/adults">
                                 Adults
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/seniors">
                                 Seniors
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/foodpantry">
                                 Food Pantry
                             </Link>
                         </div>
@@ -41,10 +47,12 @@ function Footer() {
                             <div className="footerHeader">
                                 Watch
                             </div>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/live">
                                 Live
                             </Link>
-                            <Link className="footerLink">
+                            <Link className="footerLink"
+                            to="/clips">
                                 Clips
                             </Link>
                             <div className="footerHeader2">

@@ -33,7 +33,7 @@ function Homepage() {
                         <img
                             className="homepageHeader"
                             src={headerLink}
-                            alt="Images/bg2.jpg"
+                            alt="https://i.postimg.cc/Ss3LxFVz/bg2.jpg"
                         />
                         <div className="homeHeader">
                             {headerCaption}
