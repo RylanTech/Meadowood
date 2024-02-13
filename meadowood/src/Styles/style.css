@@ -499,7 +499,18 @@ Footer
 /*
 Classes Page
 */
-.classHeading {
+
+.classHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: black;
+}
+.classContent {
+  margin: auto;
+  font-size: 16px;
+}
+
+/* .classHeading {
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
   font-size: 18px;
@@ -528,7 +539,7 @@ Classes Page
   font-family: 'Bebas Neue', sans-serif;
   font-size: 25px;
   color: black;
-}
+} */
 
 /*
 Admin Page
@@ -595,6 +606,10 @@ Admin Page
   }
   .classHeading {
     font-size: 25px;
+  }
+  .classContent {
+    margin: auto;
+    font-size: 18px;
   }
 
 }
