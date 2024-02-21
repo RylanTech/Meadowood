@@ -21,6 +21,7 @@ import EditClip from './Components/AdminPages/EditClip';
 import Connect from './Components/Pages/Connect';
 import Connections from './Components/AdminPages/Connections';
 import Classes from './Components/Pages/Classes';
+import Ultimate from './Components/Pages/Ultimate';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='/kids' element={<Kids/>} />
           <Route path='/youth' element={<Youth/>} />
           <Route path='/youngadults' element={<Youngadults/>} />
+          <Route path='/ultimate' element={<Ultimate/>}/>
           <Route path='/foodpantry' element={<Foodpantry/>} />
           {/* <Route path='/donate' element={<Donate/>} /> */}
           <Route path='/connect' element={<Connect/>}/>

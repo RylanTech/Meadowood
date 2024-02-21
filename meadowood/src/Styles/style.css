@@ -510,6 +510,21 @@ Classes Page
   font-size: 16px;
 }
 
+/*
+ Food 
+*/
+.feedMoreScheduleContent {
+  font-size: 25px;
+
+}
+.feedMoreScheduleHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 35px;
+}
+.feedMoreSchedule {
+  margin-top: 50px;
+}
+
 /* .classHeading {
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
@@ -644,6 +659,9 @@ Admin Page
     .locationIframe {
       aspect-ratio: 10/9;
     }
+    .feedMoreSchedule {
+      margin-top: 100px;
+    }
 }
 @media (min-width: 1200px) {
     .slideImg {
@@ -654,6 +672,9 @@ Admin Page
     }
     .locationIframe {
       aspect-ratio: 8/5;
+    }
+    .feedMoreSchedule {
+      margin-top: 130px;
     }
 }
 @media (min-width: 1400px) {
@@ -666,5 +687,8 @@ Admin Page
   }
   .YAages {
     position: relative; top: -60px;
+  }
+  .feedMoreSchedule {
+    margin-top: 150px;
   }
 }

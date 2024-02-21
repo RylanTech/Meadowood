@@ -47,20 +47,20 @@ function Classes() {
                 <Row>
                     <Link className="classHeader col-5 col-md-4"
                     to='/kids'>
-                        Children
+                        K - 7th Grade
                     </Link>
                     <div className="classContent col-3 col-md-4">
-                        7pm-8pm
+                        
                     </div>
                     <div className="classContent col-4">
-                        10am-11am
+                        11am-12:30pm
                     </div>
                 </Row>
                 <hr/>
                 <Row>
                     <Link className="classHeader col-5 col-md-4"
                     to='/youth'>
-                        6th grade - 18 & Graduated
+                        7th grade - 18 & Graduated
                     </Link>
                     <div className="classContent col-3 col-md-4">
                         6pm-8pm
@@ -76,7 +76,7 @@ function Classes() {
                         18 & Graduated - 25
                     </Link>
                     <div className="classContent col-3 col-md-4">
-                        7pm-8pm
+                        6pm-8pm
                     </div>
                     <div className="classContent col-4">
                         11am-12:30pm
@@ -85,7 +85,7 @@ function Classes() {
                 <hr/>
                 <Row>
                     <div className="classHeader col-5 col-md-4">
-                        Young Adults #2
+                        Ultimate Adults
                     </div>
                     <div className="classContent col-3 col-md-4">
                         7pm-8pm
@@ -100,10 +100,10 @@ function Classes() {
                         Adults
                     </div>
                     <div className="classContent col-3 col-md-4">
-
+                        7pm-8pm
                     </div>
                     <div className="classContent col-4">
-                        
+                        10am-11am
                     </div>
                 </Row>
             </Container>

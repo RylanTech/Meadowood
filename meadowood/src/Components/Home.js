@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { Container, Dropdown, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { Link, Outlet } from "react-router-dom"
 import { UserContext } from "../Contexts/UserContext"
 
@@ -42,30 +42,31 @@ function Home() {
                 </Link>
                 <Link to="/youth" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.2">
-                    Youth
+                    Newflame Students
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/youngadults" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.3">
-                    Young Adults
+                    Christ 4 Life
                   </NavDropdown.Item>
                 </Link>
-                <Link to="/youngadults" className="notUnderlined nvbr">
+                <Link to="/ultimate" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.4">
-                    Adults
+                    Ultimate
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/seniors" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.5">
-                    Seniors
+                    Young at Heart
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/foodpantry" className="notUnderlined nvbr">
+                <Dropdown.Divider />
                   <NavDropdown.Item href="#action/3.6">
                     Food Pantry
                   </NavDropdown.Item>
                 </Link>
-                {/* <NavDropdown.Divider />
+                {/* <NvDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
                 </NavDropdown.Item> */}
