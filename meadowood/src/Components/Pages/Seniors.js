@@ -3,73 +3,61 @@ import Footer from "../Footer"
 
 function Seniors() {
     return (
-        <div>
-            <center>
-            <div className="cara">
-                <Carousel fade>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp1.png"
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <p className="slideLabel">First slide label</p>
-                            <p className="slideText">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp2.png"
-                            alt="Second slide"
-                        />
-
-                        <Carousel.Caption>
-                            <p className="slideLabel">Second slide label</p>
-                            <p className="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100 slideImg"
-                            src="Images/sp3.png"
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <p className="slideLabel">Third slide label</p>
-                            <p className="slideText">
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </div>
-            </center>
+        <>
             <Container>
                 <Row>
-                    <center>
-                        <div className="verse">
-                        <img src="Images/bg1.svg"/>
-                        <div className="miniHeader col-10">
-                            "So we do not lose heart. Though our outer self is wasting away, our inner self is being renewed day by day."
-                            <br />
-                            -2 Corinthians 4:16 ESV
-                        </div>
-                        </div>
-                    </center>
+                    <Carousel fade>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100 forceCaraAspect"
+                                src="https://plus.unsplash.com/premium_photo-1681825356366-ae4e68c08a2a?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="First slide"
+                            />
+
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100 forceCaraAspect"
+                                src="https://images.unsplash.com/photo-1524492514790-8310bf594ea4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </Row>
+                <Row>
+                    <div className="kidsVerse">
+                        "Therefore we do not lose heart. Though outwardly we are wasting away, yet inwardly we are being renewed day by day."
+                        <br />
+                        -2 Corinthians 4:16 (NIV)
+                    </div>
+                </Row>
+                <Row>
+                    <div className="youthSchedule">
+                        <Row>
+                            <div className="col-12 col-md-6">
+                                <div className="YAScheduleHeader">
+                                    SUNDAYS @ CHURCH
+                                </div>
+                                <div className="YAScheduleContent">
+                                    10am - 11am Sunday morning class -  Fellowship hall
+                                    <br /><br />
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-6">
+                                <div className="YAScheduleHeader">
+                                    WEDNESDAYS @ CHURCH
+                                </div>
+                                <div className="YAScheduleContent">
+                                    7pm - 8pm Wednesday night class - Fellowship hall
+                                    <br /><br />
+                                </div>
+                            </div>
+                        </Row>
+                    </div>
                 </Row>
             </Container>
-            <div className="miniRow3">
-                <Container>
-                    <div className="r3Text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Tortor condimentum lacinia quis vel eros donec. Nunc sed velit dignissim sodales ut eu sem integer. Lorem ipsum dolor sit amet consectetur. Tincidunt id aliquet risus feugiat in ante metus. Risus quis varius quam quisque id diam vel quam elementum. Dui vivamus arcu felis bibendum ut tristique et. Sagittis aliquam malesuada bibendum arcu vitae elementum. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. In hendrerit gravida rutrum quisque. Dui vivamus arcu felis bibendum ut tristique. Leo urna molestie at elementum eu facilisis.
-                    </div>
-                </Container>
-            </div>
-            <Footer/>
-        </div>
+            <Footer />
+        </>
     )
 }
 export default Seniors

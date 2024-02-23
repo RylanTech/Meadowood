@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap"
+import Footer from '../Footer'
 
 function Foodpantry() {
     return (
@@ -25,6 +26,7 @@ function Foodpantry() {
                     </div>
                 </Row>
             </Container>
+            <Footer/>
         </>
     )
 }

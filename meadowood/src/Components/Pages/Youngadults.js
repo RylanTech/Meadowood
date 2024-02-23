@@ -9,7 +9,7 @@ function Youngadults() {
                     <Carousel fade>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block w-100 forceCaraAspect"
                                 src="https://i.postimg.cc/CxXwWTs5/PXL-20231202-232015152.jpg"
                                 alt="First slide"
                             />
@@ -17,7 +17,7 @@ function Youngadults() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block w-100 forceCaraAspect"
                                 src="https://i.postimg.cc/NFst1gBJ/PXL-20231101-235321562.jpg"
                                 alt="Second slide"
                             />
@@ -45,13 +45,25 @@ function Youngadults() {
                             <Row>
                                 <div className="col-1" />
                                 <div className="miniHeaderYA col-10">
-                                    "Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect"
+                                    "Do not be conformed to this world, but be transformed by the renewal of your mind, 
+                                    that by testing you may discern what is the will of God, what is good and acceptable 
+                                    and perfect"
                                     <br />
                                     -Romans 12:2 ESV
                                 </div>
                             </Row>
                         </div>
                     </center>
+                </Row>
+                <Row>
+                    <div className="YAdesc">
+                    At Christ for Life Ministries, our ultimate goal is to help you establish a deep and meaningful 
+                    relationship with God. We understand that this journey can be challenging, but we strive to provide 
+                    you with the support and guidance you need to grow closer to Him. Our ministry is centered on 
+                    discipleship and empowering our members to do the work of the Lord. Our hope is that through our 
+                    outreach efforts, you will be transformed into the image of our Lord and Savior, Jesus Christ. We 
+                    understand the importance of this journey and want to walk alongside you every step of the way.
+                    </div>
                 </Row>
             </Container>
             <div className="miniRow3">

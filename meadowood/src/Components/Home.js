@@ -55,7 +55,7 @@ function Home() {
                     Ultimate
                   </NavDropdown.Item>
                 </Link>
-                <Link to="/seniors" className="notUnderlined nvbr">
+                <Link to="/youngatheart" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.5">
                     Young at Heart
                   </NavDropdown.Item>

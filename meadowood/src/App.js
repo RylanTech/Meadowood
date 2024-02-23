@@ -22,6 +22,8 @@ import Connect from './Components/Pages/Connect';
 import Connections from './Components/AdminPages/Connections';
 import Classes from './Components/Pages/Classes';
 import Ultimate from './Components/Pages/Ultimate';
+import AdminStaff from './Components/AdminPages/Staff';
+import CreateStaff from './Components/AdminPages/CreateStaff';
 
 function App() {
   return (
@@ -42,7 +44,7 @@ function App() {
           <Route path='/events' element={<Events/>} />
           <Route path='/about' element={<About/>}/>
           {/* <Route path='/schedule' element={<Schedule/>}/> */}
-          <Route path='/seniors' element={<Seniors/>}/>
+          <Route path='/youngatheart' element={<Seniors/>}/>
           <Route path='/classes' element={<Classes/>}/>
 
           <Route path='/login' element={<Loginpage/>}/>
@@ -54,6 +56,9 @@ function App() {
           <Route path='/admin/clips/' element={<EditClips/>}/>
 
           <Route path='/admin/connections' element={<Connections/>}/>
+
+          <Route path='/admin/staff' element={<AdminStaff/>}/>
+          <Route path='/admin/staff/create' element={<CreateStaff/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -8,11 +8,13 @@ import { LiveProvider } from './Contexts/LiveContext';
 import { ClipProvider } from './Contexts/ClipContext';
 import { HeaderProvider } from './Contexts/HeaderContext';
 import { ConnectionProvider } from './Contexts/ConnectionContext';
+import { StaffProvider } from './Contexts/StaffContext';
 // import { EventProvider } from './Contexts/EventContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <StaffProvider>
     <ConnectionProvider>
       <HeaderProvider>
         <ClipProvider>
@@ -24,5 +26,6 @@ root.render(
         </ClipProvider>
       </HeaderProvider>
     </ConnectionProvider>
+    </StaffProvider>
   </React.StrictMode>
 );

@@ -454,6 +454,10 @@ Young Adults Page
   font-size: 25px!important;
   position: relative; top: -20px;
 }
+.YAdesc {
+  font-size: 20px;
+}
+
 /*
 Footer
 */
@@ -525,6 +529,52 @@ Classes Page
   margin-top: 50px;
 }
 
+/*
+  Kids page
+*/
+
+.kidsVerse {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 55px;
+}
+
+/*
+About page
+*/
+.aboutPeopleHeading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  background-color: #ebebeb;
+  margin: 15px 0px 15px 0px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+.aboutProfile {
+  background-color: #ebebeb;
+  padding: 15px;
+  margin: 15px 0px 15px 0px;
+}
+.aboutPhoto {
+  padding: 15px;
+  border-radius: 60px;
+  aspect-ratio: 3/2;
+}
+.aboutName {
+  text-align: center;
+  font-size: 25px;
+}
+.aboutTitle {
+  text-align: center;
+  font-size: 20px;
+}
+.aboutDesc {
+  background-color: white;
+  padding: 15px;
+  border-radius: 20px;
+}
+
 /* .classHeading {
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
@@ -561,6 +611,13 @@ Admin Page
 */
 .adminCard {
   margin-top: 15px;
+}
+
+/*
+Global
+*/
+.forceCaraAspect {
+  aspect-ratio: 18/9;
 }
 
 @media (min-width:576px) {
@@ -664,6 +721,10 @@ Admin Page
     }
 }
 @media (min-width: 1200px) {
+  .YAheading {
+    font-size: 140px;
+    position: relative; top: -820px;
+  }
     .slideImg {
       height: 1200px;
     }
@@ -676,11 +737,12 @@ Admin Page
     .feedMoreSchedule {
       margin-top: 130px;
     }
+    
 }
 @media (min-width: 1400px) {
   .YAheading {
     font-size: 180px;
-    position: relative; top: -940px;
+    position: relative; top: -960px;
   }
   .YAInstaLink {
     position: relative; top: -220px;
