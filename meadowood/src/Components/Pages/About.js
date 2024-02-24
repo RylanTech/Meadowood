@@ -2,6 +2,7 @@ import { Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
 import { useContext, useEffect, useState } from "react"
 import {StaffContext} from '../../Contexts/StaffContext'
+import { Helmet } from "react-helmet"
 
 function About() {
     const [staff, setStaff] = useState()
@@ -84,6 +85,17 @@ function About() {
 
     return (
         <>
+             <Helmet>
+                <meta name="title" content="MW COG - About" />
+                <meta name="description" content="Meadowood Church of God - Better at the Meadow" />
+                <meta name="keywords" content="Church of God, Church, God, Jesus, Lord, Community, 
+                Church community, friendly church, Meadowood, Richmond Virginia Church, 
+                Richmond VA, Meadowood Church of God Richmond VA, About us, find out more" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+                <link rel='canonical' href='/' />
+            </Helmet>
             <Container>
                 <Row>
                     <div

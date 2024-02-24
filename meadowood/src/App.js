@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './Components/Pages/About';
-import Donate from './Components/Pages/Donate';
 import Events from './Components/Pages/Events';
 import Foodpantry from './Components/Pages/Foodpantry';
 import Home from './Components/Home';
@@ -25,6 +24,7 @@ import Ultimate from './Components/Pages/Ultimate';
 import AdminStaff from './Components/AdminPages/Staff';
 import CreateStaff from './Components/AdminPages/CreateStaff';
 import EditStaff from './Components/AdminPages/EditStaff';
+import ListConnection from './Components/AdminPages/ListConnections';
 
 function App() {
   return (
@@ -57,6 +57,7 @@ function App() {
           <Route path='/admin/clips/' element={<EditClips/>}/>
 
           <Route path='/admin/connections' element={<Connections/>}/>
+          <Route path='/admin/connection/:id' element={<ListConnection/>}/>
 
           <Route path='/admin/staff' element={<AdminStaff/>}/>
           <Route path='/admin/staff/create' element={<CreateStaff/>}/>

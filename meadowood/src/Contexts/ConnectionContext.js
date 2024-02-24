@@ -22,7 +22,7 @@ export const ConnectionProvider = (props) => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('meadowoodAdminToken')}`
         };
-        return axios.get(baseUrl + `api/clips/oneconnection/${id}`, {
+        return axios.get(baseUrl + `api/connection/oneconnection/${id}`, {
             headers: myHeaders
         })
             .then(response => {

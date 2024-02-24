@@ -51,15 +51,20 @@ export const editClip: RequestHandler = async (req, res, next) => {
         let id = req.params.id;
         let existing = await clips.findByPk(id)
         let updatedClip: clips = req.body
-        if (existing) {
-            if (updatedClip) {
-                clips.update(updatedClip, { where: { clipId: id } })
-                res.status(200).send()
+        let usr = await verifyUser(req)
+        if (usr) {
+            if (existing) {
+                if (updatedClip) {
+                    clips.update(updatedClip, { where: { clipId: id } })
+                    res.status(200).send()
+                } else {
+                    res.status(400).send()
+                }
             } else {
-                res.status(400).send()
+                res.status(404).send()
             }
         } else {
-            res.status(404).send()
+            res.status(401).send()
         }
         res.status(201).send()
     } catch {

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Button, Container, Row } from "react-bootstrap"
 import { ConnectionContext } from "../../Contexts/ConnectionContext"
+import { Link } from "react-router-dom";
 
 function Connections() {
     const [connections, setConnections] = useState()
@@ -31,10 +32,13 @@ function Connections() {
                                 {connection.connectEmail}
                             </div>
                             <div className="connectionEntry col-2">
+                            <Link to={`/admin/connection/${connection.connectId}`}>
                                 <Button>
                                     View
                                 </Button>
+                            </Link>
                             </div>
+                            
                         </Row>
                     </div>
                 )

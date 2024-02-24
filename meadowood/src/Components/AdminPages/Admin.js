@@ -52,135 +52,141 @@ function Admin() {
             <Container>
                 <br />
                 <Row>
-                    {status ? (
-                        <>
-                            <div className="adminCard col-6 col-lg-4">
+                    <div className="col-6 col-md-6">
+                        <Row>
+                            {status ? (
+                                <>
+                                    <div className="adminCard col-12">
+                                        <Card>
+                                            <Card.Body>
+                                                <Card.Header>
+                                                    <h4>Live Status: <div className="liveStatus">{status.liveStatus}</div></h4>
+                                                </Card.Header>
+                                                <Card.Text>
+                                                    Live link: <a target="_blank" href={status.liveLink}>{status.liveLink}</a>
+                                                    <br />
+                                                    Title: {status.liveTitle}
+                                                </Card.Text>
+                                                <Link to="/admin/live/edit">
+                                                    <Button className="col-12">
+                                                        Edit
+                                                    </Button>
+                                                </Link>
+                                            </Card.Body>
+                                        </Card>
+                                    </div>
+                                </>
+                            ) : (
+                                <div className="adminCard col-12">
+                                    <Card>
+                                        <Card.Body>
+                                            <Card.Header>
+                                                Live Status Error
+                                            </Card.Header>
+
+                                        </Card.Body>
+                                    </Card>
+                                </div>
+                            )}
+                            <div className="adminCard col-12">
                                 <Card>
                                     <Card.Body>
                                         <Card.Header>
-                                            <h4>Live Status: <div className="liveStatus">{status.liveStatus}</div></h4>
+                                            <h4>Homepage Header: 21x9</h4>
                                         </Card.Header>
                                         <Card.Text>
-                                            Live link: <a target="_blank" href={status.liveLink}>{status.liveLink}</a>
                                             <br />
-                                            Title: {status.liveTitle}
-                                        </Card.Text>
-                                        <Link to="/admin/live/edit">
-                                            <Button className="col-12">
-                                                Edit
+                                            <img
+                                                className="homepageHeader col-12"
+                                                src={headerLink}
+                                            />
+                                            <Form.Label>Image Link</Form.Label>
+                                            <Form.Control
+                                                value={headerLink}
+                                                onChange={(e) => setHeaderLink(e.target.value)} />
+                                            <br />
+                                            <Form.Label>Image Caption</Form.Label>
+                                            <Form.Control
+                                                value={headerCaption}
+                                                onChange={(e) => setHeaderCaption(e.target.value)} />
+                                            <br />
+                                            <Button
+                                                className="col-12"
+                                                onClick={handleHeaderSubmit}
+                                            >
+                                                Update
                                             </Button>
-                                        </Link>
+                                        </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
-                        </>
-                    ) : (
-                        <div className="adminCard col-6 col-lg-4">
+                        </Row>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <div className="adminCard col-12">
                             <Card>
                                 <Card.Body>
                                     <Card.Header>
-                                        Live Status Error
+                                        <h4>Clips</h4>
                                     </Card.Header>
-
+                                    <Card.Text>
+                                        <br />
+                                        <Link to='/admin/clips/create/'>
+                                            <Button className="col-12">
+                                                Create
+                                            </Button>
+                                        </Link>
+                                        <br /><br />
+                                        <Link to='/admin/clips/'>
+                                            <Button
+                                                className="col-12"
+                                                variant="warning"
+                                            >
+                                                Edit/Delete
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </div>
-                    )}
-                    <div className="adminCard col-6 col-lg-4">
-                        <Card>
-                            <Card.Body>
-                                <Card.Header>
-                                    <h4>Clips</h4>
-                                </Card.Header>
-                                <Card.Text>
-                                    <br />
-                                    <Link to='/admin/clips/create/'>
-                                        <Button className="col-12">
-                                            Create
-                                        </Button>
-                                    </Link>
-                                    <br /><br />
-                                    <Link to='/admin/clips/'>
-                                        <Button
-                                            className="col-12"
-                                            variant="warning"
-                                        >
-                                            Edit/Delete
-                                        </Button>
-                                    </Link>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div className="adminCard col-6 col-lg-4">
-                        <Card>
-                            <Card.Body>
-                                <Card.Header>
-                                    <h4>Homepage Header: 21x9</h4>
-                                </Card.Header>
-                                <Card.Text>
-                                    <br />
-                                    <img
-                                        className="homepageHeader col-12"
-                                        src={headerLink}
-                                    />
-                                    <Form.Label>Image Link</Form.Label>
-                                    <Form.Control
-                                        value={headerLink}
-                                        onChange={(e) => setHeaderLink(e.target.value)} />
-                                    <br />
-                                    <Form.Label>Image Caption</Form.Label>
-                                    <Form.Control
-                                        value={headerCaption}
-                                        onChange={(e) => setHeaderCaption(e.target.value)} />
-                                    <br />
-                                    <Button
-                                        className="col-12"
-                                        onClick={handleHeaderSubmit}
-                                    >
-                                        Update
-                                    </Button>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div className="adminCard col-6 col-lg-4">
-                        <Card>
-                            <Card.Body>
-                                <Card.Header>
-                                    <h4>Connections</h4>
-                                </Card.Header>
-                                <Card.Text>
-                                    <br />
-                                    <Link to={'/admin/connections'}>
-                                        <Button
-                                            className="col-12"
-                                        >
-                                            View Connections
-                                        </Button>
-                                    </Link>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div className="adminCard col-6 col-lg-4">
-                        <Card>
-                            <Card.Body>
-                                <Card.Header>
-                                    <h4>Staff</h4>
-                                </Card.Header>
-                                <Card.Text>
-                                    <br />
-                                    <Link to={'/admin/staff'}>
-                                        <Button
-                                            className="col-12"
-                                        >
-                                            View Staff
-                                        </Button>
-                                    </Link>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                        <div className="adminCard col-12">
+                            <Card>
+                                <Card.Body>
+                                    <Card.Header>
+                                        <h4>Connections</h4>
+                                    </Card.Header>
+                                    <Card.Text>
+                                        <br />
+                                        <Link to={'/admin/connections'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                View Connections
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="adminCard col-12">
+                            <Card>
+                                <Card.Body>
+                                    <Card.Header>
+                                        <h4>Staff</h4>
+                                    </Card.Header>
+                                    <Card.Text>
+                                        <br />
+                                        <Link to={'/admin/staff'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                View Staff
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
                     </div>
                 </Row>
             </Container>

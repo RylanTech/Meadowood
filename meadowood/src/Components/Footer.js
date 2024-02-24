@@ -31,8 +31,8 @@ function Footer() {
                                 Young Adults
                             </Link>
                             <Link className="footerLink"
-                            to="/adults">
-                                Adults
+                            to="/ultimate">
+                                Ultimate Adults
                             </Link>
                             <Link className="footerLink"
                             to="/youngatheart">

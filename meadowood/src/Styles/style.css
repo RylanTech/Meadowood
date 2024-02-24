@@ -420,9 +420,9 @@ Young Adults Page
   position: relative; top: -150px;
 }
 .YAheading {
-  font-size: 60px;
+  font-size: 50px;
   font-family: 'Honk', system-ui;
-  position: relative; top: -330px;
+  position: relative; top: -250px;
   z-index: 1;
 }
 .caraYA {
@@ -620,10 +620,26 @@ Global
   aspect-ratio: 18/9;
 }
 
+@media (min-width:360px) {
+  .YAheading {
+    font-size: 60px;
+    position: relative; top: -280px;
+  }
+
+}
+
+@media (min-width:500px) {
+  .YAheading {
+    font-size: 60px;
+    position: relative; top: -360px;
+  }
+
+}
+
 @media (min-width:576px) {
   .YAheading {
     font-size: 80px;
-    position: relative; top: -440px;
+    position: relative; top: -400px;
   }
   .YAInstaLink {
     position: relative; top: -85px;
@@ -668,7 +684,7 @@ Global
   }
   .YAheading {
     font-size: 80px;
-    position: relative; top: -530px;
+    position: relative; top: -480px;
   }
   .YAInstaLink {
     font-size: 35px!important;
@@ -705,7 +721,7 @@ Global
     }
     .YAheading {
       font-size: 100px;
-      position: relative; top: -700px;
+      position: relative; top: -650px;
     }
     .YAInstaLink {
       position: relative; top: -100px;
@@ -723,7 +739,7 @@ Global
 @media (min-width: 1200px) {
   .YAheading {
     font-size: 140px;
-    position: relative; top: -820px;
+    position: relative; top: -760px;
   }
     .slideImg {
       height: 1200px;
@@ -742,7 +758,7 @@ Global
 @media (min-width: 1400px) {
   .YAheading {
     font-size: 180px;
-    position: relative; top: -960px;
+    position: relative; top: -880px;
   }
   .YAInstaLink {
     position: relative; top: -220px;

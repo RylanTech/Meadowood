@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import { LiveContext } from "../../Contexts/LiveContext"
 import Footer from "../Footer"
+import { Helmet } from "react-helmet"
 
 function Live() {
     const [status, setStatus] = useState({
@@ -86,6 +87,19 @@ function Live() {
 
     return (
         <>
+            <Helmet>
+                <meta name="title" content="MW COG - Live page" />
+                <meta name="description" content="Meadowood Church of God - Better at 
+                the Meadow" />
+                <meta name="keywords" content="Church of God, Church, God, Jesus, Lord, 
+                Community, Church community, friendly church, Meadowood, Richmond 
+                Virginia Church, Richmond VA, Meadowood Church of God Richmond VA,
+                Live, Meadowood Church of God LIVE, watch live" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+                <link rel='canonical' href='/' />
+            </Helmet>
             <Container>
                 <Row>
                     {isLive()}

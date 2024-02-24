@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Carousel, Container, Row } from "react-bootstrap"
 import Footer from "../Footer";
+import { Helmet } from "react-helmet";
 
 function Youth() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -192,6 +193,19 @@ function Youth() {
 
     return (
         <>
+            <Helmet>
+                <meta name="title" content="MW COG - Youth page" />
+                <meta name="description" content="Meadowood Church of God - Better at the 
+                Meadow" />
+                <meta name="keywords" content="Church of God, Church, God, Jesus, Lord, 
+                Community, Church community, friendly church, Meadowood, Richmond 
+                Virginia Church, Richmond VA, Meadowood Church of God Richmond VA,
+                Youth class, Newflame student ministries, Newflame Students, Newflame youth" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+                <link rel='canonical' href='/' />
+            </Helmet>
             <div className="newFlamePage">
                 <Container>
                     <Row>
@@ -224,13 +238,13 @@ function Youth() {
                                 <div className="newFlameVerse">
                                     Don’t let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity.
                                 </div>
-                        
+
                                 <div className="newFlameVerse2">
                                     <center>1 Timothy 4:12 NIV</center>
                                 </div>
 
                                 <div className="newFlameVerse">
-                                New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that safe enough for students to be vulnerable and grow closer to God and each other.
+                                    New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that safe enough for students to be vulnerable and grow closer to God and each other.
                                 </div>
                             </center>
                         </div>
@@ -265,7 +279,7 @@ function Youth() {
                     </Row>
                 </Container>
             </div >
-            <Footer/>
+            <Footer />
         </>
     )
 }

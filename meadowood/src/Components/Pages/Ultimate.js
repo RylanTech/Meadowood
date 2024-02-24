@@ -1,9 +1,23 @@
 import { Carousel, Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
+import { Helmet } from "react-helmet"
 
 function Ultimate() {
     return (
         <>
+            <Helmet>
+                <meta name="title" content="MW COG - Ultimate Adults page" />
+                <meta name="description" content="Meadowood Church of God - 
+                Better at the Meadow" />
+                <meta name="keywords" content="Church of God, Church, God, Jesus, 
+                Lord, Community, Church community, friendly church, Meadowood, 
+                Richmond Virginia Church, Richmond VA, Meadowood Church of God 
+                Richmond VA, Ultimate class, Ultimate adults, Ultimate" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+                <link rel='canonical' href='/' />
+            </Helmet>
             <Container>
                 <Row>
                     <Carousel fade>
