@@ -92,7 +92,7 @@ function Classes() {
                         7pm-8pm
                     </div>
                     <div className="classContent col-4">
-
+                        10am-11am
                     </div>
                 </Row>
                 <hr />

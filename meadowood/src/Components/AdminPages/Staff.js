@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react"
 import { StaffContext } from "../../Contexts/StaffContext"
 import { Button, Container, Row } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function AdminStaff() {
     const [staff, setStaff] = useState(null)
-    const { getAllStaff } = useContext(StaffContext)
+
+    const { getAllStaff, deleteStaff } = useContext(StaffContext)
+    // let navigate = useNavigate()
 
     useEffect(() => {
         async function gettingStaff() {
@@ -14,6 +16,15 @@ function AdminStaff() {
         }
         gettingStaff()
     }, [])
+
+    async function handleDelete(id) {
+        let res = await deleteStaff(id);
+        if (res = null) {
+            console.log("error")
+        } else {
+            window.location.reload()
+        }
+    }
 
     function mapThroughStaff() {
 
@@ -30,20 +41,19 @@ function AdminStaff() {
                 )
             }
         }
+        
         function ifDesc(desc) {
-            if (desc === "") {
-                return <></>
-            } else {
-                return (
-                    <div className="aboutDesc">
-                        {desc}
-                    </div>
-                )
-            }
+            console.log(desc)
+            return (
+                <div className="aboutDesc">
+                    {desc}
+                </div>
+            )
         }
 
         if (staff) {
             return staff.map((member) => {
+                console.log(member)
                 return (
                     <>
                         <div className="col-12 col-md-6 col-lg-4">
@@ -55,7 +65,24 @@ function AdminStaff() {
                                 <div className="aboutTitle">
                                     {member.title}
                                 </div>
-                                {ifDesc(member.description)}
+                                {member.description ? (
+                                    ifDesc(member.description)
+                                ) : (
+                                    <></>
+                                )}
+                                <br />
+                                <Link to={`/admin/staff/edit/${member.staffId}`}>
+                                    <Button className="col-12">
+                                        Edit
+                                    </Button>
+                                </Link>
+                                <br/><br/>
+                                <Button
+                                variant="danger"
+                                className="col-12"
+                                onClick={() => {handleDelete(member.staffId)}}>
+                                    Delete
+                                </Button>
                             </div>
                         </div>
                     </>
@@ -69,14 +96,14 @@ function AdminStaff() {
     return (
         <>
             <Container>
-                <br/>
+                <br />
                 <Row>
                     <Link
-                    to="/admin/staff/create">
-                    <Button
-                    className="col-12">
-                        Create Staff Member
-                    </Button>
+                        to="/admin/staff/create">
+                        <Button
+                            className="col-12">
+                            Create Staff Member
+                        </Button>
                     </Link>
                 </Row>
                 <Row>

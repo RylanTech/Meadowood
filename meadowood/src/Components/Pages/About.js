@@ -1,24 +1,37 @@
 import { Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
+import { useContext, useEffect, useState } from "react"
+import {StaffContext} from '../../Contexts/StaffContext'
 
 function About() {
+    const [staff, setStaff] = useState()
 
-    let staff = [
-        {
-            "position": 2,
-            "title": "Pastor",
-            "name": "Richard Dunn",
-            "description": "",
-            "imageUrl": "https://i.postimg.cc/B61qDZpk/358538967-116370081515544-2905107769366832551-n.jpg"
-        },
-        {
-            "position": 1,
-            "title": "Youth Pastor",
-            "name": "Daniel Billings",
-            "description": `"Don't be an idiot." Changed my life -Dwight Schrute`,
-            "imageUrl": "https://i.postimg.cc/26RTx2mG/daniel.jpg"
+    const {getAllStaff} = useContext(StaffContext)
+
+    useEffect(() => {
+        async function gettingStaff() {
+            let res = await getAllStaff()
+            setStaff(res)
         }
-    ]
+        gettingStaff()
+    },[])
+
+    // let staff = [
+    //     {
+    //         "position": 2,
+    //         "title": "Pastor",
+    //         "name": "Richard Dunn",
+    //         "description": "",
+    //         "imageUrl": "https://i.postimg.cc/B61qDZpk/358538967-116370081515544-2905107769366832551-n.jpg"
+    //     },
+    //     {
+    //         "position": 1,
+    //         "title": "Youth Pastor",
+    //         "name": "Daniel Billings",
+    //         "description": `"Don't be an idiot." Changed my life -Dwight Schrute`,
+    //         "imageUrl": "https://i.postimg.cc/26RTx2mG/daniel.jpg"
+    //     }
+    // ]
 
     function mapStaff() {
         function ifPhoto(photo) {
@@ -47,9 +60,9 @@ function About() {
             }
         }
 
-        staff = staff.sort((a, b) => a.position - b.position);
+        let mapStaff = staff.sort((a, b) => b.position - a.position);
 
-        return staff.map((member) => {
+        return mapStaff.map((member) => {
             return (
                 <>
                     <div className="col-12 col-md-6 col-lg-4">

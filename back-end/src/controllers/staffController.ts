@@ -77,9 +77,9 @@ export const deleteStaff: RequestHandler = async (req, res, next) => {
             let existing = await staff.findByPk(id)
             if (existing) {
                 staff.destroy({ where: { staffId: id } })
-                res.status(200).send()
+                res.status(200).send("deleted")
             } else {
-                res.status(404).send()
+                res.status(404).send(null)
             }
             res.status(200).send()
         } else {

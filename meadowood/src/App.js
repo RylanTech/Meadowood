@@ -24,6 +24,7 @@ import Classes from './Components/Pages/Classes';
 import Ultimate from './Components/Pages/Ultimate';
 import AdminStaff from './Components/AdminPages/Staff';
 import CreateStaff from './Components/AdminPages/CreateStaff';
+import EditStaff from './Components/AdminPages/EditStaff';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
 
           <Route path='/admin/staff' element={<AdminStaff/>}/>
           <Route path='/admin/staff/create' element={<CreateStaff/>}/>
+          <Route path='/admin/staff/edit/:id' element={<EditStaff/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

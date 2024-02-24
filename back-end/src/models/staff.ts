@@ -4,7 +4,7 @@ export class staff extends Model<InferAttributes<staff>, InferCreationAttributes
     declare staffId: number;
     declare name: string;
     declare title: string;
-    declare descsription: string;
+    declare description: string;
     declare position: number;
     declare imageUrl: string;
 
@@ -26,7 +26,7 @@ export function staffFactory(sequelize: Sequelize) {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        descsription: {
+        description: {
             type: DataTypes.TEXT,
             allowNull: true,
         },

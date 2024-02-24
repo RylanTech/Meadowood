@@ -10,7 +10,7 @@ export const StaffProvider = (props) => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('meadowoodAdminToken')}`
           };
-        return axios.get(baseUrl + `api/staff/${id}`, {
+        return axios.get(baseUrl + `api/staff/getone/${id}`, {
             headers: myHeaders
         })
         .then(response => {

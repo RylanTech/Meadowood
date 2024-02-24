@@ -33,7 +33,7 @@ function Homepage() {
                         <img
                             className="homepageHeader"
                             src={headerLink}
-                            alt="https://i.postimg.cc/Ss3LxFVz/bg2.jpg"
+                            alt="Meadowood Church of God"
                         />
                         <div className="homeHeader">
                             {headerCaption}
@@ -80,10 +80,10 @@ function Homepage() {
                         <center>
                             <div className="facebookText">
                                 Come follow us on <a
+                                target="_blank"
                                     href="https://www.facebook.com/profile.php?id=61550936281949">
                                     <img
                                         className="facebookImg"
-                                        target="_blank"
                                         src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
                                     />Facebook</a>
                             </div>

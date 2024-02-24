@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', getAllStaff);
 router.get('/getone/:id', getOneStaff)
-router.put('/', editStaff);
+router.put('/:id', editStaff);
 router.post('/', createStaff)
 router.delete('/:id', deleteStaff)
 
