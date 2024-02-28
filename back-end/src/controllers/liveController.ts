@@ -16,13 +16,15 @@ export const editStatus: RequestHandler = async (req, res, next) => {
         let usr = await verifyUser(req)
         if (usr) {
             let editedStatus: live = req.body
-            let status = await live.findOne({ where: { liveId: 1 } })
-            if (status) {
-                live.update(editedStatus, {where: {liveId: 1}})
-                res.status(202).send()
-            } else {
-                await live.create(editedStatus)
-                res.status(201).send()
+            if (editedStatus.liveStatus) {
+                let status = await live.findOne({ where: { liveId: 1 } })
+                if (status) {
+                    live.update(editedStatus, { where: { liveId: 1 } })
+                    res.status(202).send()
+                } else {
+                    await live.create(editedStatus)
+                    res.status(201).send()
+                }
             }
         } else {
             res.status(401).send()

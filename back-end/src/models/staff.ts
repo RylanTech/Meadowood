@@ -7,7 +7,7 @@ export class staff extends Model<InferAttributes<staff>, InferCreationAttributes
     declare description: string;
     declare position: number;
     declare imageUrl: string;
-
+    declare clickableInfo: string;
 }
 
 export function staffFactory(sequelize: Sequelize) {
@@ -37,6 +37,9 @@ export function staffFactory(sequelize: Sequelize) {
         position: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        clickableInfo: {
+            type: DataTypes.TEXT,
         }
     },
         {

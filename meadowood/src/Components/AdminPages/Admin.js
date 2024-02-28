@@ -187,6 +187,25 @@ function Admin() {
                                 </Card.Body>
                             </Card>
                         </div>
+                        <div className="adminCard col-12">
+                            <Card>
+                                <Card.Body>
+                                    <Card.Header>
+                                        <h4>About Text</h4>
+                                    </Card.Header>
+                                    <Card.Text>
+                                        <br />
+                                        <Link to={'/admin/about/edit'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                Edit Text
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
                     </div>
                 </Row>
             </Container>

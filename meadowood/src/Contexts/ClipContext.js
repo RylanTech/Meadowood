@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 
 export const ClipContext = createContext()
 let baseUrl = "http://localhost:3001/"

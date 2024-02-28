@@ -1,21 +1,35 @@
 import { Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
 import { useContext, useEffect, useState } from "react"
-import {StaffContext} from '../../Contexts/StaffContext'
+import { StaffContext } from '../../Contexts/StaffContext'
 import { Helmet } from "react-helmet"
+import { AboutContext } from "../../Contexts/AboutContext"
 
 function About() {
     const [staff, setStaff] = useState()
+    const [aboutText, setAboutText] = useState(undefined)
+    const [aboutTitle, setAboutTitle] = useState(undefined)
 
-    const {getAllStaff} = useContext(StaffContext)
+    const { getAllStaff } = useContext(StaffContext)
+    const { getText } = useContext(AboutContext)
 
     useEffect(() => {
         async function gettingStaff() {
             let res = await getAllStaff()
             setStaff(res)
         }
+        async function gettingAbout() {
+            let res = await getText();
+            if (res) {
+                console.log(res)
+                setAboutText(res.aboutText)
+                setAboutTitle(res.aboutTitle)
+            }
+        }
+
+        gettingAbout()
         gettingStaff()
-    },[])
+    }, [])
 
     // let staff = [
     //     {
@@ -85,7 +99,7 @@ function About() {
 
     return (
         <>
-             <Helmet>
+            <Helmet>
                 <meta name="title" content="MW COG - About" />
                 <meta name="description" content="Meadowood Church of God - Better at the Meadow" />
                 <meta name="keywords" content="Church of God, Church, God, Jesus, Lord, Community, 
@@ -98,35 +112,17 @@ function About() {
             </Helmet>
             <Container>
                 <Row>
-                    <div
-                        className="col-12 aboutPeopleHeading">
-                        Declaration of Faith
+                    <div className="col-12 aboutPeopleHeading">
+                        {aboutTitle}
                     </div>
-                </Row>
-                <Row>
-                    The Church of God believes the whole Bible to be completely and equally inspired and that it is the written Word of God.  The Church of God has adopted the following Declaration of Faith as its standard and official expression of its doctrine.
-                </Row>
-                <Row>
-                    <div
-                        className="col-12 aboutPeopleHeading">
-                        We Believe:
+                    <div className="col-12">
+                        {aboutText ? (
+                            <div dangerouslySetInnerHTML={{ __html: aboutText.replace(/\n/g, '<br />') }} />
+                        ) : (
+                            <>
+                            </>
+                        )}
                     </div>
-                </Row>
-                <Row>
-                    1. In the verbal inspiration of the Bible.<br />
-                    2 .In one God eternally existing in three persons; namely, the Father, Son, and Holy Ghost.<br />
-                    3. That Jesus Christ is the only begotten Son of the Father, conceived of the Holy Ghost, and born of the Virgin Mary.  That Jesus was crucified, buried, and raised from the dead.  That He ascended to heaven and is today at the right hand of the Father as the Intercessor.<br />
-                    4. That all have sinned and come short of the glory of God and that repentance is commanded of God for all and necessary for forgiveness of sins.<br />
-                    5. That justification, regeneration, and the new birth are wrought by faith in the blood of Jesus Christ.<br />
-                    6. In sanctification subsequent to the new birth, through faith in the blood of Christ; through the Word, and by the Holy Ghost.<br />
-                    7. Holiness to be God's standard of living for His people.<br />
-                    8. In the baptism with the Holy Ghost subsequent to a clean heart.<br />
-                    9. In speaking with other tongues as the Spirit gives utterance and that it is the initial evidence of the baptism of the Holy Ghost.<br />
-                    10. In water baptism by immersion, and all who repent should be baptized in the name of the Father, and of the Son, and of the Holy Ghost.<br />
-                    11. Divine healing is provided for all in the atonement.<br />
-                    12. In the Lord's Supper and washing of the saints' feet.<br />
-                    13. In the premillennial second coming of Jesus.  First, to resurrect the righteous dead and to catch away the living saints to Him in the air. Second, to reign on the earth a thousand years.<br />
-                    14. In the bodily resurrection; eternal life for the righteous, and eternal punishment for the wicked.
                 </Row>
                 <Row>
                     <div

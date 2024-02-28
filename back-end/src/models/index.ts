@@ -5,6 +5,7 @@ import { clipFactory } from "./clips";
 import { headerFactory } from "./header";
 import { connectFactory } from "./connect";
 import { staffFactory } from "./staff";
+import { AboutFactory } from "./about";
 
 const dbName = 'meadowood';
 const username = 'root';
@@ -22,5 +23,6 @@ clipFactory(sequelize)
 headerFactory(sequelize)
 connectFactory(sequelize)
 staffFactory(sequelize)
+AboutFactory(sequelize)
 
 export const db = sequelize;
