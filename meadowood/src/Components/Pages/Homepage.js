@@ -129,7 +129,8 @@ function Homepage() {
                     </Link>
                     <Link to={"/youth"}>
                         <div className="fadein">
-                            <img className="fphimg" src="Images/youth.png" />
+                            <img className="fphimg" 
+                            src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg" />
                             <div className="text">
                                 <center>
                                     <h1>Youth</h1>
