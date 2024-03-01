@@ -26,6 +26,7 @@ import CreateStaff from './Components/AdminPages/CreateStaff';
 import EditStaff from './Components/AdminPages/EditStaff';
 import ListConnection from './Components/AdminPages/ListConnections';
 import EditAbout from './Components/AdminPages/EditAbout';
+import Staff from './Components/Pages/Staff';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           {/* <Route path='/schedule' element={<Schedule/>}/> */}
           <Route path='/youngatheart' element={<Seniors/>}/>
           <Route path='/classes' element={<Classes/>}/>
+          <Route path='/staff/:id' element={<Staff/>}/>
 
           <Route path='/login' element={<Loginpage/>}/>
           <Route path='/admin' element={<Admin/>}/>

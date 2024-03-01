@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react"
 import { StaffContext } from '../../Contexts/StaffContext'
 import { Helmet } from "react-helmet"
 import { AboutContext } from "../../Contexts/AboutContext"
+import { Link } from "react-router-dom"
 
 function About() {
     const [staff, setStaff] = useState()
@@ -21,7 +22,6 @@ function About() {
         async function gettingAbout() {
             let res = await getText();
             if (res) {
-                console.log(res)
                 setAboutText(res.aboutText)
                 setAboutTitle(res.aboutTitle)
             }
@@ -75,25 +75,93 @@ function About() {
             }
         }
 
+
         let mapStaff = staff.sort((a, b) => b.position - a.position);
 
         return mapStaff.map((member) => {
-            return (
-                <>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="aboutProfile">
-                            {ifPhoto(member.imageUrl)}
-                            <div className="aboutName">
-                                {member.name}
+
+            if (member.clickableInfo) {
+                let clickableInfo = JSON.parse(member.clickableInfo)
+
+                if (clickableInfo.type === "link") {
+                    return (
+                        <>
+                            <a
+                                className="redirectProfile col-12 col-md-6 col-lg-4"
+                                href={clickableInfo.link}
+                                target="_blank">
+                                <div>
+                                    <div className="aboutProfile">
+                                        {ifPhoto(member.imageUrl)}
+                                        <div className="aboutName">
+                                            {member.name}
+                                        </div>
+                                        <div className="aboutTitle">
+                                            {member.title}
+                                        </div>
+                                        {ifDesc(member.description)}
+                                    </div>
+                                </div>
+                            </a>
+                        </>
+                    )
+                } else if (clickableInfo.type === "page") {
+                    return (
+                        <>
+                            <Link
+                                to={`/staff/${member.staffId}`}
+                                className="redirectProfile col-12 col-md-6 col-lg-4">
+                                <div className="col-12">
+                                    <div className="aboutProfile">
+                                        {ifPhoto(member.imageUrl)}
+                                        <div className="aboutName">
+                                            {member.name}
+                                        </div>
+                                        <div className="aboutTitle">
+                                            {member.title}
+                                        </div>
+                                        {ifDesc(member.description)}
+                                    </div>
+                                </div>
+                            </Link>
+                        </>
+                    )
+                } else {
+                    return (
+                        <>
+                            <div className="col-12 col-md-6 col-lg-4">
+                                <div className="aboutProfile">
+                                    {ifPhoto(member.imageUrl)}
+                                    <div className="aboutName">
+                                        {member.name}
+                                    </div>
+                                    <div className="aboutTitle">
+                                        {member.title}
+                                    </div>
+                                    {ifDesc(member.description)}
+                                </div>
                             </div>
-                            <div className="aboutTitle">
-                                {member.title}
+                        </>
+                    )
+                }
+            } else {
+                return (
+                    <>
+                        <div className="col-12 col-md-6 col-lg-4">
+                            <div className="aboutProfile">
+                                {ifPhoto(member.imageUrl)}
+                                <div className="aboutName">
+                                    {member.name}
+                                </div>
+                                <div className="aboutTitle">
+                                    {member.title}
+                                </div>
+                                {ifDesc(member.description)}
                             </div>
-                            {ifDesc(member.description)}
                         </div>
-                    </div>
-                </>
-            )
+                    </>
+                )
+            }
         })
     }
 

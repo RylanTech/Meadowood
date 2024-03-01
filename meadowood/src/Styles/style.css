@@ -615,6 +615,12 @@ Admin Page
 .adminTxtArea {
   margin-top: 25px;
 }
+.redirectProfile {
+  text-decoration: none;
+}
+.secondText {
+  text-align: left;
+}
 
 /*
 Global

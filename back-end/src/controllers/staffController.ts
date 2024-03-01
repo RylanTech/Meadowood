@@ -39,9 +39,11 @@ export const createStaff: RequestHandler = async (req, res, next) => {
         let usr = await verifyUser(req)
         if (usr) {
             let newStaff: staff = req.body;
-            if (newStaff.name && newStaff.position) {
-                await staff.create(newStaff)
-                res.status(201).send("created")
+            if (newStaff.name && newStaff.position && newStaff.clickableInfo) {
+                newStaff.clickableInfo = JSON.stringify(newStaff.clickableInfo)
+                let created = await staff.create(newStaff)
+                console.log(created)
+                res.status(201).send(created)
             } else {
                 res.status(400).send(null);
             }
@@ -58,7 +60,8 @@ export const editStaff: RequestHandler = async (req, res, next) => {
         let id = req.params.id
         let editedStaff: staff = req.body
         let staffMember = await staff.findOne({ where: { staffId: id } })
-        if (staffMember && editedStaff.name && editedStaff.position ) {
+        if (staffMember && editedStaff.name && editedStaff.position && editedStaff.clickableInfo) {
+            editedStaff.clickableInfo = JSON.stringify(editedStaff.clickableInfo)
             staff.update(editedStaff, { where: { staffId: id } })
             res.status(202).send("updated")
         } else {

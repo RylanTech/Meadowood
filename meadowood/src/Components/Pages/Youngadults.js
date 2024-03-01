@@ -7,8 +7,13 @@ function Youngadults() {
         <>
             <Helmet>
                 <meta name="title" content="MW COG - Young Adult page" />
-                <meta name="description" content="Meadowood Church of God - Better at the Meadowodd" />
-                <meta name="keywords" content="Church of God, Church, God, Jesus, Lord, Community, Church community, friendly church, Meadowood, Richmond Virginia Church, Richmond VA, Meadowood Church of God Richmond VA" />
+                <meta name="description" content="Meadowood Church of God - 
+                Better at the Meadow" />
+                <meta name="keywords" content="Church of God, Church, God, 
+                Jesus, Lord, Community, Church community, friendly church, 
+                Meadowood, Richmond Virginia Church, Richmond VA, Meadowood 
+                Church of God Richmond VA, Young Adults, Christ 4 life, Christ
+                for life, Bible study, young adults bible study" />
                 <meta name="robots" content="index, follow" />
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="language" content="English" />
