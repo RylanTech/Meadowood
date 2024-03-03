@@ -10,25 +10,28 @@ import { HeaderProvider } from './Contexts/HeaderContext';
 import { ConnectionProvider } from './Contexts/ConnectionContext';
 import { StaffProvider } from './Contexts/StaffContext';
 import { AboutProvider } from './Contexts/AboutContext';
+import { EventProvider } from './Contexts/EventContext';
 // import { EventProvider } from './Contexts/EventContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AboutProvider>
-      <StaffProvider>
-        <ConnectionProvider>
-          <HeaderProvider>
-            <ClipProvider>
-              <LiveProvider>
-                <UserProvider>
-                  <App />
-                </UserProvider>
-              </LiveProvider>
-            </ClipProvider>
-          </HeaderProvider>
-        </ConnectionProvider>
-      </StaffProvider>
-    </AboutProvider>
+    <EventProvider>
+      <AboutProvider>
+        <StaffProvider>
+          <ConnectionProvider>
+            <HeaderProvider>
+              <ClipProvider>
+                <LiveProvider>
+                  <UserProvider>
+                    <App />
+                  </UserProvider>
+                </LiveProvider>
+              </ClipProvider>
+            </HeaderProvider>
+          </ConnectionProvider>
+        </StaffProvider>
+      </AboutProvider>
+    </EventProvider>
   </React.StrictMode>
 );

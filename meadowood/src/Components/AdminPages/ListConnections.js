@@ -47,7 +47,7 @@ function ListConnection() {
                         <Form.Control value={connection.dateOfBirth} />
                     </Form.Group>
                     <Form.Group className="col-12 col-md-6 col-lg-4">
-                        <Form.Label>Phone</Form.Label>
+                        <Form.Label>Address</Form.Label>
                         <Form.Control value={connection.address} />
                     </Form.Group>
                 </Row>

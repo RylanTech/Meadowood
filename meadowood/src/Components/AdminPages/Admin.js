@@ -52,7 +52,7 @@ function Admin() {
             <Container>
                 <br />
                 <Row>
-                    <div className="col-6 col-md-6">
+                    <div className="col-12 col-md-6">
                         <Row>
                             {status ? (
                                 <>
@@ -200,6 +200,33 @@ function Admin() {
                                                 className="col-12"
                                             >
                                                 Edit Text
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="adminCard col-12">
+                            <Card>
+                                <Card.Body>
+                                    <Card.Header>
+                                        <h4>Events sign up</h4>
+                                    </Card.Header>
+                                    <Card.Text>
+                                        <br />
+                                        <Link to={'/admin/events/'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                See Events
+                                            </Button>
+                                        </Link>
+                                        <br/><br/>
+                                        <Link to={'/admin/about/edit'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                See People
                                             </Button>
                                         </Link>
                                     </Card.Text>

@@ -2,7 +2,7 @@ import { RequestHandler } from "express"
 import { verifyUser } from "../services/authService"
 import { event } from "../models/signUpEvents"
 
-export const getALlEvent: RequestHandler = async (req, res, next) => {
+export const getAllEvents: RequestHandler = async (req, res, next) => {
     try {
         let events = await event.findAll()
         if (events) {
@@ -58,7 +58,7 @@ export const createEvent: RequestHandler = async (req, res, next) => {
 }
 
 export const editEvent: RequestHandler = async (req, res, next) => {
-    try {
+    // try {
         let usr = await verifyUser(req)
         if (usr) {
             let id = req.params.id
@@ -68,8 +68,12 @@ export const editEvent: RequestHandler = async (req, res, next) => {
 
             if (oldEvent) {
                 let newEvent: event = req.body
-                if (newEvent && newEvent.eventTitle && newEvent.eventDescription && newEvent.eventLocation && newEvent.date) {
-                    let created = await event.create(newEvent)
+                if (newEvent && newEvent.eventTitle && newEvent.eventDescription && newEvent.eventLocation && newEvent.date && newEvent.eventId) {
+                    let created = await event.update(newEvent, {
+                        where: {
+                            eventId: id
+                        }
+                    })
                     res.status(201).send(created)
                 } else {
                     res.status(400).send()
@@ -80,9 +84,9 @@ export const editEvent: RequestHandler = async (req, res, next) => {
         } else {
             res.status(401).send()
         }
-    } catch {
-        res.status(500).send()
-    }
+    // } catch {
+    //     res.status(500).send()
+    // }
 }
 
 export const deleteEvent: RequestHandler = async (req, res, next) => {

@@ -607,6 +607,48 @@ About page
 } */
 
 /*
+Events sign up
+*/
+.noEvents {
+  margin: 150px 0px;
+}
+.event {
+  margin: 15px;
+  background-color: #dedede;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+}
+.eventTitle {
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: -15px;
+  
+}
+.eventTime {
+  font-size: 20px;
+}
+.eventDescription {
+  margin-top: 15px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+.eventLocation {
+  margin-top: 15px;
+}
+.signUpButton {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+.signUpButton:hover {
+  background-color: #b4b4b4;
+  border: 1px solid black;
+}
+
+
+/*
 Admin Page
 */
 .adminCard {

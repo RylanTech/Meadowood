@@ -61,7 +61,7 @@ function Home() {
                   </NavDropdown.Item>
                 </Link>
                 <Link to="/foodpantry" className="notUnderlined nvbr">
-                <Dropdown.Divider />
+                  <Dropdown.Divider />
                   <NavDropdown.Item href="#action/3.6">
                     Food Pantry
                   </NavDropdown.Item>
@@ -72,15 +72,26 @@ function Home() {
                 </NavDropdown.Item> */}
               </NavDropdown>
               <Link className="nav-link hover-effect nvbr" to="/classes">Classes</Link>
+              <NavDropdown title="Events" id="basic-nav-dropdown" className="nvbr">
+                <Link to="/events" className="notUnderlined">
+                  <NavDropdown.Item href="#action/3.1">
+                    All Events
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/eventssignup" className="notUnderlined nvbr">
+                  <NavDropdown.Item href="#action/3.2">
+                    Event Sign Up
+                  </NavDropdown.Item>
+                </Link>
+              </NavDropdown>
               <NavDropdown className="nvbr" title="Donate" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://www.paypal.com/donate?token=dAPUbR6l-8mcvWRdRvxLGBSAqI6Cbs4eHsT276tLRzHpL-IdjwQrm2uXC07XZMmK97Y9SRiPCcQRuLyN" target="_top">
                   Paypal
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item>
                   Venmo
                 </NavDropdown.Item>
               </NavDropdown>
-              <Link className="nav-link hover-effect nvbr" to="/events">Events</Link>
               <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>
             </Nav>
           </Navbar.Collapse>

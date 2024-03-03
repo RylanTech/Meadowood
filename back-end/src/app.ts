@@ -8,6 +8,8 @@ import headerRoutes from './routes/headerRoutes'
 import connectionRoutes from './routes/connectRoutes'
 import staffRoutes from './routes/staffRoutes'
 import aboutRoutes from './routes/aboutRoutes'
+import peopleRoutes from './routes/signUpUserRoutes'
+import eventRoutes from './routes/signUpEventsRoutes'
 
 const app = express();
 
@@ -30,7 +32,9 @@ app.use('/api/clips', clipRoutes)
 app.use('/api/header', headerRoutes)
 app.use('/api/connection', connectionRoutes)
 app.use('/api/staff/', staffRoutes)
-app.use('/api/about/', aboutRoutes )
+app.use('/api/about/', aboutRoutes)
+app.use('/api/people/', peopleRoutes)
+app.use('/api/events/', eventRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).end();
