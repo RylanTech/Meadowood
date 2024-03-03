@@ -16,7 +16,7 @@ function Home() {
         <Container>
           <img
             className="nav-img"
-            src="https://i.postimg.cc/YS7vzYdY/mwlogo2.png" 
+            src="https://i.postimg.cc/Nj4WN01b/Copy-of-Meadowood-removebg-preview.png" 
             alt="Meadowood - Live better, Love better, Serve better"/>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav" />
