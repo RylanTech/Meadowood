@@ -29,7 +29,7 @@ function About() {
 
         gettingAbout()
         gettingStaff()
-    }, [])
+    }, [getAllStaff, getText])
 
     // let staff = [
     //     {
@@ -87,6 +87,7 @@ function About() {
                     return (
                         <>
                             <a
+                                key={member.staffId}
                                 className="redirectProfile col-12 col-md-6 col-lg-4"
                                 href={clickableInfo.link}
                                 target="_blank">
@@ -109,6 +110,7 @@ function About() {
                     return (
                         <>
                             <Link
+                                key={member.staffId}
                                 to={`/staff/${member.staffId}`}
                                 className="redirectProfile col-12 col-md-6 col-lg-4">
                                 <div className="col-12">
@@ -129,7 +131,9 @@ function About() {
                 } else {
                     return (
                         <>
-                            <div className="col-12 col-md-6 col-lg-4">
+                            <div 
+                            className="col-12 col-md-6 col-lg-4"
+                            key={member.staffId}>
                                 <div className="aboutProfile">
                                     {ifPhoto(member.imageUrl)}
                                     <div className="aboutName">
@@ -147,7 +151,9 @@ function About() {
             } else {
                 return (
                     <>
-                        <div className="col-12 col-md-6 col-lg-4">
+                        <div 
+                        className="col-12 col-md-6 col-lg-4"
+                        key={member.staffId}>
                             <div className="aboutProfile">
                                 {ifPhoto(member.imageUrl)}
                                 <div className="aboutName">

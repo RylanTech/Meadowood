@@ -42,7 +42,6 @@ export const createStaff: RequestHandler = async (req, res, next) => {
             if (newStaff.name && newStaff.position && newStaff.clickableInfo) {
                 newStaff.clickableInfo = JSON.stringify(newStaff.clickableInfo)
                 let created = await staff.create(newStaff)
-                console.log(created)
                 res.status(201).send(created)
             } else {
                 res.status(400).send(null);

@@ -14,17 +14,15 @@ function Homepage() {
     const [headerCaption, setHeaderCaption] = useState("")
 
     useEffect(() => {
-        verify()
-
-        async function gettingHeader() {
-            let hdr = await getHeader()
-            console.log(hdr)
-            setHeaderLink(hdr.headerLink)
-            setHeaderCaption(hdr.headerCaption)
+        async function fetchData() {
+            await verify();
+            let hdr = await getHeader();
+            setHeaderLink(hdr.headerLink);
+            setHeaderCaption(hdr.headerCaption);
         }
-        gettingHeader()
 
-    }, [])
+        fetchData();
+    }, [verify, getHeader]);
 
     return (
         <>
@@ -56,53 +54,50 @@ function Homepage() {
                         </Row>
                         <Row className="fpr1Content">
                             <div className="col-md-4 fpcard clock">
-                                <center>
-                                    <Link to={"live"} className="underlined mainLink">
-                                        {/* <img className="col-4 fpimg" src="Images/clock2.png" /> */}
-                                        <br />
-                                        <h4 className="mainText">
+                                <Link to={"live"} className="underlined mainLink">
+                                    <br />
+                                    <h4 className="mainText">
+                                        <center>
                                             10am Sunday School
                                             <br />
                                             11am Worship
-                                        </h4>
-                                    </Link>
-                                </center>
+                                        </center>
+                                    </h4>
+                                </Link>
                             </div>
                             <div className="col-md-4 fpcard">
-                                <center>
-                                    <Link to={"/events"} className="underlined mainLink">
-                                        {/* <img className="col-3 col-md-6" src="Images/cal.png" /> */}
-                                        <br />
-                                        <h4 className="mainText">
+                                <Link to={"/events"} className="underlined mainLink">
+                                    <br />
+                                    <h4 className="mainText">
+                                        <center>
                                             Our Events
-                                        </h4>
-                                    </Link>
-                                </center>
+                                        </center>
+                                    </h4>
+                                </Link>
                             </div>
                             <div className="col-md-4 fpcard">
-                                <center>
-                                    <a target="_blank" href="https://www.youtube.com/@pastordunn" className="ytLink mainLink">
-                                        {/* <img className="col-4 fpimg" src="Images/youtube.png" /> */}
-                                        <br />
-                                        <h4 className="mainText underlined">
-                                            View Services
-                                        </h4>
-                                    </a>
-                                </center>
+                                <Link to={"/connect"}>
+                                    <br />
+                                    <h4 className="mainText underlined">
+                                        <center>
+                                            Get Connected!
+                                        </center>
+                                    </h4>
+                                </Link>
                             </div>
                         </Row>
                         <Row>
-                            <center>
-                                <div className="facebookText">
-                                    Come follow us on <a
-                                        target="_blank"
-                                        href="https://www.facebook.com/profile.php?id=61550936281949">
-                                        <img
-                                            className="facebookImg"
-                                            src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
-                                        />Facebook</a>
-                                </div>
-                            </center>
+                            <div className="facebookText">
+                                Come follow us on <a 
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    href="https://www.facebook.com/profile.php?id=61550936281949">
+                                    <img
+                                        className="facebookImg"
+                                        alt="facebook"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+                                    />Facebook</a>
+                            </div>
                         </Row>
                     </Container>
                 </div>
@@ -110,67 +105,84 @@ function Homepage() {
                     <Row className="fpr2">
                         <div className="positioning1">
                             <p className="heading">
-                                <center>
-                                    Get connected!
-                                </center>
+                                Get connected!
                             </p>
                         </div>
                     </Row>
                     {/* </Container> */}
                     <Link to={"/kids"}>
                         <div className="fadein">
-                            <img className="fphimg clock" src="Images/kids.png" />
+                            <img 
+                            className="fphimg clock" 
+                            src="Images/kids.png"
+                            alt="Kids"/>
                             <div className="text">
-                                <center>
-                                    <h1>Kids</h1>
-                                </center>
+                                <h1>
+                                    Kids
+                                </h1>
                             </div>
                         </div>
                     </Link>
                     <Link to={"/youth"}>
                         <div className="fadein">
-                            <img className="fphimg" 
-                            src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg" />
+                            <img 
+                            className="fphimg"
+                            src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
+                            alt="Youth"/>
                             <div className="text">
-                                <center>
-                                    <h1>Youth</h1>
-                                </center>
+                                <h1>
+                                    <center>
+                                    Youth
+                                    </center>
+                                </h1>
                             </div>
                         </div>
                     </Link>
                     <Link to={"/youngadults"}>
                         <div className="fadein">
-                            <img className="fphimg" src="Images/youngadults.png" />
+                            <img 
+                            className="fphimg" 
+                            src="Images/youngadults.png" 
+                            alt="Young Adults"/>
                             <div className="text">
-                                <center>
-                                    <h1>Young Adults</h1>
-                                </center>
+                                <h1>
+                                    <center>
+                                    Young Adults
+                                    </center>
+                                </h1>
                             </div>
                         </div>
                     </Link>
                     <Link to={"/foodpantry"}>
                         <div className="fadein">
-                            <img className="fphimg" src="Images/foodpantry.png" />
+                            <img 
+                            className="fphimg" 
+                            src="Images/foodpantry.png" 
+                            alt="Food Pantry"/>
                             <div className="text">
-                                <center>
-                                    <h1>Food Pantry</h1>
-                                </center>
+                                <h1>
+                                    <center>
+                                    Food Pantry
+                                    </center>
+                                </h1>
                             </div>
                         </div>
                     </Link>
 
                     <Row className="fpr4">
-                        <center>
-                            <div className="ytLink2">
-                                <a target="_blank" href="https://www.youtube.com/@pastordunn" className="ytLink3">
-                                    Watch now!
-                                </a>
-                                <br />
-                                <div className="ytLinkText">
-                                    We have streams every Sunday and Wednesday!
-                                </div>
+                        <div className="ytLink2">
+                            <a 
+                            rel="noreferrer"
+                            target="_blank" 
+                            href="https://www.youtube.com/@pastordunn" 
+                            className="ytLink3">
+                                Watch now!
+                            </a>
+                            <br />
+                            <div className="ytLinkText">
+                                We have streams every Sunday and Wednesday!
                             </div>
-                        </center>
+                        </div>
                     </Row>
                 </Container>
                 <Footer />

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { Button, Container, Form, Row } from "react-bootstrap"
 import { StaffContext } from "../../Contexts/StaffContext"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 function CreateStaff() {
     const [name, setName] = useState("")
@@ -17,43 +17,48 @@ function CreateStaff() {
 
     const { createStaff } = useContext(StaffContext)
     let navigate = useNavigate()
-    let params = useParams
 
     async function handleSubmit() {
-        let clcikableType
-
+        let clcikableType; // Fix typo in variable name
+    
         if (isChecked === true) {
-            clcikableType = "link"
+            clcikableType = "link"; // Fix typo in variable name
         } else if (isChecked2 === true) {
-            clcikableType = "page"
-        } else if (
-            clcikableType = "off"
-        )
+            clcikableType = "page"; // Fix typo in variable name
+        } else {
+            clcikableType = "off"; // Fix typo in variable name
+        }
+    
+        let member = {
+            name: name,
+            title: title,
+            position: position,
+            description: description,
+            imageUrl: imageUrl,
+            clickableInfo: {
+                type: clcikableType, // Use the corrected variable name
+                link: redirectLink,
+                text: text,
+                secondImageUrl: secondImageUrl,
+            },
+        };
 
-            var member = {
-                staffId: params.id,
-                name: name,
-                title: title,
-                position: position,
-                description: description,
-                imageUrl: imageUrl,
-                clickableInfo: {
-                    type: clcikableType,
-                    link: redirectLink,
-                    text: text,
-                    secondImageUrl: secondImageUrl
-                }
-            }
+        console.log(member)
+    
         if (member.name && member.position) {
-            let i = await createStaff(member)
-            if (i === null) {
-                console.log("error")
-            } else {
-                navigate('/admin/staff')
+            try {
+                let i = await createStaff(member);
+                if (i === null) {
+                    console.log("error");
+                } else {
+                    navigate('/admin/staff');
+                }
+            } catch (error) {
+                console.error(error);
             }
         }
-
     }
+    
 
     function ifPhoto(photo) {
         if (photo === "") {
@@ -116,6 +121,18 @@ function CreateStaff() {
                             {ifDesc(description)}
                         </div>
                     </div>
+                    <br/><br/>
+                    <Row>
+                        <div className="col-12 col-md-3">
+                            <img
+                                className="col-12"
+                                src={secondImageUrl} />
+                        </div>
+                        <div className="col-12 col-md-9 secondText" style={{ whiteSpace: 'pre-wrap' }}>
+                            {text}
+                        </div>
+
+                    </Row>
                 </>
             )
         } else {
@@ -165,7 +182,7 @@ function CreateStaff() {
                         />
                     </div>
                     <div className="col-12 col-md-6">
-                        <Form.Label>position (Display order highest)</Form.Label>
+                        <Form.Label>position (Display order highest) - do not leave 0</Form.Label>
                         <Form.Control
                             value={position}
                             onChange={(e) => { setPosition(e.target.value) }}

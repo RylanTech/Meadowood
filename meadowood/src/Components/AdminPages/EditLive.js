@@ -16,8 +16,6 @@ function EditLive() {
 
     useEffect(() => {
 
-        console.log(isAdmin)
-
         async function gettingLiveStatus() {
             let status = await getStatus()
             setLiveStatus(status.liveStatus)
@@ -35,7 +33,6 @@ function EditLive() {
             liveStatus,
             liveTitle
         }
-        console.log(newStatus)
         let res = await setStatus(newStatus)
         if (res) {
             navigate("/admin")

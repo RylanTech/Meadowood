@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react"
 import { StaffContext } from "../../Contexts/StaffContext"
 import { Button, Container, Row } from "react-bootstrap"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function AdminStaff() {
     const [staff, setStaff] = useState(null)
 
     const { getAllStaff, deleteStaff } = useContext(StaffContext)
-    // let navigate = useNavigate()
 
     useEffect(() => {
         async function gettingStaff() {
@@ -15,11 +14,11 @@ function AdminStaff() {
             setStaff(staffMembers)
         }
         gettingStaff()
-    }, [])
+    }, [getAllStaff])
 
     async function handleDelete(id) {
         let res = await deleteStaff(id);
-        if (res = null) {
+        if (res === null) {
             console.log("error")
         } else {
             window.location.reload()
@@ -43,7 +42,6 @@ function AdminStaff() {
         }
         
         function ifDesc(desc) {
-            console.log(desc)
             return (
                 <div className="aboutDesc">
                     {desc}
@@ -53,10 +51,11 @@ function AdminStaff() {
 
         if (staff) {
             return staff.map((member) => {
-                console.log(member)
                 return (
                     <>
-                        <div className="col-12 col-md-6 col-lg-4">
+                        <div 
+                        key={member.staffId}
+                        className="col-12 col-md-6 col-lg-4">
                             <div className="aboutProfile">
                                 {ifPhoto(member.imageUrl)}
                                 <div className="aboutName">

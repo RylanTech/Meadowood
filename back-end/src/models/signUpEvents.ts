@@ -6,6 +6,8 @@ export class event extends Model<InferAttributes<event>, InferCreationAttributes
     declare eventLocation: string;
     declare eventDescription: string;
     declare date: string;
+    declare createdAt: Date;
+    declare updatedAt: Date;
 }
 
 export function EventFactory(sequelize: Sequelize) {
@@ -31,7 +33,17 @@ export function EventFactory(sequelize: Sequelize) {
         date: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
     },
         {
             freezeTableName: true,

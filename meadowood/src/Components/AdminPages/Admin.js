@@ -31,7 +31,6 @@ function Admin() {
 
         async function gettingHeader() {
             let hdr = await getHeader()
-            console.log(hdr)
             setHeaderLink(hdr.headerLink)
             setHeaderCaption(hdr.headerCaption)
         }
@@ -219,14 +218,6 @@ function Admin() {
                                                 className="col-12"
                                             >
                                                 See Events
-                                            </Button>
-                                        </Link>
-                                        <br/><br/>
-                                        <Link to={'/admin/about/edit'}>
-                                            <Button
-                                                className="col-12"
-                                            >
-                                                See People
                                             </Button>
                                         </Link>
                                     </Card.Text>

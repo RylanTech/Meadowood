@@ -2,7 +2,7 @@ import { Button, Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
 import { useContext, useEffect, useState } from "react"
 import { EventContext } from "../../Contexts/EventContext"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 function EventsSignUp() {
     const [events, setEvents] = useState()
@@ -10,13 +10,13 @@ function EventsSignUp() {
 
     const { getAllEvents } = useContext(EventContext)
 
-    useEffect(() => {
-        async function gettingEvents() {
-            let res = await getAllEvents()
-            setEvents(res)
-        }
-        gettingEvents()
-    }, [])
+    // useEffect(() => {
+    //     async function gettingEvents() {
+    //         let res = await getAllEvents()
+    //         setEvents(res)
+    //     }
+    //     gettingEvents()
+    // }, [])
 
 
     function listEvents() {
@@ -25,25 +25,28 @@ function EventsSignUp() {
                 console.log(event)
                 return (
                     <>
-                    <div className="col-12 event">
-                        <div className="eventTitle">
-                            {event.eventTitle}
+                        <div className="col-12 event">
+                            <div className="eventTitle">
+                                {event.eventTitle}
+                            </div>
+                            <div className="eventTime">
+                                {event.date}
+                            </div>
+                            <div className="eventDescription">
+                                <div dangerouslySetInnerHTML={{ __html: event.eventDescription.replace(/\n/g, '<br />') }} />
+                            </div>
+                            <div className="eventLocation">
+                                {event.eventLocation}
+                            </div>
+                            <br />
+                            <Link
+                                to={`/eventssignup/${event.eventId}`}>
+                                <Button
+                                    className="col-12 signUpButton">
+                                    Sign up
+                                </Button>
+                            </Link>
                         </div>
-                        <div className="eventTime">
-                            {event.date}
-                        </div>
-                        <div className="eventDescription">
-                        <div dangerouslySetInnerHTML={{ __html: event.eventDescription.replace(/\n/g, '<br />') }} />
-                        </div>
-                        <div className="eventLocation">
-                            {event.eventLocation}
-                        </div>
-                        <br/>
-                        <Button 
-                        className="col-12 signUpButton">
-                            Sign up
-                        </Button>
-                    </div> 
                     </>
                 )
             })
@@ -56,14 +59,18 @@ function EventsSignUp() {
                 <Row>
                     {events ? (
                         <>
+                            <Row>
+                                <div className="eventsSUHeader">
+                                    Sign up for our events!
+                                </div>
+                            </Row>
                             {listEvents()}
                         </>
                     ) : (
                         <>
                             <center>
-                                <div>
-                                    <h2
-                                        className="noEvents">No events at this time</h2>
+                                <div className="noEvents">
+                                    No events at this time.
                                 </div>
                             </center>
                         </>

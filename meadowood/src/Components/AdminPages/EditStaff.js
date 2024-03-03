@@ -230,7 +230,7 @@ function EditStaff() {
                         <Form.Check.Input
                             type={"checkbox"}
                             checked={isChecked}
-                            onClick={() => {
+                            onChange={() => {
                                 if (isChecked === true) {
                                     setisChecked(false)
                                 } else if (isChecked === false && isChecked2 === false) {
@@ -245,7 +245,7 @@ function EditStaff() {
                         <Form.Check.Input
                             type={"checkbox"}
                             checked={isChecked2}
-                            onClick={() => {
+                            onChange={() => {
                                 if (isChecked2 === true) {
                                     setisChecked2(false)
                                 } else if (isChecked2 === false && isChecked === false) {

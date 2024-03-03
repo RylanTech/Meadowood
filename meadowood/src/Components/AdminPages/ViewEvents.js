@@ -18,7 +18,7 @@ function ViewEvents() {
 
     async function handleDeleteEvent(id) {
         let res = await deleteEvent(id)
-        .then(window.location.reload())
+            .then(window.location.reload())
     }
 
     function mapThroughEvents() {
@@ -26,43 +26,52 @@ function ViewEvents() {
             return events.map((event) => {
                 return (
                     <>
-                        <div className="col-1" />
-                        <div className="col-10 eventInfo">
-                            <h3>{event.eventTitle}</h3>
-                            <div>
-                                {event.eventLocation}
+                        <div className="col-12 event">
+                            <div className="eventTitle">
+                                {event.eventTitle}
                             </div>
-                            <br />
-                            <div>
-                                {event.eventDescription}
-                            </div>
-                            <div>
+                            <div className="eventTime">
                                 {event.date}
                             </div>
-                            <br /><br />
-                        </div>
-                        <div className="col-1" />
-                        <div className="col-12">
-                            <Link
-                                to={`/admin/event/edit/${event.eventId}`}>
-                                <Button
-                                    className="col-12"
-                                    variant="warning">
-                                    Edit
-                                </Button>
-                            </Link>
-                            <div>
-                                <br />
+                            <div className="eventDescription">
+                                <div dangerouslySetInnerHTML={{ __html: event.eventDescription.replace(/\n/g, '<br />') }} />
                             </div>
+                            <div className="eventLocation">
+                                {event.eventLocation}
+                            </div>
+                        </div>
+                        <Link
+                            to={`/admin/event/view/${event.eventId}`}>
+                            <Button
+                                className="col-12">
+                                View People
+                            </Button>
+                        </Link>
+                        <div>
+                            <br />
+                        </div>
+                        <Link
+                            to={`/admin/event/edit/${event.eventId}`}>
+                            <Button
+                                className="col-12"
+                                variant="warning">
+                                Edit
+                            </Button>
+                        </Link>
+                        <div>
+                            <br />
+                        </div>
+                        <div
+                            className="col-12">
                             <Button
                                 className="col-12"
                                 variant="danger"
-                                onClick={() => {handleDeleteEvent(event.eventId)}}>
+                                onClick={() => { handleDeleteEvent(event.eventId) }}>
                                 Delete
                             </Button>
-                            <div>
-                                <br />
-                            </div>
+                        </div>
+                        <div>
+                            <br />
                         </div>
                         <hr />
                     </>

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Container, Dropdown, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { Link, Outlet } from "react-router-dom"
 import { UserContext } from "../Contexts/UserContext"
@@ -9,26 +9,45 @@ function Home() {
 
   return (
     <div>
-      <Navbar className="almostWhite" expand="lg" variant="light">
+      <Navbar
+        className="almostWhite"
+        expand="lg"
+        variant="light">
         <Container>
-          <img className="nav-img" src="https://i.postimg.cc/YS7vzYdY/mwlogo2.png" />
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <img
+            className="nav-img"
+            src="https://i.postimg.cc/YS7vzYdY/mwlogo2.png" 
+            alt="Meadowood - Live better, Love better, Serve better"/>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            id="basic-navbar-nav">
             <Nav>
               {isAdmin ? (
-                <Link className="nav-link hover-effect nvbr" to="/admin">Admin</Link>
+                <Link
+                  className="nav-link hover-effect nvbr"
+                  to="/admin"
+                >Admin</Link>
               ) : (
                 <></>
               )}
-              <Link className="nav-link hover-effect nvbr" to="/">Home</Link>
-              <NavDropdown className="nvbr" title="Watch" id="basic-nav-dropdown">
-                <Link to="/live" className="notUnderlined nvbr">
-                  <NavDropdown.Item href="/live">
+              <Link
+                className="nav-link hover-effect nvbr" to="/">Home</Link>
+              <NavDropdown
+                className="nvbr"
+                title="Watch"
+                id="basic-nav-dropdown">
+                <Link to="/live"
+                  className="notUnderlined nvbr">
+                  <NavDropdown.Item
+                    href="/live">
                     Live
                   </NavDropdown.Item>
                 </Link>
-                <Link to="clips" className="notUnderlined nvbr">
-                  <NavDropdown.Item href="/clips">
+                <Link to="clips"
+                  className="notUnderlined nvbr">
+                  <NavDropdown.Item
+                    href="/clips">
                     Clips
                   </NavDropdown.Item>
                 </Link>
@@ -66,10 +85,6 @@ function Home() {
                     Food Pantry
                   </NavDropdown.Item>
                 </Link>
-                {/* <NvDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item> */}
               </NavDropdown>
               <Link className="nav-link hover-effect nvbr" to="/classes">Classes</Link>
               <NavDropdown title="Events" id="basic-nav-dropdown" className="nvbr">

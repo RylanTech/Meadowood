@@ -1,6 +1,7 @@
 import { RequestHandler } from "express"
 import { verifyUser } from "../services/authService"
 import { event } from "../models/signUpEvents"
+import { signUpUser } from "../models/userSignedUp"
 
 export const getAllEvents: RequestHandler = async (req, res, next) => {
     try {
@@ -99,19 +100,30 @@ export const deleteEvent: RequestHandler = async (req, res, next) => {
             })
 
             if (oldEvent) {
-                event.destroy({
+
+                // Delete all signUpUser associated with the event Id
+                await signUpUser.destroy({
                     where: {
                         eventId: id
                     }
-                })
-                res.status(200).send()
+                });
+
+                // Delete the event
+                await event.destroy({
+                    where: {
+                        eventId: id
+                    }
+                });
+
+                res.status(200).send();
             } else {
-                res.status(404).send()
+                res.status(404).send();
             }
         } else {
-            res.status(401).send()
+            res.status(401).send();
         }
-    } catch {
-        res.status(500).send()
+    } catch (error) {
+        console.error(error);
+        res.status(500).send();
     }
 }

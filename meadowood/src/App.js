@@ -31,6 +31,8 @@ import ViewEvents from './Components/AdminPages/ViewEvents';
 import CreateEvent from './Components/AdminPages/CreateEvent';
 import EditEvent from './Components/AdminPages/EditEvent';
 import EventsSignUp from './Components/Pages/EventsSignUp';
+import EventsSigningUp from './Components/Pages/EventsSigningUp';
+import ViewEventPeople from './Components/AdminPages/ViewEventPeople';
 
 function App() {
   return (
@@ -55,6 +57,7 @@ function App() {
           <Route path='/classes' element={<Classes/>}/>
           <Route path='/staff/:id' element={<Staff/>}/>
           <Route path='/eventssignup' element={<EventsSignUp/>}/>
+          <Route path='/eventssignup/:id' element={<EventsSigningUp/>}/>
 
           <Route path='/login' element={<Loginpage/>}/>
           <Route path='/admin' element={<Admin/>}/>
@@ -76,6 +79,7 @@ function App() {
           <Route path='/admin/events' element={<ViewEvents/>}/>
           <Route path='/admin/event/create' element={<CreateEvent/>}/>
           <Route path='/admin/event/edit/:id' element={<EditEvent/>}/>
+          <Route path='/admin/event/view/:id' element={<ViewEventPeople/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
