@@ -134,7 +134,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg clock"
-                                src="Images/kids.png"
+                                src="https://i.postimg.cc/YjcvSFtN/kids.png"
                                 alt="Kids" />
                             <div className="text">
                                 <h1>
@@ -165,7 +165,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                src="Images/youngadults.png"
+                                src="https://i.postimg.cc/vZY7DL8w/youngadults.png"
                                 alt="Young Adults" />
                             <div className="text">
                                 <h1>
@@ -180,7 +180,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                src="Images/foodpantry.png"
+                                src="https://i.postimg.cc/QtXfDGB1/foodpantry.png"
                                 alt="Food Pantry" />
                             <div className="text">
                                 <h1>

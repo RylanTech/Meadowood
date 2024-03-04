@@ -89,14 +89,14 @@ function EditLive() {
                         <center>
                             To get the link on a youtube video, click share
                             <br />
-                            <img className="col-12" src="/Images/share1.png" />
+                            <img className="col-12" src="https://i.postimg.cc/5Nc5yY7k/share1.png" />
                         </center>
                     </div>
                     <div className="col-6">
                         <center>
                             Then click embed,
                             <br />
-                            <img className="col-12" src="/Images/share2.png" />
+                            <img className="col-12" src="https://i.postimg.cc/jjkPbLnc/share2.png" />
                         </center>
                     </div>
                     <div className="col-12">
@@ -104,7 +104,7 @@ function EditLive() {
                         <center>
                             Then copy the highlighted text and put that in the "Link field"
                             <br />
-                            <img className="col-12" src="/Images/share3.png" />
+                            <img className="col-12" src="https://i.postimg.cc/rFLWM6sB/share3.png" />
                         </center>
                     </div>
 
