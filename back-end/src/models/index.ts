@@ -8,10 +8,15 @@ import { staffFactory } from "./staff";
 import { AboutFactory } from "./about";
 import { EventFactory } from "./signUpEvents";
 import { signUpUserFactory } from "./userSignedUp";
+import 'dotenv/config'
 
-const dbName = 'meadowood';
-const username = 'root';
-const password = '0624';
+// const dbName = 'meadowood';
+// const username = 'root';
+// const password = '0624';
+
+const dbName = process.env.DB_NAME ?? '';
+const username = process.env.DB_USER ?? '';
+const password = process.env.DB_PASS ?? '';
 
 const sequelize = new Sequelize(dbName, username, password, {
     host: 'localhost',
