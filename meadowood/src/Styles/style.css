@@ -122,10 +122,11 @@ body {
 } */
 .mainText {
   max-width: 300px;
+  text-align: center;
 }
 .mainLink:hover h4 {
   color: #b4b4b4;
-  text-align: center;
+  
 }
 .underlined {
   text-decoration: underline;
@@ -662,7 +663,7 @@ Events sign up
 }
 .noEvents {
   text-align: center;
-  margin: 200px;
+  margin: 200px 0px;
   font-size: 30px;
   font-family: 'Bebas Neue', sans-serif;
 }

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Button, Container, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { PersonContext } from "../../Contexts/personContext"
 
 function ViewEventPeople() {
@@ -9,9 +9,8 @@ function ViewEventPeople() {
     const [people, setPeople] = useState()
 
     const { getEvent } = useContext(EventContext)
-    const { getPersonByEventId } = useContext(PersonContext)
+    const { getPersonByEventId, deletePerson } = useContext(PersonContext)
     let params = useParams()
-    let navigate = useNavigate()
 
     useEffect(() => {
         async function gettingEvent() {
@@ -44,7 +43,11 @@ function ViewEventPeople() {
                             <div className="personEntry col-12 col-md-2">
                                 <Button
                                 className="col-2 col-md-12"
-                                variant="danger">
+                                variant="danger"
+                                onClick={() => {
+                                    deletePerson(person.signedUpUserId)
+                                    .then(window.location.reload())
+                                }}>
                                     Delete
                                 </Button>
                             </div>

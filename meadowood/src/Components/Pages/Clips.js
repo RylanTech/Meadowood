@@ -19,27 +19,43 @@ function Clips() {
 
     function mapThroughClips() {
         if (clips) {
-            return clips.map((clip) => {
+            if (clips.length > 0) {
+                return clips.map((clip) => {
+                    return (
+                        <>
+                            <a
+                                href={clip.clipURL}
+                                target="_blank"
+                                className="col-12 col-sm-6 col-lg-4 thumbnailLink"
+                                key={clip.clipId}
+                            >
+                                <Card className="clipCard">
+                                    <Card.Header>
+                                        <Card.Img className="clipThumbnail" src={clip.clipThumbnail} />
+                                    </Card.Header>
+                                    <Card.Body>
+                                        {clip.clipTitle}
+                                    </Card.Body>
+                                </Card>
+                            </a>
+                        </>
+                    )
+                })
+            } else {
                 return (
                     <>
-                        <a
-                            href={clip.clipURL}
-                            target="_blank"
-                            className="col-12 col-sm-6 col-lg-4 thumbnailLink"
-                            key={clip.clipId}
-                        >
-                            <Card className="clipCard">
-                                <Card.Header>
-                                    <Card.Img className="clipThumbnail" src={clip.clipThumbnail} />
-                                </Card.Header>
-                                <Card.Body>
-                                    {clip.clipTitle}
-                                </Card.Body>
-                            </Card>
-                        </a>
+                    <div className="noEvents">
+                        No clips at this time
+                    </div>
                     </>
                 )
-            })
+            }
+        } else {
+            return (
+                <>
+                    error
+                </>
+            )
         }
     }
 

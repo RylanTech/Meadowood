@@ -53,42 +53,62 @@ function Homepage() {
                             </div>
                         </Row>
                         <Row className="fpr1Content">
-                            <div className="col-md-4 fpcard clock">
-                                <Link to={"live"} className="underlined mainLink">
-                                    <br />
-                                    <h4 className="mainText">
-                                        <center>
+                            <div className="col-12 col-md-4 fpcard">
+                                <Row>
+                                    <div
+                                        className="col-3 col-md-12" />
+                                    <Link
+                                        to={"live"}
+                                        className="underlined mainLink col-6 col-md-12">
+                                        <br />
+                                        <h4
+                                            className="mainText">
                                             10am Sunday School
                                             <br />
                                             11am Worship
-                                        </center>
-                                    </h4>
-                                </Link>
+                                        </h4>
+                                    </Link>
+                                    <div
+                                        className="col-3 col-md-12s" />
+                                </Row>
                             </div>
-                            <div className="col-md-4 fpcard">
-                                <Link to={"/events"} className="underlined mainLink">
-                                    <br />
-                                    <h4 className="mainText">
-                                        <center>
+                            <div
+                                className="col-md-4 fpcard">
+                                <Row>
+                                    <div
+                                        className="col-3 col-md-12" />
+                                    <Link
+                                        to={"/events"}
+                                        className="underlined mainLink col-6 col-md-12">
+                                        <br />
+                                        <h4 className="mainText">
                                             Our Events
-                                        </center>
-                                    </h4>
-                                </Link>
+                                        </h4>
+                                    </Link>
+                                    <div
+                                        className="col-3 col-md-12" />
+                                </Row>
                             </div>
                             <div className="col-md-4 fpcard">
-                                <Link to={"/connect"}>
-                                    <br />
-                                    <h4 className="mainText underlined">
-                                        <center>
+                                <Row>
+                                    <div
+                                        className="col-3 col-md-12" />
+                                    <Link
+                                        to={"/connect"}
+                                        className="underlined mainLink col-6 col-md-12">
+                                        <br />
+                                        <h4 className="mainText">
                                             Get Connected!
-                                        </center>
-                                    </h4>
-                                </Link>
+                                        </h4>
+                                    </Link>
+                                    <div
+                                        className="col-3 col-md-12" />
+                                </Row>
                             </div>
                         </Row>
                         <Row>
                             <div className="facebookText">
-                                Come follow us on <a 
+                                Come follow us on <a
                                     target="_blank"
                                     rel="noreferrer"
                                     href="https://www.facebook.com/profile.php?id=61550936281949">
@@ -112,27 +132,30 @@ function Homepage() {
                     {/* </Container> */}
                     <Link to={"/kids"}>
                         <div className="fadein">
-                            <img 
-                            className="fphimg clock" 
-                            src="Images/kids.png"
-                            alt="Kids"/>
+                            <img
+                                className="fphimg clock"
+                                src="Images/kids.png"
+                                alt="Kids" />
                             <div className="text">
                                 <h1>
-                                    Kids
+                                    <center>
+                                        Kids
+                                    </center>
                                 </h1>
                             </div>
                         </div>
                     </Link>
                     <Link to={"/youth"}>
                         <div className="fadein">
-                            <img 
-                            className="fphimg"
-                            src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
-                            alt="Youth"/>
+                            <img
+                                className="fphimg"
+                                // src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
+                                src="https://i.postimg.cc/Ghj6TKRc/newflame-Cover.png"
+                                alt="Youth" />
                             <div className="text">
                                 <h1>
                                     <center>
-                                    Youth
+                                        Youth
                                     </center>
                                 </h1>
                             </div>
@@ -140,14 +163,14 @@ function Homepage() {
                     </Link>
                     <Link to={"/youngadults"}>
                         <div className="fadein">
-                            <img 
-                            className="fphimg" 
-                            src="Images/youngadults.png" 
-                            alt="Young Adults"/>
+                            <img
+                                className="fphimg"
+                                src="Images/youngadults.png"
+                                alt="Young Adults" />
                             <div className="text">
                                 <h1>
                                     <center>
-                                    Young Adults
+                                        Young Adults
                                     </center>
                                 </h1>
                             </div>
@@ -155,14 +178,14 @@ function Homepage() {
                     </Link>
                     <Link to={"/foodpantry"}>
                         <div className="fadein">
-                            <img 
-                            className="fphimg" 
-                            src="Images/foodpantry.png" 
-                            alt="Food Pantry"/>
+                            <img
+                                className="fphimg"
+                                src="Images/foodpantry.png"
+                                alt="Food Pantry" />
                             <div className="text">
                                 <h1>
                                     <center>
-                                    Food Pantry
+                                        Food Pantry
                                     </center>
                                 </h1>
                             </div>
@@ -171,11 +194,11 @@ function Homepage() {
 
                     <Row className="fpr4">
                         <div className="ytLink2">
-                            <a 
-                            rel="noreferrer"
-                            target="_blank" 
-                            href="https://www.youtube.com/@pastordunn" 
-                            className="ytLink3">
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                href="https://www.youtube.com/@pastordunn"
+                                className="ytLink3">
                                 Watch now!
                             </a>
                             <br />

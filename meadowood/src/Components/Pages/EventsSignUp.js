@@ -10,13 +10,13 @@ function EventsSignUp() {
 
     const { getAllEvents } = useContext(EventContext)
 
-    // useEffect(() => {
-    //     async function gettingEvents() {
-    //         let res = await getAllEvents()
-    //         setEvents(res)
-    //     }
-    //     gettingEvents()
-    // }, [])
+    useEffect(() => {
+        async function gettingEvents() {
+            let res = await getAllEvents()
+            setEvents(res)
+        }
+        gettingEvents()
+    }, [])
 
 
     function listEvents() {

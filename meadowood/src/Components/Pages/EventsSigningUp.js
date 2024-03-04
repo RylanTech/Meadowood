@@ -15,6 +15,7 @@ function EventsSigningUp() {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [name, setName] = useState("")
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     const { getEvent } = useContext(EventContext)
     const { createPerson } = useContext(PersonContext)
@@ -39,7 +40,67 @@ function EventsSigningUp() {
         }
         let res = await createPerson(newPerson)
         if (res) {
-            navigate('/')
+            setIsSubmitted(true)
+        }
+    }
+
+    function ifEvent() {
+        if (event) {
+            return (
+                <>
+                    <div className="col-12 event">
+                        <div className="eventTitle">
+                            {event.eventTitle}
+                        </div>
+                        <div className="eventTime">
+                            {event.date}
+                        </div>
+                        <div className="eventDescription">
+                            <div dangerouslySetInnerHTML={{ __html: event.eventDescription.replace(/\n/g, '<br />') }} />
+                        </div>
+                        <div className="eventLocation">
+                            {event.eventLocation}
+                        </div>
+                        <br />
+                    </div>
+                    <div>
+                        <Form>
+                            <Row>
+                                <Form.Group
+                                    className="col-12 col-md-6">
+                                    <Form.Label>Name</Form.Label>
+                                    <Form.Control
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="col-12 col-md-6">
+                                    <Form.Label>Phone</Form.Label>
+                                    <Form.Control
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="col-12 col-md-6">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </Form.Group>
+                            </Row>
+                        </Form>
+                        <br />
+                        <Button
+                            onClick={handleSubmit}
+                            className="col-12">
+                            Submit
+                        </Button>
+                    </div>
+                </>
+            )
         }
     }
 
@@ -47,66 +108,14 @@ function EventsSigningUp() {
         <>
             <Container>
                 <Row>
-                    {event ? (
-                        <>  
-                            <div className="col-12 event">
-                                <div className="eventTitle">
-                                    {event.eventTitle}
-                                </div>
-                                <div className="eventTime">
-                                    {event.date}
-                                </div>
-                                <div className="eventDescription">
-                                    <div dangerouslySetInnerHTML={{ __html: event.eventDescription.replace(/\n/g, '<br />') }} />
-                                </div>
-                                <div className="eventLocation">
-                                    {event.eventLocation}
-                                </div>
-                                <br />
-                            </div>
-                            <div>
-                                <Form>
-                                    <Row>
-                                        <Form.Group
-                                            className="col-12 col-md-6">
-                                            <Form.Label>Name</Form.Label>
-                                            <Form.Control
-                                                value={name}
-                                                onChange={(e) => setName(e.target.value)}
-                                            />
-                                        </Form.Group>
-                                        <Form.Group
-                                            className="col-12 col-md-6">
-                                            <Form.Label>Phone</Form.Label>
-                                            <Form.Control
-                                                value={phone}
-                                                onChange={(e) => setPhone(e.target.value)}
-                                            />
-                                        </Form.Group>
-                                        <Form.Group
-                                            className="col-12 col-md-6">
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                            />
-                                        </Form.Group>
-                                    </Row>
-                                </Form>
-                                <br />
-                                <Button
-                                    onClick={handleSubmit}
-                                    className="col-12">
-                                    Submit
-                                </Button>
-                            </div>
+                    {isSubmitted ? (
+                        <>
+                        <div className="noEvents">
+                            Thank you
+                        </div>
                         </>
                     ) : (
-                        <>
-                            <center>
-                                Loading...
-                            </center>
-                        </>
+                        ifEvent()
                     )}
                 </Row>
             </Container>
