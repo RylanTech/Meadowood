@@ -13,12 +13,8 @@ import eventRoutes from './routes/signUpEventsRoutes'
 
 const app = express();
 
-const corsOptions = {
-    origin: [ 'http://localhost:3000' ]
-};
-
 const cors = require('cors');
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(morgan('dev'));
 

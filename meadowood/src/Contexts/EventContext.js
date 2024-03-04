@@ -2,7 +2,8 @@ import axios from "axios";
 import { createContext } from "react";
 
 export const EventContext = createContext()
-let baseUrl = "http://localhost:3001/"
+// let baseUrl = "http://localhost:3001/"
+let baseUrl = "https://meadowoodapi.site/"
 
 export const EventProvider = (props) => {
 

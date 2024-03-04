@@ -21,7 +21,7 @@ function ViewEventPeople() {
             setPeople(peopleRes)
         }
         gettingEvent()
-    }, []);
+    }, [getEvent, getPersonByEventId, params.id]);
 
     function mapThroughPeople() {
         if (people) {

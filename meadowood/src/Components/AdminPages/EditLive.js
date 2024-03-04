@@ -1,12 +1,10 @@
 import { useContext, useEffect, useState } from "react"
-import { UserContext } from "../../Contexts/UserContext"
-import { Link, useNavigate } from "react-router-dom"
-import { Button, Card, Container, Form, Row } from "react-bootstrap"
+import { useNavigate } from "react-router-dom"
+import { Button, Container, Form, Row } from "react-bootstrap"
 import { LiveContext } from "../../Contexts/LiveContext"
 
 function EditLive() {
 
-    const { isAdmin, verify } = useContext(UserContext)
     const { getStatus, setStatus } = useContext(LiveContext)
     const navigate = useNavigate()
 
@@ -23,7 +21,7 @@ function EditLive() {
             setLiveLink(status.liveLink)
         }
         gettingLiveStatus()
-    }, []);
+    }, [getStatus]);
 
 
 
@@ -45,7 +43,6 @@ function EditLive() {
         <>
             <Container>
                 <br />
-                <h4></h4>
                 <Row>
                     <Form.Group className="col-6">
                         <Form.Label>Status</Form.Label>
@@ -89,14 +86,20 @@ function EditLive() {
                         <center>
                             To get the link on a youtube video, click share
                             <br />
-                            <img className="col-12" src="https://i.postimg.cc/5Nc5yY7k/share1.png" />
+                            <img 
+                            className="col-12" 
+                            src="https://i.postimg.cc/5Nc5yY7k/share1.png" 
+                            alt="Click Share"/>
                         </center>
                     </div>
                     <div className="col-6">
                         <center>
                             Then click embed,
                             <br />
-                            <img className="col-12" src="https://i.postimg.cc/jjkPbLnc/share2.png" />
+                            <img 
+                            className="col-12" 
+                            src="https://i.postimg.cc/jjkPbLnc/share2.png" 
+                            alt="Click embed"/>
                         </center>
                     </div>
                     <div className="col-12">
@@ -104,7 +107,10 @@ function EditLive() {
                         <center>
                             Then copy the highlighted text and put that in the "Link field"
                             <br />
-                            <img className="col-12" src="https://i.postimg.cc/rFLWM6sB/share3.png" />
+                            <img 
+                            className="col-12" 
+                            src="https://i.postimg.cc/rFLWM6sB/share3.png" 
+                            alt={`In the iframe, copy the source link (src="ThisLinkHere") link`}/>
                         </center>
                     </div>
 

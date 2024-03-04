@@ -2,7 +2,7 @@ import { Button, Container, Row } from "react-bootstrap"
 import Footer from "../Footer"
 import { useContext, useEffect, useState } from "react"
 import { EventContext } from "../../Contexts/EventContext"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function EventsSignUp() {
     const [events, setEvents] = useState()
@@ -16,15 +16,20 @@ function EventsSignUp() {
             setEvents(res)
         }
         gettingEvents()
-    }, [])
+    }, [getAllEvents])
 
 
     function listEvents() {
-        if (events) {
+        if (events.length > 0) {
             return events.map((event) => {
                 console.log(event)
                 return (
                     <>
+                        <Row>
+                            <div className="eventsSUHeader">
+                                Sign up for our events!
+                            </div>
+                        </Row>
                         <div className="col-12 event">
                             <div className="eventTitle">
                                 {event.eventTitle}
@@ -50,6 +55,14 @@ function EventsSignUp() {
                     </>
                 )
             })
+        } else {
+            return (
+                <>
+                    <div className="noEvents">
+                        No events at this time
+                    </div>
+                </>
+            )
         }
     }
 
@@ -59,18 +72,13 @@ function EventsSignUp() {
                 <Row>
                     {events ? (
                         <>
-                            <Row>
-                                <div className="eventsSUHeader">
-                                    Sign up for our events!
-                                </div>
-                            </Row>
                             {listEvents()}
                         </>
                     ) : (
                         <>
                             <center>
                                 <div className="noEvents">
-                                    No events at this time.
+                                    Error
                                 </div>
                             </center>
                         </>

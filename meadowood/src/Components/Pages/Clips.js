@@ -15,7 +15,7 @@ function Clips() {
             setClips(res)
         }
         gettingClips()
-    }, [])
+    }, [getClips])
 
     function mapThroughClips() {
         if (clips) {
@@ -26,6 +26,7 @@ function Clips() {
                             <a
                                 href={clip.clipURL}
                                 target="_blank"
+                                rel="noreferrer"
                                 className="col-12 col-sm-6 col-lg-4 thumbnailLink"
                                 key={clip.clipId}
                             >

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Button, Container, Form, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { PersonContext } from "../../Contexts/personContext"
 
 function EventsSigningUp() {
@@ -20,7 +20,6 @@ function EventsSigningUp() {
     const { getEvent } = useContext(EventContext)
     const { createPerson } = useContext(PersonContext)
     let params = useParams()
-    let navigate = useNavigate()
 
     useEffect(() => {
         async function gettingEvent() {
@@ -29,7 +28,7 @@ function EventsSigningUp() {
             setEvent(res)
         }
         gettingEvent()
-    }, [])
+    }, [getEvent, params.id])
 
     async function handleSubmit() {
         let newPerson = {
