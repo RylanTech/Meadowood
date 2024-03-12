@@ -24,14 +24,14 @@ function Kids() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 forceCaraAspect"
-                                src="https://plus.unsplash.com/premium_photo-1664478361973-d1632c3194c6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://i.postimg.cc/3R9YjNPJ/kids1.jpg"
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 forceCaraAspect"
-                                src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://i.postimg.cc/7YjDnpQ7/kids3.jpg"
                                 alt="Third slide"
                             />
                         </Carousel.Item>
