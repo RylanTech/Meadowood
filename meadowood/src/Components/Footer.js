@@ -19,27 +19,27 @@ function Footer() {
                                 Ministries
                             </div>
                             <Link className="footerLink"
-                            to="/kids">
+                                to="/kids">
                                 Kids
                             </Link>
                             <Link className="footerLink"
-                            to="/youth">
+                                to="/youth">
                                 Youth
                             </Link>
                             <Link className="footerLink"
-                            to="/youngadults">
+                                to="/youngadults">
                                 Young Adults
                             </Link>
                             <Link className="footerLink"
-                            to="/ultimate">
+                                to="/ultimate">
                                 Ultimate Adults
                             </Link>
                             <Link className="footerLink"
-                            to="/youngatheart">
+                                to="/youngatheart">
                                 Seniors
                             </Link>
                             <Link className="footerLink"
-                            to="/foodpantry">
+                                to="/foodpantry">
                                 Food Pantry
                             </Link>
                         </div>
@@ -48,22 +48,22 @@ function Footer() {
                                 Watch
                             </div>
                             <Link className="footerLink"
-                            to="/live">
+                                to="/live">
                                 Live
                             </Link>
                             <Link className="footerLink"
-                            to="/clips">
+                                to="/clips">
                                 Clips
                             </Link>
                             <div className="footerHeader2">
                                 Give
                             </div>
-                            <Link className="footerLink">
+                            <a
+                                className="footerLink"
+                                href="https://www.paypal.com/donate/?hosted_button_id=J3L75KY6QTZDW"
+                            >
                                 Paypal
-                            </Link>
-                            <Link className="footerLink">
-                                Venmo
-                            </Link>
+                            </a>
                         </div>
                         <div className="col-12 col-md-4">
                             <iframe

@@ -24,7 +24,7 @@ function Ultimate() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 forceCaraAspect"
-                                src="https://i.postimg.cc/C1r9Lq3D/ultimate.png"
+                                src="https://i.postimg.cc/d0R0WGfS/huge.png"
                                 alt="First slide"
                             />
 
@@ -32,7 +32,7 @@ function Ultimate() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 forceCaraAspect"
-                                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://i.postimg.cc/C1r9Lq3D/ultimate.png"
                                 alt="Second slide"
                             />
                         </Carousel.Item>

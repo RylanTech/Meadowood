@@ -34,8 +34,16 @@ function Youngadults() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 forceCaraAspect"
-                                    src="https://i.postimg.cc/NFst1gBJ/PXL-20231101-235321562.jpg"
+                                    src="https://i.postimg.cc/kgyfNpcV/yah3.png"
                                     alt="Second slide"
+                                />
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100 forceCaraAspect"
+                                    src="https://i.postimg.cc/NFst1gBJ/PXL-20231101-235321562.jpg"
+                                    alt="Third slide"
                                 />
 
                             </Carousel.Item>

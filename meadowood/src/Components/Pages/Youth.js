@@ -40,7 +40,7 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/3xDZK37v/IMG-3193-20240127191419-2.jpg"
+                                                src="https://i.postimg.cc/ZRT6jbwp/youth1.png"
                                                 alt="First slide"
                                             />
                                         </Carousel.Item>
@@ -54,7 +54,7 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/Y0s1HssR/IMG-1518-20240127191421-2.jpg"
+                                                src="https://i.postimg.cc/Zqf67k2Q/youth2.png"
                                                 alt="Third slide"
                                             />
                                         </Carousel.Item>
@@ -72,7 +72,7 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/Pqj1TZ2g/IMG-1469-20240127191427-2.jpg"
+                                                src="https://i.postimg.cc/sXd3RxkG/youth3.png"
                                                 alt="Second slide"
                                             />
                                         </Carousel.Item>
@@ -90,7 +90,7 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/K8XMDBS1/IMG-1273-20240127191433-2.jpg"
+                                                src="https://i.postimg.cc/7h184Ngp/huge-1.png"
                                                 alt="First slide"
                                             />
                                         </Carousel.Item>
@@ -124,7 +124,7 @@ function Youth() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/3xDZK37v/IMG-3193-20240127191419-2.jpg"
+                                    src="https://i.postimg.cc/ZRT6jbwp/youth1.png"
                                     alt="First slide"
                                 />
                             </Carousel.Item>
@@ -138,7 +138,7 @@ function Youth() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/Y0s1HssR/IMG-1518-20240127191421-2.jpg"
+                                    src="https://i.postimg.cc/Zqf67k2Q/youth2.png"
                                     alt="Third slide"
                                 />
                             </Carousel.Item>
@@ -152,7 +152,7 @@ function Youth() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/Pqj1TZ2g/IMG-1469-20240127191427-2.jpg"
+                                    src="https://i.postimg.cc/sXd3RxkG/youth3.png"
                                     alt="Second slide"
                                 />
                             </Carousel.Item>
@@ -166,7 +166,7 @@ function Youth() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/K8XMDBS1/IMG-1273-20240127191433-2.jpg"
+                                    src="https://i.postimg.cc/7h184Ngp/huge-1.png"
                                     alt="First slide"
                                 />
                             </Carousel.Item>

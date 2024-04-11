@@ -16,7 +16,7 @@ function Home() {
         <Container>
           <img
             className="nav-img"
-            src="https://i.postimg.cc/Nj4WN01b/Copy-of-Meadowood-removebg-preview.png" 
+            src="https://i.postimg.cc/ZqxtdH9j/Copy-of-Meadowood-removebg-preview.png" 
             alt="Meadowood - Live better, Love better, Serve better"/>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav" />
@@ -100,11 +100,8 @@ function Home() {
                 </Link>
               </NavDropdown>
               <NavDropdown className="nvbr" title="Donate" id="basic-nav-dropdown">
-                <NavDropdown.Item href="https://www.paypal.com/donate?token=dAPUbR6l-8mcvWRdRvxLGBSAqI6Cbs4eHsT276tLRzHpL-IdjwQrm2uXC07XZMmK97Y9SRiPCcQRuLyN" target="_top">
+                <NavDropdown.Item href="https://www.paypal.com/donate/?hosted_button_id=J3L75KY6QTZDW" target="_top">
                   Paypal
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  Venmo
                 </NavDropdown.Item>
               </NavDropdown>
               <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>

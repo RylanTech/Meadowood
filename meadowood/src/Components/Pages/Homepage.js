@@ -138,7 +138,7 @@ function Homepage() {
                                 alt="Kids" />
                             <div className="text">
                                 <h1>
-                                    <center>
+                                    <center className="tilt-neon">
                                         Kids
                                     </center>
                                 </h1>
@@ -154,7 +154,7 @@ function Homepage() {
                                 alt="Youth" />
                             <div className="text">
                                 <h1>
-                                    <center>
+                                    <center className="tilt-neon">
                                         Youth
                                     </center>
                                 </h1>
@@ -165,11 +165,11 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                src="https://i.postimg.cc/vZY7DL8w/youngadults.png"
+                                src="https://i.postimg.cc/hj7ckcJ3/youngadults.png"
                                 alt="Young Adults" />
                             <div className="text">
                                 <h1>
-                                    <center>
+                                    <center className="tilt-neon">
                                         Young Adults
                                     </center>
                                 </h1>
@@ -184,7 +184,7 @@ function Homepage() {
                                 alt="Food Pantry" />
                             <div className="text">
                                 <h1>
-                                    <center>
+                                    <center className="tilt-neon">
                                         Food Pantry
                                     </center>
                                 </h1>
