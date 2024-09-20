@@ -58,9 +58,12 @@ function Footer() {
                             <div className="footerHeader2">
                                 Give
                             </div>
-                            <Link className="footerLink">
+                            <a
+                                className="footerLink"
+                                href="https://www.paypal.com/donate/?hosted_button_id=J3L75KY6QTZDW"
+                            >
                                 Paypal
-                            </Link>
+                            </a>
                             {/* <Link className="footerLink">
                                 Venmo
                             </Link> */}

@@ -30,19 +30,22 @@ function Classes() {
                         Wednesday
                     </div>
                     <div className="classHeader col-4">
-                        Sunday
+                        Sunday School
                     </div>
                 </Row>
                 <hr />
                 <Row>
-                    <div className="classHeader col-5 col-md-4">
+                    <div className="classHeader col-8">
                         Nurery
                     </div>
-                    <div className="classContent col-3 col-md-4">
-
-                    </div>
                     <div className="classContent col-4">
-                        11am-12:30pm
+                        11am-12pm
+                    </div>
+                </Row>
+                <Row>
+                    <div
+                        className="afp">
+                        (Available for parents)
                     </div>
                 </Row>
                 <hr />
@@ -54,20 +57,26 @@ function Classes() {
 
                     </div>
                     <div className="classContent col-4">
-                        11am-12:30pm
+                        11am-12pm
                     </div>
                 </Row>
                 <hr />
                 <Row>
                     <Link className="classHeader col-5 col-md-4"
                         to='/kids'>
-                        K - 7th Grade
+                        K - 6th Grade
                     </Link>
                     <div className="classContent col-3 col-md-4">
                         Every 3rd Wed, 7pm-8pm
                     </div>
                     <div className="classContent col-4">
-                        10am-11am
+                        11am-12pm
+                    </div>
+                </Row>
+                <Row>
+                    <div
+                        className="afp">
+                        (Children's Church)
                     </div>
                 </Row>
                 <hr />
@@ -93,7 +102,7 @@ function Classes() {
                         6pm-8pm
                     </div>
                     <div className="classContent col-4">
-                        11am-12:30pm
+                        10am-11am
                     </div>
                 </Row>
                 <hr />

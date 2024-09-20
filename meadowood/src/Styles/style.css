@@ -156,6 +156,16 @@ body {
   aspect-ratio: 21/9;
 }
 
+.tilt-neon {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
 /* ministries */
 .crd {
   background-color: #2EB0EA!important;
@@ -545,6 +555,10 @@ Classes Page
   margin: auto;
   font-size: 16px;
 }
+.afp {
+  font-size: 16px;
+  text-decoration: none;
+}
 
 /*
  Food 
@@ -816,7 +830,7 @@ Global
     }
     .YAheading {
       font-size: 100px;
-      position: relative; top: -650px;
+      position: relative; top: -630px;
     }
     .YAInstaLink {
       position: relative; top: -100px;

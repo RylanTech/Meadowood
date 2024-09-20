@@ -57,7 +57,7 @@ export const deleteConnection: RequestHandler = async (req, res, next) => {
             } else {
                 res.status(404).send()
             }
-            res.status(200).send()
+            res.status(200).send(existing)
         } else {
             res.status(401).send()
         }
