@@ -9,6 +9,7 @@ import { AboutFactory } from "./about";
 import { EventFactory } from "./signUpEvents";
 import { signUpUserFactory } from "./userSignedUp";
 import 'dotenv/config'
+import { ClassFactory } from "./classes";
 
 const dbName = process.env.DB_NAME || '';
 const username = process.env.DB_USER || '';
@@ -29,5 +30,6 @@ staffFactory(sequelize)
 AboutFactory(sequelize)
 EventFactory(sequelize)
 signUpUserFactory(sequelize);
+ClassFactory(sequelize)
 
 export const db = sequelize;

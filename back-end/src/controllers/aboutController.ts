@@ -13,7 +13,7 @@ export const aboutText: RequestHandler = async (req, res, next) => {
 }
 
 export const editAbout: RequestHandler = async (req, res, next) => {
-    // try {
+    try {
         let usr = await verifyUser(req)
         if (usr) {
             let editedText: about = req.body
@@ -30,7 +30,7 @@ export const editAbout: RequestHandler = async (req, res, next) => {
         } else {
             res.status(401).send()
         }
-    // } catch {
-    //     res.status(500).send()
-    // }
+    } catch {
+        res.status(500).send()
+    }
 }

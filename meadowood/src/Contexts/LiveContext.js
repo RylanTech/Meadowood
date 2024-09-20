@@ -2,8 +2,8 @@ import axios from "axios";
 import { createContext } from "react";
 
 export const LiveContext = createContext()
-// let baseUrl = "http://localhost:3001/"
-let baseUrl = "https://meadowoodapi.site/"
+let baseUrl = "http://localhost:3001/"
+// let baseUrl = "https://meadowoodapi.site/"
 
 export const LiveProvider = (props) => {
 
