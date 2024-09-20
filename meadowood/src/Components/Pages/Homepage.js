@@ -134,7 +134,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg clock"
-                                src="https://i.postimg.cc/YjcvSFtN/kids.png"
+                                src="./meadowoodPhotos/kids/kids.png"
                                 alt="Kids" />
                             <div className="text">
                                 <h1>
@@ -149,8 +149,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                // src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
-                                src="https://i.postimg.cc/Ghj6TKRc/newflame-Cover.png"
+                                src="./meadowoodPhotos/nf/newflame-Cover.png"
                                 alt="Youth" />
                             <div className="text">
                                 <h1>
@@ -165,7 +164,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                src="https://i.postimg.cc/vZY7DL8w/youngadults.png"
+                                src="./meadowoodPhotos/c4l/youngadults.png"
                                 alt="Young Adults" />
                             <div className="text">
                                 <h1>
@@ -180,7 +179,7 @@ function Homepage() {
                         <div className="fadein">
                             <img
                                 className="fphimg"
-                                src="https://i.postimg.cc/QtXfDGB1/foodpantry.png"
+                                src="./meadowoodPhotos/fp/foodpantry2.png"
                                 alt="Food Pantry" />
                             <div className="text">
                                 <h1>
@@ -194,16 +193,14 @@ function Homepage() {
 
                     <Row className="fpr4">
                         <div className="ytLink2">
-                            <a
-                                rel="noreferrer"
-                                target="_blank"
-                                href="https://www.youtube.com/@pastordunn"
+                            <Link
+                                to="/live"
                                 className="ytLink3">
                                 Watch now!
-                            </a>
+                            </Link>
                             <br />
                             <div className="ytLinkText">
-                                We have streams every Sunday and Wednesday!
+                                We have streams every Sunday!
                             </div>
                         </div>
                     </Row>

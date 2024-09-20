@@ -64,10 +64,10 @@ function Classes() {
                         K - 7th Grade
                     </Link>
                     <div className="classContent col-3 col-md-4">
-
+                        Every 3rd Wed, 7pm-8pm
                     </div>
                     <div className="classContent col-4">
-                        11am-12:30pm
+                        10am-11am
                     </div>
                 </Row>
                 <hr />
@@ -80,7 +80,7 @@ function Classes() {
                         6pm-8pm
                     </div>
                     <div className="classContent col-4">
-                        11am-12:30pm
+                        10am-11am
                     </div>
                 </Row>
                 <hr />
@@ -103,7 +103,7 @@ function Classes() {
                         Ultimate Adults
                     </Link>
                     <div className="classContent col-3 col-md-4">
-                        7pm-8pm
+
                     </div>
                     <div className="classContent col-4">
                         10am-11am

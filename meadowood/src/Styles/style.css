@@ -399,6 +399,18 @@ body {
 }
 
 /*
+Youth Page
+*/
+.surprise {
+  color: black;
+  float: right;
+  position: relative; top: -50px;
+}
+.surprise:hover {
+  color: #161616;
+}
+
+/*
 Connection card page
 */
 .connectionHeader {
@@ -511,6 +523,13 @@ Footer
   padding: 0px 15px;
   border-radius: 7px;
   margin-top: 22px;
+}
+.madeByMe {
+  font-family: 'Bebas Neue', sans-serif;
+}
+.myLink {
+  color: black;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 /*

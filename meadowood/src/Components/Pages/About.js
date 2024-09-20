@@ -76,9 +76,9 @@ function About() {
         }
 
 
-        let mapStaff = staff.sort((a, b) => b.position - a.position);
+        // let mapStaff = staff.sort((a, b) => a.position - b.position);
 
-        return mapStaff.map((member) => {
+        return staff.map((member) => {
 
             if (member.clickableInfo) {
                 let clickableInfo = JSON.parse(member.clickableInfo)
@@ -89,6 +89,7 @@ function About() {
                             <a
                                 key={member.staffId}
                                 className="redirectProfile col-12 col-md-6 col-lg-4"
+                                rel="noreferrer"
                                 href={clickableInfo.link}
                                 target="_blank">
                                 <div>

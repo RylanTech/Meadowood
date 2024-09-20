@@ -40,21 +40,21 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/3xDZK37v/IMG-3193-20240127191419-2.jpg"
+                                                src="./meadowoodPhotos/nf/newflame2.png"
                                                 alt="First slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf4.jpg"
                                                 alt="Second slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/Y0s1HssR/IMG-1518-20240127191421-2.jpg"
+                                                src="./meadowoodPhotos/nf/newflame3.png"
                                                 alt="Third slide"
                                             />
                                         </Carousel.Item>
@@ -65,21 +65,21 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/XYF9RxcK/IMG-1488-20240127191424-2.jpg"
+                                                src="./meadowoodPhotos/nf/drama.jpg"
                                                 alt="First slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/Pqj1TZ2g/IMG-1469-20240127191427-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf6.png"
                                                 alt="Second slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/k4M8tCrw/IMG-1311-20240127191430-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf7.jpg"
                                                 alt="Third slide"
                                             />
                                         </Carousel.Item>
@@ -90,21 +90,21 @@ function Youth() {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/K8XMDBS1/IMG-1273-20240127191433-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf10.png"
                                                 alt="First slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/bvpSKPv8/IMG-1228-20240127191436-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf8.jpg"
                                                 alt="Second slide"
                                             />
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100 newFlameImg"
-                                                src="https://i.postimg.cc/QtnB9WJx/IMG-1168-20240127191441-2.jpg"
+                                                src="./meadowoodPhotos/nf/nf9.jpg"
                                                 alt="Third slide"
                                             />
                                         </Carousel.Item>
@@ -124,63 +124,63 @@ function Youth() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/3xDZK37v/IMG-3193-20240127191419-2.jpg"
+                                    src="./meadowoodPhotos/nf/newflame2.png"
                                     alt="First slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/C51j9gmd/IMG-1968-20230805122830-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf4.jpg"
                                     alt="Second slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/Y0s1HssR/IMG-1518-20240127191421-2.jpg"
+                                    src="./meadowoodPhotos/nf/newflame3.png"
                                     alt="Third slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/XYF9RxcK/IMG-1488-20240127191424-2.jpg"
+                                    src="./meadowoodPhotos/nf/drama.jpg"
                                     alt="First slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/Pqj1TZ2g/IMG-1469-20240127191427-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf6.png"
                                     alt="Second slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/k4M8tCrw/IMG-1311-20240127191430-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf7.jpg"
                                     alt="Third slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/K8XMDBS1/IMG-1273-20240127191433-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf10.png"
                                     alt="First slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/bvpSKPv8/IMG-1228-20240127191436-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf8.jpg"
                                     alt="Second slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 newFlameImg"
-                                    src="https://i.postimg.cc/QtnB9WJx/IMG-1168-20240127191441-2.jpg"
+                                    src="./meadowoodPhotos/nf/nf9.jpg"
                                     alt="Third slide"
                                 />
                             </Carousel.Item>
@@ -244,7 +244,7 @@ function Youth() {
                                 </div>
 
                                 <div className="newFlameVerse">
-                                    New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that safe enough for students to be vulnerable and grow closer to God and each other.
+                                    New Flame Student ministries is the youth group at Meadowood Church of God. We believe we are the NOW generation, not just the next generation. We can make a diference for Christ TODAY. Led by Pastor Daniel Billings, Daniel's vision is to create an evoirnment that is safe enough for students to be vulnerable and grow closer to God and each other.
                                 </div>
                             </center>
                         </div>
@@ -278,6 +278,9 @@ function Youth() {
                         </div>
                     </Row>
                 </Container>
+                <a className="surprise" href="https://i.postimg.cc/PJDBSv0P/PXL-20240128-144419141.jpg">
+                    Doggo
+                </a>
             </div >
             <Footer />
         </>

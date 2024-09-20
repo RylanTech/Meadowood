@@ -55,7 +55,7 @@ function Live() {
                             <iframe
                                 className="col-12 liveVideo"
                                 src={liveLink}
-                                title="Live on Youtube"
+                                title="Meadowood Live on Youtube"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen
                             ></iframe>
@@ -66,11 +66,16 @@ function Live() {
         } else if (liveStatus === "Live") {
             return (
                 <>
+                    <center>
+                            <br />
+                            <h3>Hello! We are live!</h3>
+                            <br />
+                        </center>
                     {ifTitle()}
                     <iframe
                         className="col-12 liveVideo"
                         src={liveLink}
-                        title="Live on Youtube"
+                        title="Meadowood Live on Youtube"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
                     ></iframe>

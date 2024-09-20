@@ -26,7 +26,7 @@ function Youngadults() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 forceCaraAspect"
-                                    src="https://i.postimg.cc/CxXwWTs5/PXL-20231202-232015152.jpg"
+                                    src="./meadowoodPhotos/c4l/c4l2.jpg"
                                     alt="First slide"
                                 />
 
@@ -34,7 +34,15 @@ function Youngadults() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 forceCaraAspect"
-                                    src="https://i.postimg.cc/NFst1gBJ/PXL-20231101-235321562.jpg"
+                                    src="./meadowoodPhotos/c4l/c4l1.jpg"
+                                    alt="Second slide"
+                                />
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100 forceCaraAspect"
+                                    src="./meadowoodPhotos/c4l/ya3.png"
                                     alt="Second slide"
                                 />
 

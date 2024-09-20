@@ -1,4 +1,4 @@
-import { Container, Row } from "react-bootstrap"
+import { Carousel, Container, Row } from "react-bootstrap"
 import Footer from '../Footer'
 import { Helmet } from "react-helmet"
 
@@ -20,7 +20,23 @@ function Foodpantry() {
             </Helmet>
             <Container>
                 <Row>
-                    <img src="https://i.postimg.cc/fyCtvmWS/428924754-384449354484246-3216635529621801509-n.jpg" />
+                <Carousel fade>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100 forceCaraAspect"
+                                src="./meadowoodPhotos/fp/foodpantry1.jpg"
+                                alt="First slide"
+                            />
+
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100 forceCaraAspect"
+                                src="./meadowoodPhotos/fp/PXL_20240317_171237996.jpg"
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
                 </Row>
                 <Row>
                     <img

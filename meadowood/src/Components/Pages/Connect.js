@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { Button, Container, Form, Row } from "react-bootstrap"
+import { Button, Card, Container, Form, Row } from "react-bootstrap"
 import { ConnectionContext } from "../../Contexts/ConnectionContext"
 import { Helmet } from "react-helmet"
 
@@ -70,76 +70,78 @@ function Connect() {
                             </div>
                         </Row>
                         <Row>
-                            <Form>
-                                <Row>
-                                    <Form.Group className="col-12 col-md-6">
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control
-                                            value={name}
-                                            onChange={(e) => setName(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group className="col-12 col-md-6">
-                                        <Form.Label>Phone Number</Form.Label>
-                                        <Form.Control
-                                            value={phone}
-                                            onChange={(e) => setPhone(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Email</Form.Label>
-                                        <Form.Control
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Date of Birth</Form.Label>
-                                        <Form.Control
-                                            value={dateOfBirth}
-                                            onChange={(e) => setDateOfBirth(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Address</Form.Label>
-                                        <Form.Control
-                                            value={address}
-                                            onChange={(e) => setAddress(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Label>Additional Notes</Form.Label>
-                                    <br />
-                                    <textarea
-                                        className="notes col-12"
-                                        value={notes}
-                                        onChange={(e) => setNotes(e.target.value)}
-                                    />
-                                </Row>
-                                <br />
-                                {message ? (
-                                    <>
-                                        <Row>
-                                            <div className="message">
-                                                {message}
-                                            </div>
-                                        </Row>
+                            <div className="col-md-3"/>
+                            <Card className="col-12 col-md-6">
+                                <Card.Body>
+                                    <Row>
+                                        <Form.Group className="col-12 col-md-6">
+                                            <Form.Label>Name</Form.Label>
+                                            <Form.Control
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group className="col-12 col-md-6">
+                                            <Form.Label>Phone Number</Form.Label>
+                                            <Form.Control
+                                                value={phone}
+                                                onChange={(e) => setPhone(e.target.value)}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Date of Birth</Form.Label>
+                                            <Form.Control
+                                                value={dateOfBirth}
+                                                onChange={(e) => setDateOfBirth(e.target.value)}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Address</Form.Label>
+                                            <Form.Control
+                                                value={address}
+                                                onChange={(e) => setAddress(e.target.value)}
+                                            />
+                                        </Form.Group>
+                                        <Form.Label>Additional Notes</Form.Label>
                                         <br />
-                                    </>
-                                ) : (
-                                    <>
-                                    </>
-                                )}
-                                <Row>
-                                    <div className="col-md-3" />
-                                    <Button
-                                        onClick={handleSubmit}
-                                        className="col-12 col-md-6 connectionBtn"
-                                    >
-                                        Submit
-                                    </Button>
-                                </Row>
-
-                            </Form>
+                                        <textarea
+                                            className="notes col-12"
+                                            value={notes}
+                                            onChange={(e) => setNotes(e.target.value)}
+                                        />
+                                    </Row>
+                                    <br />
+                                    {message ? (
+                                        <>
+                                            <Row>
+                                                <div className="message">
+                                                    {message}
+                                                </div>
+                                            </Row>
+                                            <br />
+                                        </>
+                                    ) : (
+                                        <>
+                                        </>
+                                    )}
+                                    <Row>
+                                        <div className="col-md-3" />
+                                        <Button
+                                            onClick={handleSubmit}
+                                            className="col-12 col-md-6 connectionBtn"
+                                        >
+                                            Submit
+                                        </Button>
+                                    </Row>
+                                </Card.Body>
+                            </Card>
                         </Row>
                     </>
                 )}
