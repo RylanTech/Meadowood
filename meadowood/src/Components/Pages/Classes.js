@@ -2,83 +2,96 @@ import { Container, Row } from "react-bootstrap";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useContext, useEffect, useState } from "react";
+import { ClassContext } from "../../Contexts/ClassContexts";
 
 function Classes() {
+    const [classes, setClasses] = useState([])
 
-    let classes = [
-        {
-            classId: 0,
-            className: "Nursery",
-            classSubtitle: "(Available for parents)",
-            classLink: undefined,
-            wednesdayTime: undefined,
-            sundayschooltime: "11am-12pm",
-            singleText: undefined
-        },
-        {
-            classId: 1,
-            className: "Toddler",
-            classSubtitle: undefined,
-            classLink: undefined,
-            wednesdayTime: undefined,
-            sundayschooltime: "11am-12pm",
-            singleText: undefined
-        },
-        {
-            classId: 2,
-            className: "K - 6th Grade",
-            classSubtitle: undefined,
-            classLink: "/kids",
-            wednesdayTime: "Every 3rd Wed, 7pm-8pm",
-            sundayschooltime: "11am-12pm",
-            singleText: undefined
-        },
-        {
-            classId: 3,
-            className: "7th grade - 18",
-            classSubtitle: undefined,
-            classLink: "/youth",
-            wednesdayTime: "6pm-8pm",
-            sundayschooltime: "10am-11am",
-            singleText: undefined
-        },
-        {
-            classId: 4,
-            className: "18 & Graduated - 25",
-            classSubtitle: undefined,
-            classLink: "/youngadults",
-            wednesdayTime: "7pm-8pm",
-            sundayschooltime: "10am-11am",
-            singleText: undefined
-        },
-        {
-            classId: 5,
-            className: "Ultimate Adults",
-            classSubtitle: undefined,
-            classLink: "/ultimate",
-            wednesdayTime: undefined,
-            sundayschooltime: "10am-11am",
-            singleText: undefined
-        },
-        {
-            classId: 6,
-            className: "Adults",
-            classSubtitle: undefined,
-            classLink: undefined,
-            wednesdayTime: "7pm-8pm",
-            sundayschooltime: "10am-11am",
-            singleText: undefined
-        },
-        {
-            classId: 7,
-            className: "55+",
-            classSubtitle: undefined,
-            classLink: undefined,
-            wednesdayTime: undefined,
-            sundayschooltime: undefined,
-            singleText: "Scheduled once a month"
+    const { getClasses } = useContext(ClassContext)
+
+    useEffect(() => {
+        async function gettingClasses() {
+            let classesGotten = await getClasses();
+            setClasses(classesGotten);
         }
-    ]
+        gettingClasses();
+    }, []);
+
+    // let classes = [
+    //     {
+    //         classId: 0,
+    //         className: "Nursery",
+    //         classSubtitle: "(Available for parents)",
+    //         classLink: undefined,
+    //         wednesdayTime: undefined,
+    //         sundaySchoolTime: "11am-12pm",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 1,
+    //         className: "Toddler",
+    //         classSubtitle: undefined,
+    //         classLink: undefined,
+    //         wednesdayTime: undefined,
+    //         sundaySchoolTime: "11am-12pm",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 2,
+    //         className: "K - 6th Grade",
+    //         classSubtitle: undefined,
+    //         classLink: "/kids",
+    //         wednesdayTime: "Every 3rd Wed, 7pm-8pm",
+    //         sundaySchoolTime: "11am-12pm",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 3,
+    //         className: "7th grade - 18",
+    //         classSubtitle: undefined,
+    //         classLink: "/youth",
+    //         wednesdayTime: "6pm-8pm",
+    //         sundaySchoolTime: "10am-11am",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 4,
+    //         className: "18 & Graduated - 25",
+    //         classSubtitle: undefined,
+    //         classLink: "/youngadults",
+    //         wednesdayTime: "7pm-8pm",
+    //         sundaySchoolTime: "10am-11am",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 5,
+    //         className: "Ultimate Adults",
+    //         classSubtitle: undefined,
+    //         classLink: "/ultimate",
+    //         wednesdayTime: undefined,
+    //         sundaySchoolTime: "10am-11am",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 6,
+    //         className: "Adults",
+    //         classSubtitle: undefined,
+    //         classLink: undefined,
+    //         wednesdayTime: "7pm-8pm",
+    //         sundaySchoolTime: "10am-11am",
+    //         singleText: undefined
+    //     },
+    //     {
+    //         classId: 7,
+    //         className: "55+",
+    //         classSubtitle: undefined,
+    //         classLink: undefined,
+    //         wednesdayTime: undefined,
+    //         sundaySchoolTime: undefined,
+    //         singleText: "Scheduled once a month"
+    //     }
+    // ]
 
     function mapThroughClasses() {
         return classes.map((classItem) => {
@@ -111,7 +124,7 @@ function Classes() {
                                     {classItem.wednesdayTime}
                                 </div>
                                 <div className="classContent col-4">
-                                    {classItem.sundayschooltime}
+                                    {classItem.sundaySchoolTime}
                                 </div>
                             </>}
                     </Row>

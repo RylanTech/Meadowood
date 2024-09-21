@@ -6,7 +6,7 @@ export class classes extends Model<InferAttributes<classes>, InferCreationAttrib
     declare classSubtitle: string;
     declare classLink: string;
     declare wednesdayTime: string;
-    declare sundayschoolTime: string;
+    declare sundaySchoolTime: string;
     declare singleText: string;
     declare createdAt?: Date;
     declare updatedAt?: Date;
@@ -36,7 +36,7 @@ export function ClassFactory(sequelize: Sequelize) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        sundayschoolTime: {
+        sundaySchoolTime: {
             type: DataTypes.STRING,
             allowNull: true
         },

@@ -1,9 +1,10 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Button, Card, Container, Form, Row } from "react-bootstrap"
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ClassContext } from "../../Contexts/ClassContexts"
 
-function AddClasses() {
+function EditClass() {
+    const [classId, setClassId] = useState();
     const [className, setClassName] = useState();
     const [classSubtitle, setClassSubtitle] = useState();
     const [classLink, setClassLink] = useState();
@@ -11,11 +12,29 @@ function AddClasses() {
     const [sundaySchoolTime, setSundaySchoolTime] = useState();
     const [singleText, setSingleText] = useState();
 
-    const { createClass } = useContext(ClassContext)
+    const { getOneClass, editClass } = useContext(ClassContext)
     let navigate = useNavigate()
+    const params = useParams()
 
-    async function creatingClass() {
+    useEffect(() => {
+        let id = params.id
+        async function gettingClass() {
+            let meadowoodClass = await getOneClass(id)
+
+            setClassName(meadowoodClass.className)
+            setClassSubtitle(meadowoodClass.classSubtitle)
+            setClassLink(meadowoodClass.classLink)
+            setWednesdayTime(meadowoodClass.wednesdayTime)
+            setSundaySchoolTime(meadowoodClass.sundaySchoolTime)
+            setSingleText(meadowoodClass.singleText)
+            setClassId(meadowoodClass.classId)
+        }
+        gettingClass()
+    }, [])
+
+    async function editingClass() {
         let classDetails = {
+            classId,
             className,
             classSubtitle,
             classLink,
@@ -23,7 +42,7 @@ function AddClasses() {
             sundaySchoolTime,
             singleText
         }
-        await createClass(classDetails).then(() => {
+        await editClass(classDetails).then(() => {
             navigate("/admin/manage-classes");
         });
     }
@@ -66,8 +85,8 @@ function AddClasses() {
                             </div>
                         </Row>
                         <br />
-                        <Button onClick={creatingClass}>
-                            Add
+                        <Button variant="warning" onClick={editingClass}>
+                            Edit
                         </Button>
                         <Row>
                             <center>
@@ -131,4 +150,4 @@ function AddClasses() {
         </>
     )
 }
-export default AddClasses
+export default EditClass

@@ -35,6 +35,7 @@ import EventsSigningUp from './Components/Pages/EventsSigningUp';
 import ViewEventPeople from './Components/AdminPages/ViewEventPeople';
 import ManageClasses from './Components/AdminPages/ManageClasses';
 import AddClasses from './Components/AdminPages/AddClass';
+import EditClass from './Components/AdminPages/EditClasses';
 
 function App() {
   return (
@@ -84,7 +85,8 @@ function App() {
           <Route path='/admin/event/view/:id' element={<ViewEventPeople/>}/>
 
           <Route path='/admin/manage-classes/' element={<ManageClasses/>}/>
-          <Route path='/admin/add-class' element={<AddClasses/>}/>
+          <Route path='/admin/manage-classes/add-class' element={<AddClasses/>}/>
+          <Route path='/admin/manage-classes/edit/:id' element={<EditClass/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
