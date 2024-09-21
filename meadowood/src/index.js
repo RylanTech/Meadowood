@@ -12,11 +12,13 @@ import { StaffProvider } from './Contexts/StaffContext';
 import { AboutProvider } from './Contexts/AboutContext';
 import { EventProvider } from './Contexts/EventContext';
 import { PersonProvider } from './Contexts/personContext';
+import { ClassProvider } from './Contexts/ClassContexts';
 // import { EventProvider } from './Contexts/EventContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ClassProvider>
     <PersonProvider>
       <EventProvider>
         <AboutProvider>
@@ -36,5 +38,6 @@ root.render(
         </AboutProvider>
       </EventProvider>
     </PersonProvider>
+    </ClassProvider>
   </React.StrictMode>
 );

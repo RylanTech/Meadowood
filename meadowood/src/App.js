@@ -33,6 +33,8 @@ import EditEvent from './Components/AdminPages/EditEvent';
 import EventsSignUp from './Components/Pages/EventsSignUp';
 import EventsSigningUp from './Components/Pages/EventsSigningUp';
 import ViewEventPeople from './Components/AdminPages/ViewEventPeople';
+import ManageClasses from './Components/AdminPages/ManageClasses';
+import AddClasses from './Components/AdminPages/AddClass';
 
 function App() {
   return (
@@ -80,6 +82,9 @@ function App() {
           <Route path='/admin/event/create' element={<CreateEvent/>}/>
           <Route path='/admin/event/edit/:id' element={<EditEvent/>}/>
           <Route path='/admin/event/view/:id' element={<ViewEventPeople/>}/>
+
+          <Route path='/admin/manage-classes/' element={<ManageClasses/>}/>
+          <Route path='/admin/add-class' element={<AddClasses/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

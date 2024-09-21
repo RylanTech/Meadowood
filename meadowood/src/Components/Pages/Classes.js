@@ -5,6 +5,135 @@ import { Helmet } from "react-helmet";
 
 function Classes() {
 
+    let classes = [
+        {
+            classId: 0,
+            className: "Nursery",
+            classSubtitle: "(Available for parents)",
+            classLink: undefined,
+            wednesdayTime: undefined,
+            sundayschooltime: "11am-12pm",
+            singleText: undefined
+        },
+        {
+            classId: 1,
+            className: "Toddler",
+            classSubtitle: undefined,
+            classLink: undefined,
+            wednesdayTime: undefined,
+            sundayschooltime: "11am-12pm",
+            singleText: undefined
+        },
+        {
+            classId: 2,
+            className: "K - 6th Grade",
+            classSubtitle: undefined,
+            classLink: "/kids",
+            wednesdayTime: "Every 3rd Wed, 7pm-8pm",
+            sundayschooltime: "11am-12pm",
+            singleText: undefined
+        },
+        {
+            classId: 3,
+            className: "7th grade - 18",
+            classSubtitle: undefined,
+            classLink: "/youth",
+            wednesdayTime: "6pm-8pm",
+            sundayschooltime: "10am-11am",
+            singleText: undefined
+        },
+        {
+            classId: 4,
+            className: "18 & Graduated - 25",
+            classSubtitle: undefined,
+            classLink: "/youngadults",
+            wednesdayTime: "7pm-8pm",
+            sundayschooltime: "10am-11am",
+            singleText: undefined
+        },
+        {
+            classId: 5,
+            className: "Ultimate Adults",
+            classSubtitle: undefined,
+            classLink: "/ultimate",
+            wednesdayTime: undefined,
+            sundayschooltime: "10am-11am",
+            singleText: undefined
+        },
+        {
+            classId: 6,
+            className: "Adults",
+            classSubtitle: undefined,
+            classLink: undefined,
+            wednesdayTime: "7pm-8pm",
+            sundayschooltime: "10am-11am",
+            singleText: undefined
+        },
+        {
+            classId: 7,
+            className: "55+",
+            classSubtitle: undefined,
+            classLink: undefined,
+            wednesdayTime: undefined,
+            sundayschooltime: undefined,
+            singleText: "Scheduled once a month"
+        }
+    ]
+
+    function mapThroughClasses() {
+        return classes.map((classItem) => {
+            return (
+                <>
+                    <Row>
+                        <div className="classHeader col-5 col-md-4">
+                            {classItem.classLink ? (
+                                <>
+                                    <Link className="classHeader col-5 col-md-3"
+                                        to={classItem.classLink}>
+                                        {classItem.className}
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    {classItem.className}
+                                </>
+                            )}
+                        </div>
+                        {classItem.singleText ? (
+                            <>
+                                <div className="classContent col-5 col-md-5">
+                                    {classItem.singleText}
+                                </div>
+                            </>
+                        ) :
+                            <>
+                                <div className="classContent col-3 col-md-4">
+                                    {classItem.wednesdayTime}
+                                </div>
+                                <div className="classContent col-4">
+                                    {classItem.sundayschooltime}
+                                </div>
+                            </>}
+                    </Row>
+                    {classItem.classSubtitle ? (
+                        <>
+                            <Row>
+                                <div
+                                    className="afp">
+                                    {classItem.classSubtitle}
+                                </div>
+                            </Row>
+                        </>
+                    ) : (
+                        <>
+                        </>
+                    )}
+                    <hr />
+                </>
+            )
+        });
+    }
+
     return (
         <>
             <Helmet>
@@ -20,11 +149,27 @@ function Classes() {
                 <meta name="language" content="English" />
                 <link rel='canonical' href='/' />
             </Helmet>
+
             <Container>
                 <br />
                 <Row>
                     <div className="classHeader col-4">
                         Class
+                    </div>
+                    <div className="classHeader col-4">
+                        Wednesday
+                    </div>
+                    <div className="classHeader col-4">
+                        Sunday School
+                    </div>
+                    <hr />
+                </Row>
+
+                {mapThroughClasses()}
+            </Container>
+
+            {/* <Container>
+                <br />
                     </div>
                     <div className="classHeader col-4">
                         Wednesday
@@ -142,7 +287,7 @@ function Classes() {
                         </center>
                     </div>
                 </Row>
-            </Container>
+            </Container> */}
             <br /><br /><br /><br />
             <Footer />
         </>

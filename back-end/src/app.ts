@@ -10,6 +10,7 @@ import staffRoutes from './routes/staffRoutes'
 import aboutRoutes from './routes/aboutRoutes'
 import peopleRoutes from './routes/signUpUserRoutes'
 import eventRoutes from './routes/signUpEventsRoutes'
+import classRoutes from './routes/classRoutes'
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use('/api/staff/', staffRoutes)
 app.use('/api/about/', aboutRoutes)
 app.use('/api/people/', peopleRoutes)
 app.use('/api/events/', eventRoutes)
+app.use('/api/classes/', classRoutes)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).end();

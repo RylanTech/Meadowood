@@ -120,6 +120,25 @@ function Admin() {
                                 </Card>
                             </div>
                         </Row>
+                        <div className="adminCard col-12">
+                            <Card>
+                                <Card.Body>
+                                    <Card.Header>
+                                        <h4>Classes</h4>
+                                    </Card.Header>
+                                    <Card.Text>
+                                        <br />
+                                        <Link to={'/admin/manage-classes'}>
+                                            <Button
+                                                className="col-12"
+                                            >
+                                                Manage Classes
+                                            </Button>
+                                        </Link>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
                     </div>
                     <div className="col-12 col-md-6">
                         <div className="adminCard col-12">
@@ -179,7 +198,7 @@ function Admin() {
                                             <Button
                                                 className="col-12"
                                             >
-                                                View Staff
+                                                Manage Staff
                                             </Button>
                                         </Link>
                                     </Card.Text>
@@ -217,7 +236,7 @@ function Admin() {
                                             <Button
                                                 className="col-12"
                                             >
-                                                See Events
+                                                Manage Events
                                             </Button>
                                         </Link>
                                     </Card.Text>
