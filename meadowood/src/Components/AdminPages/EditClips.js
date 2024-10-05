@@ -3,6 +3,7 @@ import { ClipContext } from "../../Contexts/ClipContext"
 import { Card, Container, Row } from "react-bootstrap"
 import { UserContext } from "../../Contexts/UserContext"
 import { Link, useNavigate } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 function EditClips() {
     const [clips, setClips] = useState()
@@ -52,6 +53,9 @@ function EditClips() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     {mapThroughClips()}

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Button, Container, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
 import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 function ViewEvents() {
     const [events, setEvents] = useState()
@@ -82,6 +83,9 @@ function ViewEvents() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>

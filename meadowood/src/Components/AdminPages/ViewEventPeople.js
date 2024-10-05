@@ -3,6 +3,7 @@ import { Button, Container, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
 import { useParams } from "react-router-dom"
 import { PersonContext } from "../../Contexts/personContext"
+import { Helmet } from "react-helmet"
 
 function ViewEventPeople() {
     const [event, setEvent] = useState()
@@ -65,6 +66,9 @@ function ViewEventPeople() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     {event ? (

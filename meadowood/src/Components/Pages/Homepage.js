@@ -27,9 +27,8 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <meta name="title" content="MWCOG - Homepage" />
-                <meta name="description" content="Meadowood Church of God - Better at the 
-                Meadow" />
+                <meta name="title" content="Meadowood Church - Homepage" />
+                <meta name="description" content="Meadowood Chrurch of God. 325 Azalea Ave, Richmond, VA 23227. Better at the Meadow" />
                 <meta name="keywords" content="Church of God, Church, God, Jesus, 
                 Lord, Community, Church community, friendly church, Meadowood,
                 Richmond Virginia Church, Richmond VA, Meadowood Church of God Richmond 
@@ -48,6 +47,7 @@ function Homepage() {
                                 src={headerLink}
                                 alt="Meadowood Church of God"
                             />
+                            <h1 className="h1-homepage-header">Meadowood Church of God</h1>
                             <div className="homeHeader">
                                 {headerCaption}
                             </div>
@@ -137,11 +137,11 @@ function Homepage() {
                                 src="./meadowoodPhotos/kids/kids.png"
                                 alt="Kids" />
                             <div className="text">
-                                <h1>
+                                <h2>
                                     <center className="tilt-neon">
                                         Kids
                                     </center>
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                     </Link>
@@ -152,11 +152,11 @@ function Homepage() {
                                 src="./meadowoodPhotos/nf/newflame-Cover.png"
                                 alt="Youth" />
                             <div className="text">
-                                <h1>
+                                <h2>
                                     <center className="tilt-neon">
                                         Youth
                                     </center>
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                     </Link>
@@ -167,11 +167,11 @@ function Homepage() {
                                 src="./meadowoodPhotos/c4l/youngadults.png"
                                 alt="Young Adults" />
                             <div className="text">
-                                <h1>
+                                <h2>
                                     <center className="tilt-neon">
                                         Young Adults
                                     </center>
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                     </Link>
@@ -182,11 +182,11 @@ function Homepage() {
                                 src="./meadowoodPhotos/fp/foodpantry2.png"
                                 alt="Food Pantry" />
                             <div className="text">
-                                <h1>
+                                <h2>
                                     <center className="tilt-neon">
                                         Food Pantry
                                     </center>
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                     </Link>

@@ -3,6 +3,7 @@ import { Button, Card, Container, Form, Row } from "react-bootstrap"
 import { ClipContext } from "../../Contexts/ClipContext";
 import { UserContext } from "../../Contexts/UserContext";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function CreateClip() {
     const [clipTitle, setClipTitle] = useState("");
@@ -19,7 +20,7 @@ function CreateClip() {
         } else {
             navigate('/')
         }
-    },[])
+    },[navigate, isAdmin])
 
     function handleSubmit() {
         let clip = {
@@ -33,6 +34,9 @@ function CreateClip() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     <br />

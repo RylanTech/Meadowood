@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { StaffContext } from "../../Contexts/StaffContext"
 import { Button, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 function AdminStaff() {
     const [staff, setStaff] = useState(null)
@@ -94,6 +95,9 @@ function AdminStaff() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>

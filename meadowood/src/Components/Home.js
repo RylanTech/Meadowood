@@ -103,6 +103,9 @@ function Home() {
                 <NavDropdown.Item href="https://www.paypal.com/donate/?hosted_button_id=J3L75KY6QTZDW" target="_top">
                   Paypal
                 </NavDropdown.Item>
+                <NavDropdown.Item href="https://square.link/u/4lbMabKW" target="_top">
+                  Square
+                </NavDropdown.Item>
               </NavDropdown>
               <Link className="nav-link hover-effect nvbr" to="/about">About us</Link>
             </Nav>
@@ -111,6 +114,6 @@ function Home() {
       </Navbar>
       <Outlet />
     </div>
-  )
+  ) 
 }
 export default Home

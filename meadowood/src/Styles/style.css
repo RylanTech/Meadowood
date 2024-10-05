@@ -139,10 +139,11 @@ body {
   text-decoration-color: #b4b4b4;
 }
 .homeHeader {
-  position: relative; top: -40px;
+  position: relative; top: -90px;
   text-align: center;
   font-size: 25px;
   color: white;
+  z-index: 3;
 }
 .facebookImg {
   width: 25px;
@@ -154,7 +155,13 @@ body {
 }
 .homepageHeader {
   aspect-ratio: 21/9;
+  z-index: 2;
 }
+.h1-homepage-header {
+  position: relative; top: -100px;
+  z-index: 1;
+}
+
 
 .tilt-neon {
   font-family: "Tilt Neon", sans-serif;

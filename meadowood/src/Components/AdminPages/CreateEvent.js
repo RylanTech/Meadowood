@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { Button, Container, Form, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
 import { useNavigate } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 function CreateEvent() {
     const [title, setTitle] = useState("")
@@ -28,6 +29,9 @@ function CreateEvent() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     <Form.Group

@@ -2,6 +2,7 @@ import { useContext, useState } from 'react'
 import { Button, Container, Form, Row } from 'react-bootstrap'
 import { UserContext } from '../../Contexts/UserContext'
 import { Link, useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 function Loginpage() {
     const [username, setUsername] = useState("");
@@ -31,6 +32,9 @@ function Loginpage() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br /><br /><br />
                 <Row>

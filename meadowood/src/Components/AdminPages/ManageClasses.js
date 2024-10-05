@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Button, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { ClassContext } from "../../Contexts/ClassContexts";
+import { Helmet } from "react-helmet";
 
 function ManageClasses() {
     const [classes, setClasses] = useState([])
@@ -15,7 +16,7 @@ function ManageClasses() {
             setClasses(classesGotten);
         }
         gettingClasses();
-    }, [deleted]);
+    }, [deleted, getClasses]);
 
     function mapThroughClasses() {
         return classes.map((classItem) => {
@@ -90,6 +91,9 @@ function ManageClasses() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>

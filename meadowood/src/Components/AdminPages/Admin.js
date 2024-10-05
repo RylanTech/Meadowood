@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { Button, Card, Container, Form, Row } from "react-bootstrap"
 import { LiveContext } from "../../Contexts/LiveContext"
 import { HeaderContext } from "../../Contexts/HeaderContext"
+import { Helmet } from "react-helmet"
 
 function Admin() {
 
@@ -36,7 +37,7 @@ function Admin() {
         }
         gettingHeader()
 
-    }, [])
+    }, [getStatus, getHeader, isAdmin, navigate])
 
     function handleHeaderSubmit() {
         let header = {
@@ -48,6 +49,9 @@ function Admin() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Button, Container, Form, Row } from "react-bootstrap"
 import { EventContext } from "../../Contexts/EventContext"
 import { useNavigate, useParams } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 function EditEvent() {
     const [title, setTitle] = useState("")
@@ -45,6 +46,9 @@ function EditEvent() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
             <Row>
                 <Form.Group

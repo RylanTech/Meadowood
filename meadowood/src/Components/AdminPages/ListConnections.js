@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { ConnectionContext } from "../../Contexts/ConnectionContext"
 import { useNavigate, useParams } from "react-router-dom"
 import { Button, Container, Form, Row } from "react-bootstrap"
+import { Helmet } from "react-helmet"
 
 function ListConnection() {
     const [connection, setConnection] = useState({
@@ -36,6 +37,9 @@ function ListConnection() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     <Form.Group className="col-12 col-md-6 col-lg-4">

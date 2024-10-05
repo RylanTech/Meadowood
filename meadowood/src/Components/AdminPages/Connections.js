@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Button, Container, Row } from "react-bootstrap"
 import { ConnectionContext } from "../../Contexts/ConnectionContext"
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Connections() {
     const [connections, setConnections] = useState()
@@ -14,7 +15,7 @@ function Connections() {
             setConnections(res)
         }
         gettingConnections()
-    }, [])
+    }, [getConnections])
 
     function displayConnections() {
         if (connections) {
@@ -54,6 +55,9 @@ function Connections() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <div className="connectionTitleRow">
                     <Row>

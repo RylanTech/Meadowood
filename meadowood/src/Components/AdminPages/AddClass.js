@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { Button, Card, Container, Form, Row } from "react-bootstrap"
 import { Link, useNavigate } from "react-router-dom";
 import { ClassContext } from "../../Contexts/ClassContexts"
+import { Helmet } from "react-helmet";
 
 function AddClasses() {
     const [className, setClassName] = useState();
@@ -30,6 +31,9 @@ function AddClasses() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>

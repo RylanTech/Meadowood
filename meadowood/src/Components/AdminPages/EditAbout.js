@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { AboutContext } from "../../Contexts/AboutContext";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function EditAbout() {
     const [aboutText, setAboutText] = useState(undefined)
@@ -38,6 +39,9 @@ function EditAbout() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <Row>
                     <div className="col-12 aboutPeopleHeading">

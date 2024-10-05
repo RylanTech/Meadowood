@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Button, Container, Form, Row } from "react-bootstrap"
 import { LiveContext } from "../../Contexts/LiveContext"
+import { Helmet } from "react-helmet"
 
 function EditLive() {
 
@@ -41,6 +42,9 @@ function EditLive() {
 
     return (
         <>
+            <Helmet>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
             <Container>
                 <br />
                 <Row>
