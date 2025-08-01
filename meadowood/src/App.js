@@ -53,7 +53,7 @@ function App() {
           <Route path='/foodpantry' element={<Foodpantry/>} />
           {/* <Route path='/donate' element={<Donate/>} /> */}
           <Route path='/connect' element={<Connect/>}/>
-          <Route path='/events' element={<Events/>} />
+          {/* <Route path='/events' element={<Events/>} /> */}
           <Route path='/about' element={<About/>}/>
           {/* <Route path='/schedule' element={<Schedule/>}/> */}
           <Route path='/youngatheart' element={<Seniors/>}/>

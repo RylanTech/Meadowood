@@ -88,11 +88,6 @@ function Home() {
               </NavDropdown>
               <Link className="nav-link hover-effect nvbr" to="/classes">Classes</Link>
               <NavDropdown title="Events" id="basic-nav-dropdown" className="nvbr">
-                <Link to="/events" className="notUnderlined">
-                  <NavDropdown.Item href="#action/3.1">
-                    All Events
-                  </NavDropdown.Item>
-                </Link>
                 <Link to="/eventssignup" className="notUnderlined nvbr">
                   <NavDropdown.Item href="#action/3.2">
                     Event Sign Up
